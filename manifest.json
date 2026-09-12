@@ -1,0 +1,9 @@
+{
+  "name": "ManufacturingWebApp",
+  "short_name": "Manufacturing",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#102542",
+  "theme_color": "#102542",
+  "icons": []
+}
