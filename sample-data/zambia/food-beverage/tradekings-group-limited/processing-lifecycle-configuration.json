@@ -1,0 +1,124 @@
+{
+  "templates": [
+    {
+      "templateKey": "cooking-oil",
+      "displayName": "TradeKings Cooking Oil Lifecycle",
+      "description": "Crude intake, refining, packaging, pallet release, and traceability.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "receiving",
+          "name": "Receiving",
+          "description": "Crude oil intake and sample release",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Released",
+          "unit": "",
+          "allowedNextStageKeys": ["refining"]
+        },
+        {
+          "stageKey": "refining",
+          "name": "Refining",
+          "description": "Degumming, neutralising, and washing",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "In progress",
+          "unit": "",
+          "allowedNextStageKeys": ["packaging"]
+        },
+        {
+          "stageKey": "packaging",
+          "name": "Packaging",
+          "description": "Fill, seal, and label management",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["dispatch"]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Shipment release and compliance packet",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    },
+    {
+      "templateKey": "milling",
+      "displayName": "TradeKings Milling Lifecycle",
+      "description": "Receiving, cleaning, milling, blending, bagging, and dispatch.",
+      "primaryUnitLabel": "Batches",
+      "stages": [
+        {
+          "stageKey": "receiving",
+          "name": "Receiving",
+          "description": "Inbound grain intake and grading",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Released",
+          "unit": "",
+          "allowedNextStageKeys": ["cleaning"]
+        },
+        {
+          "stageKey": "cleaning",
+          "name": "Cleaning",
+          "description": "Foreign matter removal and moisture balancing",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Stable",
+          "unit": "",
+          "allowedNextStageKeys": ["milling"]
+        },
+        {
+          "stageKey": "milling",
+          "name": "Milling",
+          "description": "Grinding and output quality checks",
+          "sortOrder": 3,
+          "status": "Warning",
+          "value": "1 deviation",
+          "unit": "",
+          "allowedNextStageKeys": ["bagging"]
+        },
+        {
+          "stageKey": "bagging",
+          "name": "Bagging",
+          "description": "Weighing, sealing, and labeling",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "On target",
+          "unit": "",
+          "allowedNextStageKeys": ["dispatch"]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Warehouse release and dispatch control",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "cooking-oil",
+      "templateKey": "cooking-oil",
+      "displayName": "Cooking Oil Processing",
+      "notes": "TradeKings branded sample data"
+    },
+    {
+      "profileKey": "milling",
+      "templateKey": "milling",
+      "displayName": "Milling",
+      "notes": "TradeKings branded sample data"
+    }
+  ]
+}

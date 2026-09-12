@@ -1,0 +1,182 @@
+{
+  "CountryName": "South Africa",
+  "CountrySlug": "south-africa",
+  "OrganizationType": "ManufacturingWebApp",
+  "TenantType": "MWA",
+  "InstitutionTypePermissions": [
+    "General",
+    "Platform",
+    "Finance",
+    "Manufacturing",
+    "Processing",
+    "FactoryFloor",
+    "SupplyChain",
+    "Utilities",
+    "Telecom",
+    "Logistics",
+    "HeavyIndustry"
+  ],
+  "EffectiveInstitutionPermissions": [
+    "General",
+    "Platform",
+    "Finance",
+    "Manufacturing",
+    "Processing",
+    "FactoryFloor",
+    "SupplyChain",
+    "Utilities",
+    "Telecom",
+    "Logistics",
+    "HeavyIndustry"
+  ],
+  "AccessiblePages": [
+    "/",
+    "/dashboard",
+    "/platform/governance",
+    "/finance/sync-dashboard",
+    "/manufacturing/quality-control",
+    "/manufacturing/production-planning",
+    "/manufacturing/production-board",
+    "/manufacturing/orders",
+    "/manufacturing/oee",
+    "/manufacturing/bom/library",
+    "/manufacturing/planning/mps",
+    "/manufacturing/planning/mrp",
+    "/manufacturing/costing/variance",
+    "/manufacturing/shopfloor/dispatch",
+    "/manufacturing/traceability/genealogy",
+    "/manufacturing/quality/gates",
+    "/manufacturing/processing/configuration",
+    "/manufacturing/ethanol",
+    "/manufacturing/ethanol/intake",
+    "/manufacturing/ethanol/fermentation",
+    "/manufacturing/ethanol/energy-yield",
+    "/manufacturing/ethanol/compliance-dispatch",
+    "/manufacturing/ethanol/distillation",
+    "/manufacturing/fruit",
+    "/manufacturing/factory-floor",
+    "/manufacturing/factory-floor/alerts",
+    "/manufacturing/factory-floor/management",
+    "/manufacturing/factory-floor/workbench",
+    "/manufacturing/factory-floor/machines/{MachineId}",
+    "/manufacturing/factory-floor/lines/{LineId}",
+    "/manufacturing/factory-floor/shifts/{ShiftId}",
+    "/supplychain/control-tower",
+    "/supplychain/wms",
+    "/supplychain/intake",
+    "/supplychain/risk",
+    "/supplychain/fleet",
+    "/utilities/dashboard",
+    "/telecom/dashboard",
+    "/logistics/dashboard",
+    "/heavyindustry/dashboard"
+  ],
+  "Roles": [
+    {
+      "RoleId": "ROLE-ADMIN-ARCELORMITTALSA",
+      "RoleName": "System Administrator",
+      "TemplateRole": "Administrator",
+      "Permissions": [
+        "General",
+        "Platform",
+        "Finance",
+        "Manufacturing",
+        "Processing",
+        "FactoryFloor",
+        "SupplyChain",
+        "Utilities",
+        "Telecom",
+        "Logistics",
+        "HeavyIndustry"
+      ]
+    },
+    {
+      "RoleId": "ROLE-DIR-ARCELORMITTALSA",
+      "RoleName": "Company Director",
+      "TemplateRole": "Director",
+      "Permissions": [
+        "General",
+        "Platform",
+        "Finance",
+        "Manufacturing",
+        "Processing",
+        "FactoryFloor",
+        "SupplyChain",
+        "Utilities",
+        "Telecom",
+        "Logistics",
+        "HeavyIndustry"
+      ]
+    },
+    {
+      "RoleId": "ROLE-OPS-ARCELORMITTALSA",
+      "RoleName": "Operations Manager",
+      "TemplateRole": "Manager",
+      "Permissions": [
+        "General",
+        "Manufacturing",
+        "Processing",
+        "FactoryFloor",
+        "SupplyChain",
+        "Logistics",
+        "Utilities"
+      ]
+    },
+    {
+      "RoleId": "ROLE-PLAN-ARCELORMITTALSA",
+      "RoleName": "Production Planner",
+      "TemplateRole": "Planner",
+      "Permissions": [
+        "General",
+        "Manufacturing",
+        "Processing",
+        "FactoryFloor"
+      ]
+    },
+    {
+      "RoleId": "ROLE-QA-ARCELORMITTALSA",
+      "RoleName": "Quality Assurance Lead",
+      "TemplateRole": "QA",
+      "Permissions": [
+        "General",
+        "Manufacturing",
+        "Processing",
+        "FactoryFloor"
+      ]
+    },
+    {
+      "RoleId": "ROLE-PLANT-ARCELORMITTALSA",
+      "RoleName": "Plant Manager",
+      "TemplateRole": "PlantManager",
+      "Permissions": [
+        "General",
+        "Manufacturing",
+        "Processing",
+        "FactoryFloor",
+        "SupplyChain",
+        "Logistics"
+      ]
+    },
+    {
+      "RoleId": "ROLE-SC-ARCELORMITTALSA",
+      "RoleName": "Supply Chain Coordinator",
+      "TemplateRole": "Coordinator",
+      "Permissions": [
+        "General",
+        "SupplyChain",
+        "Logistics",
+        "Processing"
+      ]
+    },
+    {
+      "RoleId": "ROLE-MAINT-ARCELORMITTALSA",
+      "RoleName": "Maintenance Supervisor",
+      "TemplateRole": "Supervisor",
+      "Permissions": [
+        "General",
+        "Manufacturing",
+        "FactoryFloor"
+      ]
+    }
+  ]
+}

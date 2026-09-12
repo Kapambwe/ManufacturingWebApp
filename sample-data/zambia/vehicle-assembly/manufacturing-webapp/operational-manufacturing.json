@@ -1,0 +1,50 @@
+{
+  "productionOrders": [
+    {
+      "OrderNo": "MO-VA-1001",
+      "ItemId": "VA-CAR-001",
+      "PlannedQty": 60,
+      "ReleasedQty": 30,
+      "Status": "Released",
+      "Priority": "High",
+      "DueDate": "2026-08-15T00:00:00Z",
+      "LastAction": "Release",
+      "LastActionBy": "planner-va-01",
+      "LastActionAtUtc": "2026-07-04T06:00:00Z",
+      "LinkedLotNo": "LOT-VA-001",
+      "Operations": [
+        { "OrderNo": "MO-VA-1001", "OperationNo": 10, "OperationName": "Body Weld", "WorkCenterId": "WC-VA-BODY", "Status": "In Progress", "PlannedQty": 60, "CompletedQty": 18, "ScrapQty": 0 },
+        { "OrderNo": "MO-VA-1001", "OperationNo": 20, "OperationName": "Paint", "WorkCenterId": "WC-VA-PAINT", "Status": "Queued", "PlannedQty": 60, "CompletedQty": 0, "ScrapQty": 0 }
+      ]
+    }
+  ],
+  "shopFloorEvents": [],
+  "qualityHolds": [
+    { "HoldId": "HOLD-VA-1001", "EntityType": "Order", "EntityId": "MO-VA-1001", "ReasonCode": "Weld-Check", "RaisedBy": "qa-va-01", "RaisedAt": "2026-07-04T06:10:00Z", "Status": "Open" }
+  ],
+  "nonConformances": [
+    { "NcrId": "NCR-VA-1001", "OrderNo": "MO-VA-1001", "OperationNo": 10, "Severity": "High", "Disposition": "Rework", "RootCause": "Weld seam variation", "CapaId": "CAPA-VA-1001", "Status": "Open", "RecordedBy": "qa-va-01", "RecordedAtUtc": "2026-07-04T06:15:00Z", "Notes": "Body shell weld needs rework" }
+  ],
+  "qualityHistory": [
+    { "ActionType": "Hold", "EntityType": "Order", "EntityId": "MO-VA-1001", "Result": "Open", "PerformedBy": "qa-va-01", "Comment": "Weld check pending", "TimestampUtc": "2026-07-04T06:10:00Z" }
+  ],
+  "genealogyHistory": [
+    { "LotNo": "LOT-VA-001", "Direction": "Backward", "NodeCount": 4, "RequestedBy": "operator", "RequestedAtUtc": "2026-07-04T06:20:00Z" }
+  ],
+  "costingStates": [
+    {
+      "OrderNo": "MO-VA-1001",
+      "Variances": [
+        { "OrderNo": "MO-VA-1001", "VarianceType": "Material", "Amount": 5100, "Currency": "USD", "AnalysisNote": "Body panel premium" },
+        { "OrderNo": "MO-VA-1001", "VarianceType": "Labor", "Amount": 2200, "Currency": "USD", "AnalysisNote": "Assembly overtime" }
+      ],
+      "Handoffs": [
+        { "OrderNo": "MO-VA-1001", "EventType": "SettlementReady", "TargetSystem": "Accounting", "Status": "Pending", "Notes": "Awaiting variance review" }
+      ],
+      "SettlementStatus": "Pending",
+      "PostingId": "",
+      "PostAttempts": 0,
+      "RequiresRetry": true
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "templates": [
+    {
+      "templateKey": "solar-assembly",
+      "displayName": "Solar Assembly Lifecycle",
+      "description": "Solar Assembly operations from intake through dispatch.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "component-intake",
+          "name": "Component Intake",
+          "description": "Solar Assembly stage: Component Intake",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["assembly"]
+        },
+        {
+          "stageKey": "assembly",
+          "name": "Assembly",
+          "description": "Solar Assembly stage: Assembly",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["testing"]
+        },
+        {
+          "stageKey": "testing",
+          "name": "Testing",
+          "description": "Solar Assembly stage: Testing",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["packaging"]
+        },
+        {
+          "stageKey": "packaging",
+          "name": "Packaging",
+          "description": "Solar Assembly stage: Packaging",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["dispatch"]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Solar Assembly stage: Dispatch",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "solar-assembly",
+      "templateKey": "solar-assembly",
+      "displayName": "Solar Assembly",
+      "notes": ""
+    }
+  ]
+}

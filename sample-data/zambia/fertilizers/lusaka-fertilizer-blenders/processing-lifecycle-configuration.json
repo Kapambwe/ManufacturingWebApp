@@ -1,0 +1,78 @@
+{
+  "templates": [
+    {
+      "templateKey": "fertilizers",
+      "displayName": "Fertilizer Blending Lifecycle",
+      "description": "Fertilizer Blending operations from intake through dispatch.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "raw-materials",
+          "name": "Raw Materials",
+          "description": "Fertilizer Blending stage: Raw Materials",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "blending"
+          ]
+        },
+        {
+          "stageKey": "blending",
+          "name": "Blending",
+          "description": "Fertilizer Blending stage: Blending",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "granulation"
+          ]
+        },
+        {
+          "stageKey": "granulation",
+          "name": "Granulation",
+          "description": "Fertilizer Blending stage: Granulation",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "bagging"
+          ]
+        },
+        {
+          "stageKey": "bagging",
+          "name": "Bagging",
+          "description": "Fertilizer Blending stage: Bagging",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "dispatch"
+          ]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Fertilizer Blending stage: Dispatch",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "fertilizers",
+      "templateKey": "fertilizers",
+      "displayName": "Fertilizer Blending",
+      "notes": ""
+    }
+  ]
+}

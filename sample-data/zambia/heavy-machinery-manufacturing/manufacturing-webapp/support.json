@@ -1,0 +1,207 @@
+{
+  "autoPilotActions": [
+    {
+      "id": "ap-hm-1001",
+      "category": "Maintenance",
+      "title": "Hydraulic Press Overheat",
+      "description": "Hydraulic press temperature is above normal operating range.",
+      "suggestedAction": "Schedule immediate inspection and divert work to spare line.",
+      "status": "Pending",
+      "timestamp": "2026-07-04T06:00:00Z",
+      "impactAnalysis": "Prevents unplanned downtime on press line.",
+      "confidenceScore": 97
+    }
+  ],
+  "autoPilotHistory": [],
+  "productionOrders": [
+    {
+      "id": "po-hm-1001",
+      "orderCode": "HM-ASM-001",
+      "productName": "Excavator Boom Assembly",
+      "orderType": "Custom",
+      "status": "Planning",
+      "targetQuantity": 12,
+      "completedQuantity": 0,
+      "startDate": "2026-07-04T00:00:00Z",
+      "endDate": "2026-08-04T00:00:00Z",
+      "totalBudget": 180000,
+      "fundsUtilized": 0
+    }
+  ],
+  "inventoryItems": [
+    {
+      "id": "inv-hm-1001",
+      "receiptNumber": "RC-HM-001",
+      "supplierName": "Kafue Steel Mills",
+      "sku": "HM-STEEL-PLATE",
+      "name": "High Strength Steel Plate",
+      "batchNumber": "HM-B-001",
+      "quantity": 1800,
+      "unit": "kg",
+      "binLocation": "HEAVY-A1",
+      "expiryDate": "2027-07-04T00:00:00Z",
+      "status": "Available"
+    }
+  ],
+  "warehouseTasks": [
+    {
+      "id": "task-hm-1001",
+      "taskType": "Putaway",
+      "description": "Move steel plate to fabrication bay",
+      "assignedTo": "Forklift 7",
+      "status": "Pending",
+      "createdAt": "2026-07-04T06:00:00Z"
+    }
+  ],
+  "fleetVehicles": [
+    {
+      "id": "fleet-hm-1001",
+      "plateNumber": "HM-TRK-101",
+      "driverName": "Mwila Chanda",
+      "currentRoute": "Ndola -> Kitwe",
+      "latitude": -12.9667,
+      "longitude": 28.6333,
+      "temperature": 16.0,
+      "humidity": 45,
+      "status": "Loading"
+    }
+  ],
+  "intakeRecords": [
+    {
+      "id": "intake-hm-1001",
+      "receiptNumber": "RC-HM-001",
+      "supplierName": "Kafue Steel Mills",
+      "materialType": "Steel Plate",
+      "deliveryDate": "2026-07-03T00:00:00Z",
+      "declaredWeight": 2000,
+      "actualWeight": 1980,
+      "status": "Accepted",
+      "qcGrading": "Grade A",
+      "moistureContent": 0.2,
+      "purityLevel": 99.8
+    }
+  ],
+  "sourcingContracts": [
+    {
+      "id": "sc-hm-1001",
+      "contractNumber": "HM-CTR-001",
+      "vendorName": "Zambia Heavy Components",
+      "materialCategory": "Fabrication",
+      "status": "Active",
+      "startDate": "2026-01-01T00:00:00Z",
+      "endDate": "2026-12-31T00:00:00Z",
+      "contractValue": 950000,
+      "amountFulfilled": 520000
+    }
+  ],
+  "financialSyncEvents": [
+    {
+      "id": "fin-hm-1001",
+      "eventType": "AssetCapitalization",
+      "sourceModule": "HeavyIndustry",
+      "referenceId": "MAINT-CRK-A",
+      "timestamp": "2026-07-03T08:00:00Z",
+      "amount": 120000,
+      "currency": "ZMW",
+      "status": "Synced",
+      "destinationLedger": "Plant & Equipment"
+    }
+  ],
+  "costAllocations": [
+    {
+      "id": "cost-hm-1001",
+      "costCenter": "Heavy Assembly Cell",
+      "expenseType": "Direct Labor",
+      "allocatedAmount": 12500,
+      "allocationPeriod": "2026-07-01T00:00:00Z",
+      "syncStatus": "Synced"
+    }
+  ],
+  "platformSession": {
+    "userId": "supervisor-01",
+    "displayName": "Heavy Industry Supervisor",
+    "environment": "ManufacturingWebApp",
+    "mode": "Mock",
+    "roles": [ "Supervisor", "MaintenanceLead" ],
+    "permissions": [ "Audit.View", "Orders.Manage", "Quality.Manage", "Traceability.View", "Performance.View", "Maintenance.Manage" ],
+    "lastAuthenticatedUtc": "2026-07-04T06:45:00Z"
+  },
+  "platformAuditEvents": [
+    { "eventId": "audit-hm-1001", "userId": "supervisor-01", "action": "Login", "resource": "Platform", "outcome": "Success", "details": "Authenticated into heavy machinery context", "eventTimeUtc": "2026-07-04T06:45:00Z", "severity": "Info" }
+  ],
+  "platformPermissionRules": [
+    { "permission": "Audit.View", "description": "View audit trail and system events", "granted": true },
+    { "permission": "Maintenance.Manage", "description": "Schedule and complete heavy equipment maintenance", "granted": true }
+  ],
+  "subscribers": [
+    {
+      "id": "sub-hm-1001",
+      "msisdn": "260971100111",
+      "fullName": "Plant Maintenance Lead",
+      "status": "Active",
+      "planType": "Postpaid",
+      "airtimeBalance": 85,
+      "dataBalance": 8.5,
+      "kycStatus": "2026-06-30T00:00:00Z",
+      "simSerial": "SIM-HM-1001"
+    }
+  ],
+  "telecomBills": [
+    {
+      "id": "bill-hm-1001",
+      "subscriberId": "260971100111",
+      "billCycle": "2026-07-01T00:00:00Z",
+      "usageCharges": 680,
+      "subscriptionFees": 250,
+      "paymentStatus": "Pending"
+    }
+  ],
+  "telecomRecharges": [
+    { "id": "recharge-hm-1001", "subscriberId": "260971100111", "amount": 150, "channel": "Mobile Money", "rechargedAtUtc": "2026-07-04T05:30:00Z", "status": "Posted" }
+  ],
+  "telecomUsage": [
+    { "id": "usage-hm-1001", "subscriberId": "260971100111", "voiceMinutes": 120, "dataMb": 2048, "ratedAmount": 45.5, "ratedAtUtc": "2026-07-04T06:00:00Z", "status": "Rated" }
+  ],
+  "telecomAssurance": [
+    { "id": "assure-hm-1001", "category": "Outage", "summary": "Site radio issue near assembly yard", "owner": "network-ops", "status": "Investigating", "raisedAtUtc": "2026-07-04T06:10:00Z", "notes": "" }
+  ],
+  "telecomCdrs": [
+    { "id": "cdr-hm-1001", "subscriberId": "260971100111", "callDirection": "Outbound", "durationSeconds": 210, "ratedAmount": 5.5, "cellId": "CELL-HM-11", "occurredAtUtc": "2026-07-04T06:05:00Z", "status": "Mediated" }
+  ],
+  "telecomRoaming": [],
+  "telecomCases": [
+    { "id": "case-hm-1001", "caseNumber": "CASE-HM-1001", "subscriberId": "260971100111", "category": "Coverage", "summary": "Coverage fluctuation near machining bay", "owner": "care-hm-01", "status": "Open", "createdAtUtc": "2026-07-04T06:15:00Z" }
+  ],
+  "telecomSites": [
+    { "id": "site-hm-1001", "siteCode": "HM-01", "siteName": "Heavy Machinery Plant", "region": "Copperbelt", "technology": "4G", "status": "Active", "uptimePercent": 99.5, "owner": "radio-ops" }
+  ],
+  "telecomElements": [
+    { "id": "elem-hm-1001", "elementCode": "CELL-HM-11", "elementType": "Base Station", "siteCode": "HM-01", "vendor": "Nokia", "status": "In Service", "managedBy": "noc-hm-01", "lastHeartbeatUtc": "2026-07-04T06:12:00Z" }
+  ],
+  "telecomWorkOrders": [
+    { "id": "wo-hm-1001", "workOrderNumber": "WO-HM-1001", "workType": "Repair", "priority": "High", "siteCode": "HM-01", "summary": "Restore plant radio coverage", "assignedTo": "field-tech-hm-01", "status": "Open", "createdAtUtc": "2026-07-04T06:20:00Z" }
+  ],
+  "utilityMeters": [
+    { "id": "um-hm-1001", "meterNumber": "ZWES-HM-1001", "customerName": "Heavy Machinery Works", "status": "Active", "meterType": "Electricity", "lastReading": 18520.4, "lastReadingDate": "2026-07-04T05:45:00Z", "currentUsage": 540.2, "tariffClass": "Industrial", "balance": 8200 }
+  ],
+  "utilityBills": [
+    { "id": "ub-hm-1001", "meterId": "ZWES-HM-1001", "billDate": "2026-07-01T00:00:00Z", "consumption": 12000, "amount": 8200, "status": "Unpaid", "dueDate": "2026-07-14T00:00:00Z" }
+  ],
+  "utilityReadings": [
+    { "id": "ur-hm-1001", "meterId": "ZWES-HM-1001", "readingValue": 18520.4, "capturedAtUtc": "2026-07-04T05:45:00Z", "capturedBy": "meter-tech-hm-01", "status": "Posted" }
+  ],
+  "utilityTariffs": [
+    { "id": "ut-hm-1001", "tariffClass": "Industrial", "meterType": "Electricity", "baseCharge": 250, "ratePerUnit": 0.68, "status": "Active" }
+  ],
+  "utilityOutages": [
+    { "id": "uo-hm-1001", "outageNumber": "OUT-HM-1001", "area": "Forging Area", "severity": "High", "status": "Open", "owner": "dispatch-hm-01", "reportedAtUtc": "2026-07-04T06:05:00Z", "notes": "Transformer check in progress" }
+  ],
+  "utilityEvents": [
+    { "id": "ue-hm-1001", "meterId": "ZWES-HM-1001", "eventType": "Read", "notes": "Scheduled read captured", "occurredAtUtc": "2026-07-04T05:45:00Z" }
+  ],
+  "utilityPrepayments": [],
+  "utilityDispatches": [],
+  "utilityForecasts": [
+    { "id": "uf-hm-1001", "area": "Copperbelt Industrial Zone", "forecastDate": "2026-07-05T00:00:00Z", "forecastLoad": 185.4, "status": "Planned" }
+  ]
+}

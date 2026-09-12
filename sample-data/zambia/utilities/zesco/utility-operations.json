@@ -1,0 +1,54 @@
+{
+  "utilityCompany": {
+    "companyName": "Zesco",
+    "country": "zambia",
+    "industryType": "utilities",
+    "domain": "power-distribution"
+  },
+  "meters": [
+    {
+      "meterNumber": "ZESCO-RES-2001",
+      "customerName": "Lusaka North Household Cluster",
+      "status": "Active",
+      "meterType": "Electricity",
+      "tariffClass": "Residential",
+      "lastReading": 18350.2,
+      "currentUsage": 72.4,
+      "balance": 95.75
+    },
+    {
+      "meterNumber": "ZESCO-COM-3101",
+      "customerName": "Kafue Industrial Park",
+      "status": "Disconnected",
+      "meterType": "Electricity",
+      "tariffClass": "Commercial",
+      "lastReading": 51200.7,
+      "currentUsage": 0,
+      "balance": -1120.5
+    }
+  ],
+  "tariffs": [
+    {
+      "tariffClass": "Residential",
+      "meterType": "Electricity",
+      "baseCharge": 50.0,
+      "ratePerUnit": 0.18
+    },
+    {
+      "tariffClass": "Commercial",
+      "meterType": "Electricity",
+      "baseCharge": 120.0,
+      "ratePerUnit": 0.26
+    }
+  ],
+  "outages": [
+    {
+      "outageNumber": "OUT-ZESCO-1001",
+      "area": "Lusaka Central",
+      "severity": "High",
+      "status": "Open",
+      "owner": "dispatch-utility-01",
+      "notes": "Feeder fault under restoration"
+    }
+  ]
+}

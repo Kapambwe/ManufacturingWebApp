@@ -1,0 +1,44 @@
+{
+  "workCenters": [
+    { "WorkCenterId": "WC-VA-BODY", "Name": "Body Shop", "ShiftCapacityHours": 20, "UtilizationPercent": 82, "MaxDailyLoadHours": 18, "SupportedSkills": [ "Welding", "Body Fit", "Fixture Setup" ] },
+    { "WorkCenterId": "WC-VA-PAINT", "Name": "Paint Shop", "ShiftCapacityHours": 18, "UtilizationPercent": 79, "MaxDailyLoadHours": 16, "SupportedSkills": [ "Paint", "Booth Control", "Finishing" ] },
+    { "WorkCenterId": "WC-VA-FINAL", "Name": "Final Assembly", "ShiftCapacityHours": 22, "UtilizationPercent": 75, "MaxDailyLoadHours": 20, "SupportedSkills": [ "Trim", "Electrical", "Testing" ] }
+  ],
+  "routings": [
+    {
+      "RoutingId": "R-VA-1001",
+      "ItemId": "VA-CAR-001",
+      "Version": "v1",
+      "Operations": [
+        { "OperationNo": 10, "WorkCenterId": "WC-VA-BODY", "SetupMinutes": 90, "RunMinutesPerUnit": 6.5, "QueueMinutes": 45, "RequiredSkill": "Welding", "RequiredOperators": 6 },
+        { "OperationNo": 20, "WorkCenterId": "WC-VA-PAINT", "SetupMinutes": 120, "RunMinutesPerUnit": 8.0, "QueueMinutes": 60, "RequiredSkill": "Paint", "RequiredOperators": 5 },
+        { "OperationNo": 30, "WorkCenterId": "WC-VA-FINAL", "SetupMinutes": 75, "RunMinutesPerUnit": 9.2, "QueueMinutes": 35, "RequiredSkill": "Trim", "RequiredOperators": 8 }
+      ]
+    }
+  ],
+  "mpsHistory": [
+    {
+      "ScheduleId": "mps-va-1001",
+      "HorizonStart": "2026-07-04T00:00:00Z",
+      "HorizonEnd": "2026-08-18T00:00:00Z",
+      "Scenario": "Vehicle Assembly",
+      "Status": "Generated",
+      "TotalPlannedQty": 120,
+      "Lines": [
+        { "ItemId": "VA-CAR-001", "BucketDate": "2026-07-05T00:00:00Z", "Quantity": 60, "WorkCenterId": "WC-VA-BODY" },
+        { "ItemId": "VA-CAR-002", "BucketDate": "2026-07-08T00:00:00Z", "Quantity": 60, "WorkCenterId": "WC-VA-FINAL" }
+      ]
+    }
+  ],
+  "mrpHistory": [
+    {
+      "Run": { "RunId": "mrp-va-1001", "RunTime": "2026-07-04T06:00:00Z", "Planner": "planner-va-01", "Scenario": "Vehicle Assembly", "Status": "Generated" },
+      "Requirements": [
+        { "ItemId": "RM-BODY-SHEET", "GrossReq": 240, "NetReq": 100, "Available": 140, "ShortageQty": 100, "PeggedOrderId": "VA-CAR-001" },
+        { "ItemId": "RM-PAINT-KIT", "GrossReq": 120, "NetReq": 20, "Available": 100, "ShortageQty": 20, "PeggedOrderId": "VA-CAR-001" }
+      ],
+      "Peggings": [],
+      "TotalShortageQty": 120
+    }
+  ]
+}

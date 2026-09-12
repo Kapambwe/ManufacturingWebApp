@@ -1,0 +1,44 @@
+{
+  "autoPilotActions": [
+    {
+      "id": "ap-min-1001",
+      "category": "Processing",
+      "title": "Moisture above target",
+      "description": "Crushed feed moisture is above the set limit for the current batch.",
+      "suggestedAction": "Increase drying time before concentration.",
+      "status": "Pending",
+      "timestamp": "2026-07-04T08:00:00Z",
+      "impactAnalysis": "Reduces downstream quality issues and rework.",
+      "confidenceScore": 94
+    }
+  ],
+  "platformSession": {
+    "userId": "minerals-ops-01",
+    "displayName": "Minerals Operator",
+    "environment": "ManufacturingWebApp",
+    "mode": "Mock",
+    "roles": [ "Operator", "Supervisor" ],
+    "permissions": [ "Audit.View", "Production.Manage", "Quality.Manage", "Traceability.View" ],
+    "lastAuthenticatedUtc": "2026-07-04T07:48:00Z"
+  },
+  "platformAuditEvents": [
+    {
+      "eventId": "audit-min-1001",
+      "userId": "minerals-ops-01",
+      "action": "Login",
+      "resource": "Platform",
+      "outcome": "Success",
+      "details": "Authenticated into minerals-processing context",
+      "eventTimeUtc": "2026-07-04T07:48:00Z",
+      "severity": "Info"
+    }
+  ],
+  "utilityForecasts": [
+    { "id": "uf-min-1001", "area": "Ore Yard", "forecastDate": "2026-07-05T00:00:00Z", "forecastLoad": 138.2, "status": "Planned" }
+  ],
+  "factoryFloor": {
+    "lines": [
+      { "lineId": "MIN-LINE-01", "name": "Crushing Line", "status": "Running", "shift": "Day", "currentOrder": "ORE-001", "throughputPerHour": 74, "utilizationPercent": 82, "oeePercent": 78 }
+    ]
+  }
+}

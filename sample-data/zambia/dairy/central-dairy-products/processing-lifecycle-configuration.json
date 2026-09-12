@@ -1,0 +1,78 @@
+{
+  "templates": [
+    {
+      "templateKey": "dairy",
+      "displayName": "Dairy Processing Lifecycle",
+      "description": "Dairy Processing operations from intake through dispatch.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "milk-intake",
+          "name": "Milk Intake",
+          "description": "Dairy Processing stage: Milk Intake",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "pasteurising"
+          ]
+        },
+        {
+          "stageKey": "pasteurising",
+          "name": "Pasteurising",
+          "description": "Dairy Processing stage: Pasteurising",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "processing"
+          ]
+        },
+        {
+          "stageKey": "processing",
+          "name": "Processing",
+          "description": "Dairy Processing stage: Processing",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "packaging"
+          ]
+        },
+        {
+          "stageKey": "packaging",
+          "name": "Packaging",
+          "description": "Dairy Processing stage: Packaging",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "dispatch"
+          ]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Dairy Processing stage: Dispatch",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "dairy",
+      "templateKey": "dairy",
+      "displayName": "Dairy Processing",
+      "notes": ""
+    }
+  ]
+}

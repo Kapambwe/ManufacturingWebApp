@@ -1,0 +1,70 @@
+{
+  "templates": [
+    {
+      "templateKey": "metal-fabrication",
+      "displayName": "Metal Fabrication Lifecycle",
+      "description": "Metal Fabrication operations from intake through dispatch.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "material-intake",
+          "name": "Material Intake",
+          "description": "Metal Fabrication stage: Material Intake",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["cutting"]
+        },
+        {
+          "stageKey": "cutting",
+          "name": "Cutting",
+          "description": "Metal Fabrication stage: Cutting",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["welding"]
+        },
+        {
+          "stageKey": "welding",
+          "name": "Welding",
+          "description": "Metal Fabrication stage: Welding",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["finishing"]
+        },
+        {
+          "stageKey": "finishing",
+          "name": "Finishing",
+          "description": "Metal Fabrication stage: Finishing",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["dispatch"]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Metal Fabrication stage: Dispatch",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "metal-fabrication",
+      "templateKey": "metal-fabrication",
+      "displayName": "Metal Fabrication",
+      "notes": ""
+    }
+  ]
+}

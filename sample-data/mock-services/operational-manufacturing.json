@@ -1,0 +1,132 @@
+{
+  "productionOrders": [
+    {
+      "OrderNo": "MO-1001",
+      "ItemId": "FG-ETH-95",
+      "PlannedQty": 12000,
+      "ReleasedQty": 12000,
+      "Status": "Released",
+      "Priority": "High",
+      "DueDate": "2026-07-06T00:00:00Z",
+      "LastAction": "Release",
+      "LastActionBy": "planner-01",
+      "LastActionAtUtc": "2026-07-04T06:00:00Z",
+      "LinkedLotNo": "LOT-ETH-9001",
+      "Operations": [
+        {
+          "OrderNo": "MO-1001",
+          "OperationNo": 10,
+          "OperationName": "Mix and Prepare",
+          "WorkCenterId": "WC-DST-01",
+          "Status": "In Progress",
+          "PlannedQty": 7000,
+          "CompletedQty": 5400,
+          "ScrapQty": 80,
+          "PlannedStart": "2026-07-04T01:00:00Z",
+          "ActualStart": "2026-07-04T02:00:00Z",
+          "ActualEnd": null,
+          "OperatorId": "op-01",
+          "DeviceId": "panel-01",
+          "LastEventType": "Complete",
+          "LastEventAtUtc": "2026-07-04T05:00:00Z"
+        },
+        {
+          "OrderNo": "MO-1001",
+          "OperationNo": 20,
+          "OperationName": "Fill and Package",
+          "WorkCenterId": "WC-PCK-02",
+          "Status": "Ready",
+          "PlannedQty": 5000,
+          "CompletedQty": 0,
+          "ScrapQty": 0,
+          "PlannedStart": "2026-07-04T08:00:00Z",
+          "ActualStart": null,
+          "ActualEnd": null,
+          "OperatorId": "",
+          "DeviceId": "",
+          "LastEventType": "",
+          "LastEventAtUtc": null
+        }
+      ]
+    },
+    {
+      "OrderNo": "MO-CAR-2001",
+      "ItemId": "CAR-ASM-001",
+      "PlannedQty": 220,
+      "ReleasedQty": 120,
+      "Status": "Released",
+      "Priority": "High",
+      "DueDate": "2026-07-09T00:00:00Z",
+      "LastAction": "Release",
+      "LastActionBy": "planner-veh-01",
+      "LastActionAtUtc": "2026-07-04T06:05:00Z",
+      "LinkedLotNo": "LOT-CAR-2001",
+      "Operations": [
+        {
+          "OrderNo": "MO-CAR-2001",
+          "OperationNo": 10,
+          "OperationName": "Chassis Assembly",
+          "WorkCenterId": "WC-VEH-ASM-01",
+          "Status": "In Progress",
+          "PlannedQty": 120,
+          "CompletedQty": 70,
+          "ScrapQty": 2,
+          "PlannedStart": "2026-07-04T03:00:00Z",
+          "ActualStart": "2026-07-04T03:30:00Z",
+          "ActualEnd": null,
+          "OperatorId": "op-veh-01",
+          "DeviceId": "panel-veh-01",
+          "LastEventType": "Start",
+          "LastEventAtUtc": "2026-07-04T03:30:00Z"
+        }
+      ]
+    }
+  ],
+  "shopFloorEvents": [
+    { "EventId": "EVT-1001", "OrderNo": "MO-1001", "OperationNo": 10, "EventType": "Start", "Qty": 0, "ScrapQty": 0, "OperatorId": "op-01", "DeviceId": "panel-01", "TimestampUtc": "2026-07-04T02:00:00Z" },
+    { "EventId": "EVT-1002", "OrderNo": "MO-1001", "OperationNo": 10, "EventType": "Complete", "Qty": 5400, "ScrapQty": 80, "OperatorId": "op-02", "DeviceId": "tablet-03", "TimestampUtc": "2026-07-04T05:00:00Z" },
+    { "EventId": "EVT-2001", "OrderNo": "MO-CAR-2001", "OperationNo": 10, "EventType": "Start", "Qty": 0, "ScrapQty": 0, "OperatorId": "op-veh-01", "DeviceId": "panel-veh-01", "TimestampUtc": "2026-07-04T03:30:00Z" }
+  ],
+  "qualityHolds": [
+    { "HoldId": "HOLD-1001", "EntityType": "Order", "EntityId": "MO-1001", "ReasonCode": "Brix-Out-Of-Spec", "RaisedBy": "qa-01", "RaisedAt": "2026-07-04T02:00:00Z", "Status": "Open" }
+  ],
+  "nonConformances": [
+    { "NcrId": "NCR-1001", "OrderNo": "MO-1001", "OperationNo": 20, "Severity": "High", "Disposition": "Rework", "RootCause": "Underfill", "CapaId": "CAPA-2001", "Status": "Open", "RecordedBy": "qa-01", "RecordedAtUtc": "2026-07-04T02:00:00Z", "Notes": "Bottle fill variation exceeded limit" }
+  ],
+  "qualityHistory": [
+    { "ActionId": "QA-1001", "ActionType": "Hold", "EntityType": "Order", "EntityId": "MO-1001", "Result": "Open", "PerformedBy": "qa-01", "Comment": "Brix out of spec", "TimestampUtc": "2026-07-04T02:00:00Z" }
+  ],
+  "genealogyHistory": [
+    { "TraceId": "TR-1001", "LotNo": "LOT-ETH-9001", "Direction": "Backward", "NodeCount": 3, "RequestedBy": "operator", "RequestedAtUtc": "2026-07-04T05:30:00Z" },
+    { "TraceId": "TR-2001", "LotNo": "LOT-CAR-2001", "Direction": "Forward", "NodeCount": 2, "RequestedBy": "operator", "RequestedAtUtc": "2026-07-04T05:45:00Z" }
+  ],
+  "costingStates": [
+    {
+      "OrderNo": "MO-1001",
+      "SettlementStatus": "Pending",
+      "PostingId": "",
+      "PostAttempts": 0,
+      "RequiresRetry": false,
+      "Variances": [
+        { "OrderNo": "MO-1001", "VarianceType": "Material", "Amount": 420.55, "Currency": "USD", "AnalysisNote": "Molasses premium" },
+        { "OrderNo": "MO-1001", "VarianceType": "Labor", "Amount": -120.15, "Currency": "USD", "AnalysisNote": "Shift efficiency gain" }
+      ],
+      "Handoffs": [
+        { "EventId": "CH-1001", "OrderNo": "MO-1001", "EventType": "SettlementReady", "TargetSystem": "Accounting", "Status": "Pending", "CreatedAtUtc": "2026-07-04T06:00:00Z", "Notes": "Awaiting variance review" }
+      ]
+    },
+    {
+      "OrderNo": "MO-CAR-2001",
+      "SettlementStatus": "Pending",
+      "PostingId": "",
+      "PostAttempts": 0,
+      "RequiresRetry": true,
+      "Variances": [
+        { "OrderNo": "MO-CAR-2001", "VarianceType": "Material", "Amount": 780.00, "Currency": "USD", "AnalysisNote": "Imported body sheet premium" }
+      ],
+      "Handoffs": [
+        { "EventId": "CH-2001", "OrderNo": "MO-CAR-2001", "EventType": "SettlementReady", "TargetSystem": "Accounting", "Status": "Pending", "CreatedAtUtc": "2026-07-04T06:05:00Z", "Notes": "Awaiting bill of materials reconciliation" }
+      ]
+    }
+  ]
+}

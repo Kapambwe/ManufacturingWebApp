@@ -1,0 +1,122 @@
+{
+  "companyName": "Zambeef Products Plc",
+  "industryType": "agro-processing",
+  "country": "zambia",
+  "lifecycleTemplates": [
+    {
+      "displayName": "Meat Processing Lifecycle",
+      "description": "Livestock intake, slaughter, chilling, packing, and cold-chain release.",
+      "stages": [
+        {
+          "stageKey": "intake",
+          "name": "Livestock Intake",
+          "description": "Receive livestock and validate supplier documents.",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Open",
+          "allowedNextStageKeys": ["slaughter"]
+        },
+        {
+          "stageKey": "slaughter",
+          "name": "Slaughter",
+          "description": "Humane processing and primary carcass handling.",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Active",
+          "allowedNextStageKeys": ["chilling"]
+        },
+        {
+          "stageKey": "chilling",
+          "name": "Chilling",
+          "description": "Rapid cooling and quality hold management.",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Stable",
+          "allowedNextStageKeys": ["packing"]
+        },
+        {
+          "stageKey": "packing",
+          "name": "Packing",
+          "description": "Portioning, labeling, and traceability capture.",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "allowedNextStageKeys": ["dispatch"]
+        }
+      ]
+    },
+    {
+      "displayName": "Feed Mill Lifecycle",
+      "description": "Ingredient intake, milling, mixing, pelletizing, and bagging.",
+      "stages": [
+        {
+          "stageKey": "receiving",
+          "name": "Receiving",
+          "description": "Receive maize, soy, and mineral inputs.",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Open",
+          "allowedNextStageKeys": ["milling"]
+        },
+        {
+          "stageKey": "milling",
+          "name": "Milling",
+          "description": "Size reduction and screening.",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Active",
+          "allowedNextStageKeys": ["mixing"]
+        },
+        {
+          "stageKey": "mixing",
+          "name": "Mixing",
+          "description": "Blend by formulation and batch standard.",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Stable",
+          "allowedNextStageKeys": ["pelletizing"]
+        },
+        {
+          "stageKey": "bagging",
+          "name": "Bagging",
+          "description": "Bag, seal, and palletize finished feed.",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "allowedNextStageKeys": ["dispatch"]
+        }
+      ]
+    }
+  ],
+  "sampleRecords": {
+    "batches": [
+      {
+        "batchNumber": "ZB-MEAT-240701",
+        "product": "Fresh Beef Cuts",
+        "status": "InProcess",
+        "quantity": 1200,
+        "unit": "kg"
+      },
+      {
+        "batchNumber": "ZB-FEED-240702",
+        "product": "Starter Feed Pellets",
+        "status": "Released",
+        "quantity": 18000,
+        "unit": "kg"
+      }
+    ],
+    "suppliers": [
+      {
+        "supplierName": "Zambeef Farmers Co-op",
+        "material": "Livestock",
+        "status": "Approved"
+      },
+      {
+        "supplierName": "North Valley Grain",
+        "material": "Maize",
+        "status": "Approved"
+      }
+    ]
+  },
+  "notes": "Zambeef demo data for agro-processing, livestock, and feed operations."
+}

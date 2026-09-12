@@ -1,0 +1,51 @@
+{
+  "companyName": "TradeKings Group Limited",
+  "industryType": "food-beverage",
+  "country": "zambia",
+  "operationType": "Cooking Oil",
+  "productionLines": [
+    {
+      "lineName": "Crude Oil Intake",
+      "status": "Running",
+      "outputPerHour": 24.5,
+      "unit": "tonnes"
+    },
+    {
+      "lineName": "Refining and Deodorising",
+      "status": "Running",
+      "outputPerHour": 18.2,
+      "unit": "tonnes"
+    },
+    {
+      "lineName": "Packaging and Palletising",
+      "status": "Running",
+      "outputPerHour": 22.0,
+      "unit": "cases"
+    }
+  ],
+  "materials": [
+    {
+      "materialName": "Crude Palm Oil",
+      "inventoryStatus": "Healthy",
+      "reorderLevel": 1200
+    },
+    {
+      "materialName": "Packaging Bottles",
+      "inventoryStatus": "Watch",
+      "reorderLevel": 50000
+    }
+  ],
+  "qualityChecks": [
+    {
+      "checkName": "FFA Level",
+      "target": "< 0.5%",
+      "status": "Pass"
+    },
+    {
+      "checkName": "Label Seal Integrity",
+      "target": "No defects",
+      "status": "Pass"
+    }
+  ],
+  "notes": "TradeKings food-beverage demo data covering cooking oil production and packaging."
+}

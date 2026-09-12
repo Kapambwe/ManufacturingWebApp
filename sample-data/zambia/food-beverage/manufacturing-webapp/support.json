@@ -1,0 +1,212 @@
+{
+  "autoPilotActions": [
+    {
+      "id": "ap-fb-1001",
+      "category": "Procurement",
+      "title": "Low Stock: PET Bottles",
+      "description": "PET bottle inventory is below the target for the beverage bottling line.",
+      "suggestedAction": "Raise purchase order for bottles and closures.",
+      "status": "Pending",
+      "timestamp": "2026-07-04T08:00:00Z",
+      "impactAnalysis": "Avoids line stoppage and missed dispatches.",
+      "confidenceScore": 98
+    }
+  ],
+  "autoPilotHistory": [],
+  "productionOrders": [
+    {
+      "id": "po-fb-1001",
+      "orderCode": "FB-JUICE-001",
+      "productName": "Mango Juice Concentrate",
+      "orderType": "Standard",
+      "status": "Active",
+      "targetQuantity": 4000,
+      "completedQuantity": 1800,
+      "startDate": "2026-07-01T00:00:00Z",
+      "endDate": "2026-07-10T00:00:00Z",
+      "totalBudget": 22000,
+      "fundsUtilized": 12000
+    }
+  ],
+  "inventoryItems": [
+    {
+      "id": "inv-fb-1001",
+      "receiptNumber": "RC-FB-001",
+      "supplierName": "Mongu Fruit Producers",
+      "sku": "RM-MANGO-01",
+      "name": "Fresh Mango Pulp",
+      "batchNumber": "FB-B-001",
+      "quantity": 3200,
+      "unit": "kg",
+      "binLocation": "COLD-01",
+      "expiryDate": "2026-07-14T00:00:00Z",
+      "status": "Available"
+    }
+  ],
+  "warehouseTasks": [
+    {
+      "id": "task-fb-1001",
+      "taskType": "Picking",
+      "description": "Pick mango pulp for juice blending",
+      "assignedTo": "Operator 3",
+      "status": "Pending",
+      "createdAt": "2026-07-04T08:00:00Z"
+    }
+  ],
+  "fleetVehicles": [
+    {
+      "id": "fleet-fb-1001",
+      "plateNumber": "FB-TRK-101",
+      "driverName": "Grace Mwewa",
+      "currentRoute": "Mongu -> Lusaka",
+      "latitude": -15.3875,
+      "longitude": 28.3228,
+      "temperature": 3.2,
+      "humidity": 72,
+      "status": "In-Transit"
+    }
+  ],
+  "intakeRecords": [
+    {
+      "id": "intake-fb-1001",
+      "receiptNumber": "RC-FB-001",
+      "supplierName": "Mongu Fruit Producers",
+      "materialType": "Mangoes",
+      "deliveryDate": "2026-07-03T00:00:00Z",
+      "declaredWeight": 5000,
+      "actualWeight": 4850,
+      "status": "Partial Accept",
+      "qcGrading": "Grade B",
+      "moistureContent": 85.0,
+      "purityLevel": 90.0
+    }
+  ],
+  "sourcingContracts": [
+    {
+      "id": "sc-fb-1001",
+      "contractNumber": "FB-CTR-001",
+      "vendorName": "TradeKings Supply",
+      "materialCategory": "Packaging",
+      "status": "Active",
+      "startDate": "2026-04-01T00:00:00Z",
+      "endDate": "2027-01-01T00:00:00Z",
+      "contractValue": 175000,
+      "amountFulfilled": 98000
+    }
+  ],
+  "financialSyncEvents": [
+    {
+      "id": "fin-fb-1001",
+      "eventType": "RevenueRecognition",
+      "sourceModule": "Logistics",
+      "referenceId": "WB-FB-4001",
+      "timestamp": "2026-07-03T08:00:00Z",
+      "amount": 45000,
+      "currency": "ZMW",
+      "status": "Pending",
+      "destinationLedger": "Sales Revenue"
+    }
+  ],
+  "costAllocations": [
+    {
+      "id": "cost-fb-1001",
+      "costCenter": "Juice Line A",
+      "expenseType": "Water",
+      "allocatedAmount": 1400,
+      "allocationPeriod": "2026-07-01T00:00:00Z",
+      "syncStatus": "Pending"
+    }
+  ],
+  "platformSession": {
+    "userId": "planner-juice-01",
+    "displayName": "Food and Beverage Planner",
+    "environment": "ManufacturingWebApp",
+    "mode": "Mock",
+    "roles": [ "Planner", "Supervisor" ],
+    "permissions": [ "Audit.View", "Orders.Manage", "Quality.Manage", "Traceability.View", "Performance.View" ],
+    "lastAuthenticatedUtc": "2026-07-04T07:48:00Z"
+  },
+  "platformAuditEvents": [
+    { "eventId": "audit-fb-1001", "userId": "planner-juice-01", "action": "Login", "resource": "Platform", "outcome": "Success", "details": "Authenticated into food-beverage context", "eventTimeUtc": "2026-07-04T07:48:00Z", "severity": "Info" }
+  ],
+  "platformPermissionRules": [
+    { "permission": "Audit.View", "description": "View audit trail and system events", "granted": true },
+    { "permission": "Orders.Manage", "description": "Create and update production orders", "granted": true }
+  ],
+  "subscribers": [
+    {
+      "id": "sub-fb-1001",
+      "msisdn": "260971000111",
+      "fullName": "Beverage Sales Lead",
+      "status": "Active",
+      "planType": "Prepaid",
+      "airtimeBalance": 45.5,
+      "dataBalance": 2.4,
+      "kycStatus": "2026-06-30T00:00:00Z",
+      "simSerial": "SIM-998877"
+    }
+  ],
+  "telecomBills": [
+    {
+      "id": "bill-fb-1001",
+      "subscriberId": "260971000111",
+      "billCycle": "2026-07-01T00:00:00Z",
+      "usageCharges": 320,
+      "subscriptionFees": 180,
+      "paymentStatus": "Paid"
+    }
+  ],
+  "telecomRecharges": [
+    { "id": "recharge-fb-1001", "subscriberId": "260971000111", "amount": 100, "channel": "Bank Transfer", "rechargedAtUtc": "2026-07-04T05:30:00Z", "status": "Posted" }
+  ],
+  "telecomUsage": [
+    { "id": "usage-fb-1001", "subscriberId": "260971000111", "voiceMinutes": 65, "dataMb": 1024, "ratedAmount": 21.5, "ratedAtUtc": "2026-07-04T06:00:00Z", "status": "Rated" }
+  ],
+  "telecomAssurance": [
+    { "id": "assure-fb-1001", "category": "Performance", "summary": "Bottling plant office coverage is stable", "owner": "network-ops", "status": "Closed", "raisedAtUtc": "2026-07-04T06:10:00Z", "notes": "No action needed" }
+  ],
+  "telecomCdrs": [
+    { "id": "cdr-fb-1001", "subscriberId": "260971000111", "callDirection": "Inbound", "durationSeconds": 132, "ratedAmount": 2.75, "cellId": "CELL-FB-04", "occurredAtUtc": "2026-07-04T06:05:00Z", "status": "Mediated" }
+  ],
+  "telecomRoaming": [],
+  "telecomCases": [
+    { "id": "case-fb-1001", "caseNumber": "CASE-FB-1001", "subscriberId": "260971000111", "category": "Billing", "summary": "Monthly bill review for dispatch coordinator", "owner": "care-fb-01", "status": "Resolved", "createdAtUtc": "2026-07-04T06:15:00Z" }
+  ],
+  "telecomSites": [
+    { "id": "site-fb-1001", "siteCode": "FB-01", "siteName": "Bottling Plant", "region": "Lusaka", "technology": "4G", "status": "Active", "uptimePercent": 99.9, "owner": "radio-ops" }
+  ],
+  "telecomElements": [
+    { "id": "elem-fb-1001", "elementCode": "CELL-FB-04", "elementType": "Base Station", "siteCode": "FB-01", "vendor": "Huawei", "status": "In Service", "managedBy": "noc-fb-01", "lastHeartbeatUtc": "2026-07-04T06:12:00Z" }
+  ],
+  "telecomWorkOrders": [
+    { "id": "wo-fb-1001", "workOrderNumber": "WO-FB-1001", "workType": "Inspection", "priority": "Medium", "siteCode": "FB-01", "summary": "Quarterly site health check", "assignedTo": "field-tech-fb-01", "status": "Open", "createdAtUtc": "2026-07-04T06:20:00Z" }
+  ],
+  "utilityMeters": [
+    { "id": "um-fb-1001", "meterNumber": "ZWES-FB-1001", "customerName": "Beverage Bottling Plant", "status": "Active", "meterType": "Electricity", "lastReading": 8210.6, "lastReadingDate": "2026-07-04T05:45:00Z", "currentUsage": 180.4, "tariffClass": "Industrial", "balance": 2400 }
+  ],
+  "utilityBills": [
+    { "id": "ub-fb-1001", "meterId": "ZWES-FB-1001", "billDate": "2026-07-01T00:00:00Z", "consumption": 4200, "amount": 2400, "status": "Part Paid", "dueDate": "2026-07-14T00:00:00Z" }
+  ],
+  "utilityReadings": [
+    { "id": "ur-fb-1001", "meterId": "ZWES-FB-1001", "readingValue": 8210.6, "capturedAtUtc": "2026-07-04T05:45:00Z", "capturedBy": "meter-tech-fb-01", "status": "Posted" }
+  ],
+  "utilityTariffs": [
+    { "id": "ut-fb-1001", "tariffClass": "Industrial", "meterType": "Electricity", "baseCharge": 180, "ratePerUnit": 0.52, "status": "Active" }
+  ],
+  "utilityOutages": [
+    { "id": "uo-fb-1001", "outageNumber": "OUT-FB-1001", "area": "Cold Room", "severity": "Low", "status": "Closed", "owner": "dispatch-fb-01", "reportedAtUtc": "2026-07-04T06:05:00Z", "notes": "Utility restored" }
+  ],
+  "utilityEvents": [
+    { "id": "ue-fb-1001", "meterId": "ZWES-FB-1001", "eventType": "Read", "notes": "Scheduled read captured", "occurredAtUtc": "2026-07-04T05:45:00Z" }
+  ],
+  "utilityPrepayments": [
+    { "id": "up-fb-1001", "accountNumber": "ACC-FB-1001", "amount": 1000, "postedAtUtc": "2026-07-04T05:55:00Z", "status": "Posted" }
+  ],
+  "utilityDispatches": [
+    { "id": "ud-fb-1001", "dispatchNumber": "DIS-FB-1001", "area": "Cold Room", "crew": "Utility Crew 2", "status": "Assigned", "createdAtUtc": "2026-07-04T06:00:00Z" }
+  ],
+  "utilityForecasts": [
+    { "id": "uf-fb-1001", "area": "Lusaka Food Corridor", "forecastDate": "2026-07-05T00:00:00Z", "forecastLoad": 92.8, "status": "Planned" }
+  ],
+  "ethanolBatches": []
+}

@@ -1,0 +1,90 @@
+{
+  "templates": [
+    {
+      "templateKey": "minerals-processing-generic",
+      "displayName": "Generic Minerals Processing Lifecycle",
+      "description": "A reusable lifecycle for quarry, mineral, and concentrate operations.",
+      "primaryUnitLabel": "Batches",
+      "stages": [
+        {
+          "stageKey": "receiving",
+          "name": "Receiving",
+          "description": "Receive ore, aggregate, or mineral feedstock and check the delivery note.",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Released",
+          "unit": "",
+          "allowedNextStageKeys": ["crushing"]
+        },
+        {
+          "stageKey": "crushing",
+          "name": "Crushing",
+          "description": "Break down the input material to the required size.",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Running",
+          "unit": "",
+          "allowedNextStageKeys": ["screening"]
+        },
+        {
+          "stageKey": "screening",
+          "name": "Screening",
+          "description": "Separate fine and coarse material and remove unwanted fragments.",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Running",
+          "unit": "",
+          "allowedNextStageKeys": ["washing"]
+        },
+        {
+          "stageKey": "washing",
+          "name": "Washing",
+          "description": "Remove dust, mud, and surface contamination.",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["concentration"]
+        },
+        {
+          "stageKey": "concentration",
+          "name": "Concentration",
+          "description": "Increase mineral value using process reagents or separation methods.",
+          "sortOrder": 5,
+          "status": "Warning",
+          "value": "In progress",
+          "unit": "",
+          "allowedNextStageKeys": ["packaging"]
+        },
+        {
+          "stageKey": "packaging",
+          "name": "Packaging",
+          "description": "Bag, bulk-load, or palletize the finished output.",
+          "sortOrder": 6,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["dispatch"]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Release the finished product with the required paperwork.",
+          "sortOrder": 7,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "minerals-processing-generic",
+      "templateKey": "minerals-processing-generic",
+      "displayName": "Minerals Processing",
+      "notes": "Generic reusable lifecycle for mineral operations"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "templates": [
+    {
+      "templateKey": "cheese",
+      "displayName": "Cheese Blend",
+      "description": "Cheese formulation template.",
+      "ingredients": [
+        { "name": "Raw Milk", "quantity": 1000, "unit": "L" },
+        { "name": "Starter Culture", "quantity": 2, "unit": "kg" },
+        { "name": "Rennet", "quantity": 0.5, "unit": "kg" },
+        { "name": "Salt", "quantity": 15, "unit": "kg" }
+      ],
+      "notes": "Suitable for hard cheese variants."
+    }
+  ]
+}

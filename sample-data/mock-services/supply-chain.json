@@ -1,0 +1,69 @@
+{
+  "supplierRisks": [
+    {
+      "id": "risk-cassava-001",
+      "supplierName": "Zambia Cassava Growers Assoc.",
+      "category": "Farmer",
+      "riskScore": 15,
+      "riskLevel": "Low",
+      "factors": [
+        { "name": "Climate", "impact": "Low", "description": "Favorable rainfall forecast." },
+        { "name": "Financial", "impact": "Low", "description": "Strong payment history." }
+      ],
+      "aIPrediction": "Stable supply expected for next quarter.",
+      "owner": "",
+      "actionStatus": "Open"
+    },
+    {
+      "id": "risk-packaging-001",
+      "supplierName": "Global Packaging Solutions",
+      "category": "Packaging",
+      "riskScore": 65,
+      "riskLevel": "High",
+      "factors": [
+        { "name": "Logistics", "impact": "High", "description": "Durban port congestion." },
+        { "name": "Lead Time", "impact": "Medium", "description": "Increased from 14 to 24 days." }
+      ],
+      "aIPrediction": "Potential 10-day delay in PET bottle shipments due to port congestion.",
+      "owner": "",
+      "actionStatus": "Open"
+    },
+    {
+      "id": "risk-logistics-001",
+      "supplierName": "FastTrack Logistics ZM",
+      "category": "Logistics",
+      "riskScore": 35,
+      "riskLevel": "Medium",
+      "factors": [
+        { "name": "Economic", "impact": "Medium", "description": "Fuel price fluctuations." }
+      ],
+      "aIPrediction": "Fuel price volatility may impact contract rates by 3-5%.",
+      "owner": "",
+      "actionStatus": "Open"
+    }
+  ],
+  "supplierRiskActions": [],
+  "networkNodes": [
+    { "nodeName": "Primary Factory", "nodeType": "Factory", "location": "Lusaka", "inventoryLevel": 85, "riskStatus": "Stable", "carbonFootprint": 1250 },
+    { "nodeName": "Agri-Coop (Tier 1)", "nodeType": "Tier 1 Supplier", "location": "Mpika", "inventoryLevel": 40, "riskStatus": "Warning", "carbonFootprint": 320 },
+    { "nodeName": "Fertilizer Ltd (Tier 2)", "nodeType": "Tier 2 Supplier", "location": "Ndola", "inventoryLevel": 90, "riskStatus": "Stable", "carbonFootprint": 850 },
+    { "nodeName": "Central Depot", "nodeType": "Warehouse", "location": "Kabwe", "inventoryLevel": 15, "riskStatus": "Disrupted", "carbonFootprint": 150 }
+  ],
+  "ledger": [
+    { "hash": "0x8F4B...3A12", "assetType": "Cassava Batch ETH-402", "event": "Origin Verified", "participants": "Farmer Co-op -> Transnet", "verified": true },
+    { "hash": "0x2A9C...7F44", "assetType": "Smart Contract Pay", "event": "Automated Payment Executed", "participants": "AccountingWebApp -> Farmer", "verified": true },
+    { "hash": "0x5C1E...9B88", "assetType": "Mango Puree MNG-201", "event": "Quality Passed (Edge IoT)", "participants": "Factory Sensors", "verified": true }
+  ],
+  "demandForecasts": [
+    { "product": "Ethanol (Industrial)", "marketSignal": "Global supply chain constraint detected in Asia.", "suggestedAdjustment": 15, "aiConfidence": "94%" },
+    { "product": "Pineapple Juice", "marketSignal": "Early rainy season predicted; potential harvest delay.", "suggestedAdjustment": -10, "aiConfidence": "88%" }
+  ],
+  "routePlans": [
+    { "routeId": "route-harvest-lane", "originNode": "Agri-Coop (Tier 1)", "destinationNode": "Central Depot", "routeName": "Harvest Lane", "status": "Planned", "owner": "planner-01", "notes": "Primary inbound corridor", "plannedForUtc": "2026-07-04T08:00:00Z" },
+    { "routeId": "route-factory-replenishment", "originNode": "Central Depot", "destinationNode": "Primary Factory", "routeName": "Factory Replenishment", "status": "Active", "owner": "planner-02", "notes": "Daily replenishment run", "plannedForUtc": "2026-07-04T06:00:00Z" }
+  ],
+  "supplyChainExceptions": [
+    { "exceptionId": "ex-delay-001", "routeId": "Harvest Lane", "type": "Delay", "severity": "High", "owner": "dispatch-01", "status": "Open", "resolution": "", "evidence": "Truck held at checkpoint", "raisedAtUtc": "2026-07-04T03:00:00Z" },
+    { "exceptionId": "ex-capacity-001", "routeId": "Factory Replenishment", "type": "Capacity", "severity": "Medium", "owner": "planner-02", "status": "Investigating", "resolution": "", "evidence": "Warehouse congestion", "raisedAtUtc": "2026-07-04T05:00:00Z" }
+  ]
+}

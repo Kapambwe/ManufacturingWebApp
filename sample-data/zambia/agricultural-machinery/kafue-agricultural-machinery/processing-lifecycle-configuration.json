@@ -1,0 +1,90 @@
+{
+  "profileMappings": [
+    {
+      "templateKey": "agricultural-machinery",
+      "profileKey": "agricultural-machinery",
+      "displayName": "Agricultural Machinery Lifecycle",
+      "notes": ""
+    }
+  ],
+  "templates": [
+    {
+      "templateKey": "agricultural-machinery",
+      "description": "Agricultural machinery manufacturing operations from intake through dispatch.",
+      "stages": [
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "fabrication"
+          ],
+          "description": "Agricultural Machinery stage: Intake",
+          "stageKey": "intake",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 1,
+          "name": "Intake"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "welding"
+          ],
+          "description": "Agricultural Machinery stage: Fabrication",
+          "stageKey": "fabrication",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 2,
+          "name": "Fabrication"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "assembly"
+          ],
+          "description": "Agricultural Machinery stage: Welding",
+          "stageKey": "welding",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 3,
+          "name": "Welding"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "testing"
+          ],
+          "description": "Agricultural Machinery stage: Assembly",
+          "stageKey": "assembly",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 4,
+          "name": "Assembly"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "dispatch"
+          ],
+          "description": "Agricultural Machinery stage: Testing",
+          "stageKey": "testing",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 5,
+          "name": "Testing"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [],
+          "description": "Agricultural Machinery stage: Dispatch",
+          "stageKey": "dispatch",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 6,
+          "name": "Dispatch"
+        }
+      ],
+      "displayName": "Agricultural Machinery Lifecycle",
+      "primaryUnitLabel": "Machines"
+    }
+  ]
+}

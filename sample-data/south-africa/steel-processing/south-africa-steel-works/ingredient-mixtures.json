@@ -1,0 +1,15 @@
+{
+  "templates": [
+    {
+      "templateKey": "steel-charge",
+      "displayName": "Steelmaking Charge Mix",
+      "description": "Charge mix for steel melt.",
+      "ingredients": [
+        { "name": "Iron Source", "quantity": 700, "unit": "kg" },
+        { "name": "Scrap Metal", "quantity": 250, "unit": "kg" },
+        { "name": "Limestone", "quantity": 30, "unit": "kg" }
+      ],
+      "notes": "Typical furnace charge profile."
+    }
+  ]
+}

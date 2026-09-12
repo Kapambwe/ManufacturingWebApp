@@ -1,0 +1,58 @@
+{
+  "shifts": [
+    { "ShiftId": "SHIFT-A", "ShiftName": "Day Shift", "Supervisor": "sup-01", "StartUtc": "2026-07-04T06:00:00Z", "EndUtc": "2026-07-04T14:00:00Z", "Status": "Active" },
+    { "ShiftId": "SHIFT-B", "ShiftName": "Swing Shift", "Supervisor": "sup-02", "StartUtc": "2026-07-04T14:00:00Z", "EndUtc": "2026-07-04T22:00:00Z", "Status": "Planned" },
+    { "ShiftId": "SHIFT-C", "ShiftName": "Night Shift", "Supervisor": "sup-03", "StartUtc": "2026-07-04T22:00:00Z", "EndUtc": "2026-07-05T06:00:00Z", "Status": "Planned" }
+  ],
+  "assignments": [
+    { "AssignmentId": "ASSIGN-1001", "OperatorId": "op-01", "OperatorName": "A. Moyo", "LineId": "LINE-01", "Station": "Sorter", "Role": "Lead Operator", "Status": "Assigned", "AssignedAtUtc": "2026-07-04T06:00:00Z", "Notes": "Start with wash line checks." },
+    { "AssignmentId": "ASSIGN-1002", "OperatorId": "op-03", "OperatorName": "T. Banda", "LineId": "LINE-02", "Station": "Filler", "Role": "Operator", "Status": "Assigned", "AssignedAtUtc": "2026-07-04T06:00:00Z", "Notes": "Monitor seals and fill levels." }
+  ],
+  "downtimeRecords": [
+    { "DowntimeId": "DT-1001", "AssetId": "M-201", "AssetName": "Pulper B", "ReasonCategory": "Mechanical", "ReasonDetails": "Bearing vibration exceeded threshold", "StartUtc": "2026-07-04T05:45:00Z", "Status": "Open", "LoggedBy": "maint-02" },
+    { "DowntimeId": "DT-1002", "AssetId": "M-402", "AssetName": "Chassis Press B", "ReasonCategory": "Tooling", "ReasonDetails": "Die alignment requires verification", "StartUtc": "2026-07-04T06:10:00Z", "Status": "Open", "LoggedBy": "maint-vehicle-02" }
+  ],
+  "maintenanceRecords": [
+    { "MaintenanceId": "MT-1001", "MachineId": "M-201", "MachineName": "Pulper B", "MaintenanceType": "Inspection", "Priority": "High", "RequestedBy": "maint-02", "AssignedTo": "tech-04", "Status": "Scheduled", "ScheduledForUtc": "2026-07-04T08:00:00Z", "Notes": "Follow-up on vibration alert" },
+    { "MaintenanceId": "MT-1002", "MachineId": "M-402", "MachineName": "Chassis Press B", "MaintenanceType": "Tooling Review", "Priority": "High", "RequestedBy": "maint-vehicle-02", "AssignedTo": "tech-12", "Status": "Scheduled", "ScheduledForUtc": "2026-07-04T10:00:00Z", "Notes": "Pre-run tooling alignment check" }
+  ],
+  "handoverHistory": [
+    { "HandoverId": "HO-1001", "FromShiftId": "SHIFT-A", "ToShiftId": "SHIFT-B", "Supervisor": "sup-01", "Notes": "All line statuses stable", "CompletedAtUtc": "2026-07-04T06:00:00Z", "Status": "Completed" }
+  ],
+  "roster": [
+    { "RosterId": "ROSTER-1001", "OperatorId": "op-01", "OperatorName": "A. Moyo", "SkillGroup": "Sorting", "CurrentLineId": "LINE-01", "ShiftId": "SHIFT-A", "PlannedHours": 8, "AssignedHours": 8, "CapacityPercent": 100, "Availability": "Available", "Status": "Active", "Notes": "Lead sorter" },
+    { "RosterId": "ROSTER-1002", "OperatorId": "op-03", "OperatorName": "T. Banda", "SkillGroup": "Packaging", "CurrentLineId": "LINE-02", "ShiftId": "SHIFT-A", "PlannedHours": 8, "AssignedHours": 6, "CapacityPercent": 75, "Availability": "Available", "Status": "Active", "Notes": "Can support fill line" }
+  ],
+  "capacities": [
+    { "LineId": "LINE-01", "LineName": "Wash and Sort Line", "PlannedHeadcount": 4, "AssignedHeadcount": 4, "CapacityPercent": 100, "Bottleneck": "None", "Status": "Healthy", "Notes": "Fully staffed" },
+    { "LineId": "LINE-02", "LineName": "Pulp and Fill Line", "PlannedHeadcount": 5, "AssignedHeadcount": 4, "CapacityPercent": 80, "Bottleneck": "Packaging labor", "Status": "Watch", "Notes": "Need one extra packer" },
+    { "LineId": "LINE-03", "LineName": "Pack and Label Line", "PlannedHeadcount": 3, "AssignedHeadcount": 2, "CapacityPercent": 67, "Bottleneck": "Night shift coverage", "Status": "Critical", "Notes": "Coverage gap on night shift" },
+    { "LineId": "LINE-04", "LineName": "Vehicle Assembly Line", "PlannedHeadcount": 10, "AssignedHeadcount": 8, "CapacityPercent": 80, "Bottleneck": "Body shell welding", "Status": "Watch", "Notes": "Needs two welders" }
+  ],
+  "lines": [
+    { "LineId": "LINE-01", "Name": "Wash and Sort Line", "Status": "Running", "CurrentOrder": "FO-1001", "ThroughputPerHour": 2100, "UtilizationPercent": 84, "OeePercent": 77, "Shift": "Day" },
+    { "LineId": "LINE-02", "Name": "Pulp and Fill Line", "Status": "Running", "CurrentOrder": "FO-1002", "ThroughputPerHour": 1850, "UtilizationPercent": 78, "OeePercent": 73, "Shift": "Day" },
+    { "LineId": "LINE-03", "Name": "Pack and Label Line", "Status": "Maintenance", "CurrentOrder": "", "ThroughputPerHour": 0, "UtilizationPercent": 41, "OeePercent": 36, "Shift": "Night" },
+    { "LineId": "LINE-04", "Name": "Vehicle Assembly Line", "Status": "Running", "CurrentOrder": "CAR-ASM-001", "ThroughputPerHour": 22, "UtilizationPercent": 81, "OeePercent": 74, "Shift": "Day" }
+  ],
+  "machines": [
+    { "MachineId": "M-101", "Name": "Sorter A", "LineId": "LINE-01", "Industry": "Food Processing", "AssetClass": "Inspection and Sorting", "MachineType": "Optical Sorter", "MachineRole": "Inbound quality gate", "Manufacturer": "AgriTech Systems", "ModelNumber": "ATS-OptiSort 300", "SerialNumber": "ATS-300-0017", "AssetTag": "AT-00101", "Site": "Plant A", "Area": "Inbound Sorting", "OperatingMode": "Automated", "ControlSystem": "PLC + Vision Controller", "PowerSource": "Electric", "TelemetrySource": "SCADA Feed", "MaintenanceOwner": "qa-maint-01", "ComplianceProfile": "Food safety / traceability", "OperatingContext": "Checks inbound produce before release to wash line", "Status": "Operational", "TemperatureC": 42.5, "RuntimeHours": 118.3, "LastServiceDate": "2026-06-22T00:00:00Z", "CommissionedOnUtc": "2024-11-04T00:00:00Z", "AlertCount": 0, "Capabilities": ["High-speed inspection", "Auto reject", "Vision-based sorting"] },
+    { "MachineId": "M-401", "Name": "Body Weld Cell A", "LineId": "LINE-04", "Industry": "Vehicle Assembly", "AssetClass": "Robotic Welding", "MachineType": "Weld Cell", "MachineRole": "Body shell welding", "Manufacturer": "AutoFrame Robotics", "ModelNumber": "AFR-WC-900", "SerialNumber": "AFR-900-4101", "AssetTag": "AT-00401", "Site": "Plant B", "Area": "Body Shop", "OperatingMode": "Automated", "ControlSystem": "PLC + Robot Controller", "PowerSource": "Electric", "TelemetrySource": "IIoT Gateway", "MaintenanceOwner": "maint-vehicle-01", "ComplianceProfile": "Weld integrity / dimensional control", "OperatingContext": "Vehicle body welding for car assembly", "Status": "Operational", "TemperatureC": 49.3, "RuntimeHours": 164.4, "LastServiceDate": "2026-06-25T00:00:00Z", "CommissionedOnUtc": "2025-03-04T00:00:00Z", "AlertCount": 0, "Capabilities": ["Body shell welding", "Spot weld inspection", "Dimensional alignment"] }
+  ],
+  "tasks": [
+    { "TaskId": "TASK-1001", "TaskType": "Quality Check", "AssignedTo": "qa-01", "Area": "Line 1", "Priority": "High", "Status": "Pending", "DueAt": "2026-07-04T06:45:00Z", "Description": "Verify product dimensions after wash stage." },
+    { "TaskId": "TASK-1004", "TaskType": "Assembly Calibration", "AssignedTo": "maint-vehicle-01", "Area": "Line 4", "Priority": "High", "Status": "Pending", "DueAt": "2026-07-04T09:00:00Z", "Description": "Verify weld cell calibration before car body run." }
+  ],
+  "exceptions": [
+    { "ExceptionId": "EX-1001", "ExceptionType": "Blocked", "ReferenceId": "TASK-1003", "ReferenceName": "Maintenance Inspection", "Owner": "maint-02", "TargetArea": "Line 3", "Priority": "High", "Status": "Open", "EscalationLevel": "None", "DueAtUtc": "2026-07-04T07:00:00Z", "RecommendedAction": "Clear obstruction and verify sensor status", "Notes": "Waiting on parts" },
+    { "ExceptionId": "EX-1004", "ExceptionType": "Blocked", "ReferenceId": "TASK-1004", "ReferenceName": "Assembly Calibration", "Owner": "maint-vehicle-01", "TargetArea": "Line 4", "Priority": "High", "Status": "Open", "EscalationLevel": "Supervisor", "DueAtUtc": "2026-07-04T08:30:00Z", "RecommendedAction": "Calibrate weld tooling before first run", "Notes": "Vehicle line startup" }
+  ],
+  "incidents": [
+    { "IncidentId": "INC-1001", "AlarmId": "ALERT-1002", "Category": "Alarm", "Severity": "Critical", "SourceAssetId": "M-201", "SourceName": "Pulper B", "Summary": "High vibration alarm triggered on Pulper B.", "Owner": "maint-02", "Status": "Open", "RaisedAtUtc": "2026-07-04T06:10:00Z", "Notes": "Awaiting operator acknowledgment" },
+    { "IncidentId": "INC-1003", "AlarmId": "ALERT-1003", "Category": "Alarm", "Severity": "Warning", "SourceAssetId": "M-401", "SourceName": "Body Weld Cell A", "Summary": "Weld cell temperature trending high.", "Owner": "maint-vehicle-01", "Status": "Open", "RaisedAtUtc": "2026-07-04T06:20:00Z", "Notes": "Monitor cooling system" }
+  ],
+  "alerts": [
+    { "AlertId": "ALERT-1001", "Category": "Quality", "Severity": "Warning", "Message": "Moisture reading drifting above threshold on Line 1.", "Status": "Open", "SourceAssetId": "M-101", "RaisedAt": "2026-07-04T06:05:00Z" },
+    { "AlertId": "ALERT-1003", "Category": "Assembly", "Severity": "Warning", "Message": "Vehicle weld cell temperature trending high.", "Status": "Open", "SourceAssetId": "M-401", "RaisedAt": "2026-07-04T06:15:00Z" }
+  ]
+}

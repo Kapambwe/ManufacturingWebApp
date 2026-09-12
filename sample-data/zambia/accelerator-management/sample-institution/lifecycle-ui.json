@@ -1,0 +1,99 @@
+{
+  "country": "Zambia",
+  "institutionType": "accelerator-management",
+  "institutionName": "sample-institution",
+  "lifecycleName": "Supplier to Finished Product Lifecycle",
+  "description": "UI friendly lifecycle display.",
+  "summary": {
+    "overallProgressPercent": 58,
+    "activeStageKey": "processing",
+    "activeStageName": "Processing",
+    "status": "In Progress"
+  },
+  "categories": [
+    {
+      "categoryKey": "intake",
+      "displayName": "Intake",
+      "color": "#2563eb",
+      "progressPercent": 100,
+      "stages": [
+        { "stageKey": "supplier-intake", "stageName": "Supplier Intake", "order": 1, "status": "Complete", "progressPercent": 100, "description": "Supplier inputs are registered.", "color": "#16a34a" },
+        { "stageKey": "quality-check", "stageName": "Quality Check", "order": 2, "status": "In Progress", "progressPercent": 70, "description": "Inputs are being reviewed for quality.", "color": "#f59e0b" }
+      ]
+    },
+    {
+      "categoryKey": "factory",
+      "displayName": "Factory Stage",
+      "color": "#7c3aed",
+      "progressPercent": 45,
+      "stages": [
+        { "stageKey": "factory-start", "stageName": "Factory Start", "order": 3, "status": "In Progress", "progressPercent": 45, "description": "Factory stage work has started.", "color": "#f59e0b" }
+      ]
+    },
+    {
+      "categoryKey": "processing",
+      "displayName": "Processing Stage",
+      "color": "#0f766e",
+      "progressPercent": 55,
+      "stages": [
+        { "stageKey": "processing", "stageName": "Processing", "order": 4, "status": "In Progress", "progressPercent": 55, "description": "Material is being transformed.", "color": "#f59e0b" }
+      ]
+    },
+    {
+      "categoryKey": "main",
+      "displayName": "Main",
+      "color": "#2563eb",
+      "progressPercent": 100,
+      "stages": [
+        { "stageKey": "finished-goods", "stageName": "Finished Goods", "order": 5, "status": "Complete", "progressPercent": 100, "description": "Main lifecycle output is ready.", "color": "#16a34a" }
+      ]
+    },
+    {
+      "categoryKey": "dispatch",
+      "displayName": "Dispatch",
+      "color": "#0f766e",
+      "progressPercent": 25,
+      "stages": [
+        { "stageKey": "dispatch", "stageName": "Dispatch", "order": 6, "status": "In Progress", "progressPercent": 25, "description": "Finished items are being released.", "color": "#f59e0b" },
+        { "stageKey": "delivery-confirmation", "stageName": "Delivery Confirmation", "order": 7, "status": "Not Started", "progressPercent": 0, "description": "Proof of delivery will close the lifecycle.", "color": "#6b7280" }
+      ]
+    }
+  ],
+  "legend": {
+    "statuses": [
+      { "name": "Complete", "color": "#16a34a" },
+      { "name": "In Progress", "color": "#f59e0b" },
+      { "name": "Not Started", "color": "#6b7280" },
+      { "name": "Blocked", "color": "#dc2626" }
+    ]
+  },
+  "navigationItems": [
+    {
+      "label": "Dynamic Forms",
+      "targetPath": "/dynamic-forms",
+      "icon": "dynamic_form",
+      "visibleRoles": [ "Admin", "Programme Manager" ]
+    },
+    {
+      "label": "Factory Floor",
+      "targetPath": "/manufacturing/factory-floor",
+      "icon": "factory",
+      "visibleRoles": [ "Admin", "Operations Manager" ]
+    },
+    {
+      "label": "Processing Config",
+      "targetPath": "/manufacturing/processing/configuration",
+      "icon": "tune",
+      "visibleRoles": [ "Admin", "Programme Manager", "Operations Manager" ]
+    },
+    {
+      "label": "Lifecycle Overview",
+      "targetPath": "/manufacturing/lifecycle-examples",
+      "icon": "schema",
+      "visibleRoles": [ "Admin", "Programme Manager", "Operations" ]
+    }
+  ],
+  "stages": [
+    { "stageKey": "supplier-intake", "stageName": "Supplier Intake", "order": 1, "description": "Suppliers submit materials and supporting documents.", "status": "Open", "allowedNextStages": [ "quality-check" ], "completionCriteria": [ "Supplier registered", "Documents received", "Input logged" ] }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "workCenters": [
+    { "WorkCenterId": "WC-FB-WASH", "Name": "Wash and Sort", "ShiftCapacityHours": 16, "UtilizationPercent": 84, "MaxDailyLoadHours": 14, "SupportedSkills": [ "Sorting", "Washing", "Inspection" ] },
+    { "WorkCenterId": "WC-FB-PULP", "Name": "Pulp and Fill", "ShiftCapacityHours": 16, "UtilizationPercent": 79, "MaxDailyLoadHours": 14, "SupportedSkills": [ "Filling", "Pasteurization", "Packaging" ] },
+    { "WorkCenterId": "WC-FB-LBL", "Name": "Pack and Label", "ShiftCapacityHours": 14, "UtilizationPercent": 73, "MaxDailyLoadHours": 12, "SupportedSkills": [ "Labeling", "Case Packing", "Palletizing" ] }
+  ],
+  "routings": [
+    {
+      "RoutingId": "R-FB-1001",
+      "ItemId": "FB-JUICE-001",
+      "Version": "v1",
+      "Operations": [
+        { "OperationNo": 10, "WorkCenterId": "WC-FB-WASH", "SetupMinutes": 45, "RunMinutesPerUnit": 0.15, "QueueMinutes": 20, "RequiredSkill": "Sorting", "RequiredOperators": 3 },
+        { "OperationNo": 20, "WorkCenterId": "WC-FB-PULP", "SetupMinutes": 60, "RunMinutesPerUnit": 0.22, "QueueMinutes": 25, "RequiredSkill": "Filling", "RequiredOperators": 4 },
+        { "OperationNo": 30, "WorkCenterId": "WC-FB-LBL", "SetupMinutes": 30, "RunMinutesPerUnit": 0.1, "QueueMinutes": 15, "RequiredSkill": "Labeling", "RequiredOperators": 3 }
+      ]
+    }
+  ],
+  "mpsHistory": [
+    {
+      "ScheduleId": "mps-fb-1001",
+      "HorizonStart": "2026-07-04T00:00:00Z",
+      "HorizonEnd": "2026-07-18T00:00:00Z",
+      "Scenario": "Food Beverage",
+      "Status": "Generated",
+      "TotalPlannedQty": 9000,
+      "Lines": [
+        { "ItemId": "FB-JUICE-001", "BucketDate": "2026-07-05T00:00:00Z", "Quantity": 5000, "WorkCenterId": "WC-FB-PULP" },
+        { "ItemId": "FB-BEV-002", "BucketDate": "2026-07-06T00:00:00Z", "Quantity": 4000, "WorkCenterId": "WC-FB-LBL" }
+      ]
+    }
+  ],
+  "mrpHistory": [
+    {
+      "Run": { "RunId": "mrp-fb-1001", "RunTime": "2026-07-04T06:00:00Z", "Planner": "planner-fb-01", "Scenario": "Food Beverage", "Status": "Generated" },
+      "Requirements": [
+        { "ItemId": "RM-MANGO", "GrossReq": 6000, "NetReq": 2400, "Available": 3600, "ShortageQty": 2400, "PeggedOrderId": "FB-JUICE-001" },
+        { "ItemId": "PM-BOTTLE-500ML", "GrossReq": 9000, "NetReq": 1000, "Available": 8000, "ShortageQty": 1000, "PeggedOrderId": "FB-JUICE-001" }
+      ],
+      "Peggings": [],
+      "TotalShortageQty": 3400
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "shifts": [
+    { "ShiftId": "SHIFT-FB-A", "ShiftName": "Day Shift", "Supervisor": "sup-fb-01", "StartUtc": "2026-07-04T06:00:00Z", "EndUtc": "2026-07-04T14:00:00Z", "Status": "Active" },
+    { "ShiftId": "SHIFT-FB-B", "ShiftName": "Night Shift", "Supervisor": "sup-fb-02", "StartUtc": "2026-07-04T22:00:00Z", "EndUtc": "2026-07-05T06:00:00Z", "Status": "Planned" }
+  ],
+  "assignments": [
+    { "AssignmentId": "ASSIGN-FB-1001", "OperatorId": "op-fb-01", "OperatorName": "A. Moyo", "LineId": "LINE-FB-01", "Station": "Sorter", "Role": "Lead Operator", "Status": "Assigned", "AssignedAtUtc": "2026-07-04T06:00:00Z", "Notes": "Start with wash line checks." },
+    { "AssignmentId": "ASSIGN-FB-1002", "OperatorId": "op-fb-02", "OperatorName": "T. Banda", "LineId": "LINE-FB-02", "Station": "Filler", "Role": "Operator", "Status": "Assigned", "AssignedAtUtc": "2026-07-04T06:00:00Z", "Notes": "Monitor seals and fill levels." }
+  ],
+  "downtimeRecords": [
+    { "DowntimeId": "DT-FB-1001", "AssetId": "FB-M-201", "AssetName": "Pulper B", "ReasonCategory": "Mechanical", "ReasonDetails": "Bearing vibration exceeded threshold", "StartUtc": "2026-07-04T05:45:00Z", "Status": "Open", "LoggedBy": "maint-fb-02" }
+  ],
+  "maintenanceRecords": [
+    { "MaintenanceId": "MT-FB-1001", "MachineId": "FB-M-201", "MachineName": "Pulper B", "MaintenanceType": "Inspection", "Priority": "High", "RequestedBy": "maint-fb-02", "AssignedTo": "tech-fb-04", "Status": "Scheduled", "ScheduledForUtc": "2026-07-04T08:00:00Z", "Notes": "Follow-up on vibration alert" },
+    { "MaintenanceId": "MT-FB-1002", "MachineId": "FB-M-205", "MachineName": "Pasteurizer Tunnel", "MaintenanceType": "Thermal Check", "Priority": "High", "RequestedBy": "maint-fb-04", "AssignedTo": "tech-fb-09", "Status": "Scheduled", "ScheduledForUtc": "2026-07-04T10:00:00Z", "Notes": "Confirm temperature stability" }
+  ],
+  "handoverHistory": [
+    { "HandoverId": "HO-FB-1001", "FromShiftId": "SHIFT-FB-A", "ToShiftId": "SHIFT-FB-B", "Supervisor": "sup-fb-01", "Notes": "All line statuses stable", "CompletedAtUtc": "2026-07-04T06:00:00Z", "Status": "Completed" }
+  ],
+  "roster": [
+    { "RosterId": "ROSTER-FB-1001", "OperatorId": "op-fb-01", "OperatorName": "A. Moyo", "SkillGroup": "Sorting", "CurrentLineId": "LINE-FB-01", "ShiftId": "SHIFT-FB-A", "PlannedHours": 8, "AssignedHours": 8, "CapacityPercent": 100, "Availability": "Available", "Status": "Active", "Notes": "Lead sorter" },
+    { "RosterId": "ROSTER-FB-1002", "OperatorId": "op-fb-02", "OperatorName": "T. Banda", "SkillGroup": "Packaging", "CurrentLineId": "LINE-FB-02", "ShiftId": "SHIFT-FB-A", "PlannedHours": 8, "AssignedHours": 6, "CapacityPercent": 75, "Availability": "Available", "Status": "Active", "Notes": "Can support fill line" }
+  ],
+  "capacities": [
+    { "LineId": "LINE-FB-01", "LineName": "Wash and Sort Line", "PlannedHeadcount": 4, "AssignedHeadcount": 4, "CapacityPercent": 100, "Bottleneck": "None", "Status": "Healthy", "Notes": "Fully staffed" },
+    { "LineId": "LINE-FB-02", "LineName": "Pulp and Fill Line", "PlannedHeadcount": 5, "AssignedHeadcount": 4, "CapacityPercent": 80, "Bottleneck": "Packaging labor", "Status": "Watch", "Notes": "Need one extra packer" },
+    { "LineId": "LINE-FB-03", "LineName": "Pack and Label Line", "PlannedHeadcount": 3, "AssignedHeadcount": 2, "CapacityPercent": 67, "Bottleneck": "Night shift coverage", "Status": "Critical", "Notes": "Coverage gap on night shift" }
+  ],
+  "lines": [
+    { "LineId": "LINE-FB-01", "Name": "Wash and Sort Line", "Status": "Running", "CurrentOrder": "FB-1001", "ThroughputPerHour": 2100, "UtilizationPercent": 84, "OeePercent": 77, "Shift": "Day" },
+    { "LineId": "LINE-FB-02", "Name": "Pulp and Fill Line", "Status": "Running", "CurrentOrder": "FB-1002", "ThroughputPerHour": 1850, "UtilizationPercent": 78, "OeePercent": 73, "Shift": "Day" },
+    { "LineId": "LINE-FB-03", "Name": "Pack and Label Line", "Status": "Maintenance", "CurrentOrder": "", "ThroughputPerHour": 0, "UtilizationPercent": 41, "OeePercent": 36, "Shift": "Night" }
+  ],
+  "machines": [
+    {
+      "MachineId": "FB-M-101",
+      "Name": "Sorter A",
+      "LineId": "LINE-FB-01",
+      "Industry": "Food Beverage Processing",
+      "AssetClass": "Inspection and Sorting",
+      "MachineType": "Optical Sorter",
+      "MachineRole": "Inbound quality gate",
+      "Manufacturer": "AgriTech Systems",
+      "ModelNumber": "ATS-OptiSort 300",
+      "SerialNumber": "ATS-300-0017",
+      "AssetTag": "FB-00101",
+      "Site": "Food Beverage Plant",
+      "Area": "Inbound Sorting",
+      "OperatingMode": "Automated",
+      "ControlSystem": "PLC + Vision Controller",
+      "PowerSource": "Electric",
+      "TelemetrySource": "SCADA Feed",
+      "MaintenanceOwner": "qa-maint-01",
+      "ComplianceProfile": "Food safety / traceability",
+      "OperatingContext": "Checks inbound produce before release to wash line",
+      "Status": "Operational",
+      "TemperatureC": 42.5,
+      "RuntimeHours": 118.3,
+      "LastServiceDate": "2026-06-22T00:00:00Z",
+      "CommissionedOnUtc": "2024-11-04T00:00:00Z",
+      "AlertCount": 0,
+      "Metrics": [
+        { "Name": "Throughput", "Value": "2,100", "Unit": "units/hr", "Status": "Strong" },
+        { "Name": "Accuracy", "Value": "99.2", "Unit": "%", "Status": "Strong" }
+      ],
+      "Specifications": [
+        { "Category": "Automation", "Name": "Controller", "Value": "PLC" }
+      ],
+      "Capabilities": [ "High-speed inspection", "Auto reject", "Vision-based sorting" ]
+    },
+    {
+      "MachineId": "FB-M-205",
+      "Name": "Pasteurizer Tunnel",
+      "LineId": "LINE-FB-02",
+      "Industry": "Food Beverage Processing",
+      "AssetClass": "Thermal Processing",
+      "MachineType": "Pasteurizer",
+      "MachineRole": "Heat treatment",
+      "Manufacturer": "ThermoFlow Africa",
+      "ModelNumber": "TFA-PST-700",
+      "SerialNumber": "TFA-700-018",
+      "AssetTag": "FB-00205",
+      "Site": "Food Beverage Plant",
+      "Area": "Thermal Processing",
+      "OperatingMode": "Automated",
+      "ControlSystem": "Temperature PLC",
+      "PowerSource": "Electric",
+      "TelemetrySource": "Temperature Probe Feed",
+      "MaintenanceOwner": "maint-fb-04",
+      "ComplianceProfile": "HACCP / thermal treatment",
+      "OperatingContext": "Pasteurizes fruit juice before filling",
+      "Status": "Operational",
+      "TemperatureC": 85.0,
+      "RuntimeHours": 92.1,
+      "LastServiceDate": "2026-06-24T00:00:00Z",
+      "CommissionedOnUtc": "2024-06-18T00:00:00Z",
+      "AlertCount": 0,
+      "Metrics": [
+        { "Name": "Tunnel Temp", "Value": "85.0", "Unit": "C", "Status": "Normal" },
+        { "Name": "Hold Time", "Value": "32", "Unit": "secs", "Status": "Normal" }
+      ],
+      "Specifications": [
+        { "Category": "Thermal", "Name": "Target Temp", "Value": "85C" }
+      ],
+      "Capabilities": [ "Pasteurization", "Heat stabilization", "Food safety control" ]
+    }
+  ],
+  "tasks": [
+    { "TaskId": "TASK-FB-1001", "TaskType": "Quality Check", "AssignedTo": "qa-01", "Area": "Line 1", "Priority": "High", "Status": "Pending", "DueAt": "2026-07-04T06:45:00Z", "Description": "Verify product dimensions after wash stage." }
+  ],
+  "exceptions": [
+    { "ExceptionId": "EX-FB-1001", "ExceptionType": "Blocked", "ReferenceId": "TASK-FB-1001", "ReferenceName": "Quality Check", "Owner": "qa-01", "TargetArea": "Line 1", "Priority": "High", "Status": "Open", "EscalationLevel": "None", "DueAtUtc": "2026-07-04T07:00:00Z", "RecommendedAction": "Clear obstruction and verify sensor status", "Notes": "Waiting on parts" }
+  ],
+  "incidents": [
+    { "IncidentId": "INC-FB-1001", "AlarmId": "ALERT-FB-1002", "Category": "Alarm", "Severity": "Critical", "SourceAssetId": "FB-M-205", "SourceName": "Pasteurizer Tunnel", "Summary": "Temperature excursion detected on pasteurizer tunnel.", "Owner": "maint-fb-04", "Status": "Open", "RaisedAtUtc": "2026-07-04T06:10:00Z", "Notes": "Awaiting operator acknowledgment" }
+  ],
+  "alerts": [
+    { "AlertId": "ALERT-FB-1001", "Category": "Quality", "Severity": "Warning", "Message": "Moisture reading drifting above threshold on Line 1.", "Status": "Open", "SourceAssetId": "FB-M-101", "RaisedAt": "2026-07-04T06:05:00Z" }
+  ]
+}

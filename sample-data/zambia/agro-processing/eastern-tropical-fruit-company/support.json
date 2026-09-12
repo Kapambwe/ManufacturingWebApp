@@ -1,0 +1,165 @@
+{
+  "autoPilotActions": [
+    {
+      "id": "ap-etf-1001",
+      "category": "Procurement",
+      "title": "Low Stock: Fruit Cartons",
+      "description": "Packaging cartons have dropped below the reorder threshold for the fruit packing line.",
+      "suggestedAction": "Draft a PO for 25,000 cartons from the approved packaging supplier.",
+      "status": "Pending",
+      "timestamp": "2026-07-04T08:00:00Z",
+      "impactAnalysis": "Avoids a packaging stop on the export line.",
+      "confidenceScore": 96
+    }
+  ],
+  "autoPilotHistory": [
+    {
+      "id": "ap-etf-0901",
+      "category": "Quality",
+      "title": "Sanitation Check Completed",
+      "description": "Daily sanitation verification closed without exceptions.",
+      "suggestedAction": "No further action required.",
+      "status": "Executed",
+      "timestamp": "2026-07-03T08:00:00Z",
+      "impactAnalysis": "Maintained export readiness.",
+      "confidenceScore": 99
+    }
+  ],
+  "productionOrders": [
+    {
+      "id": "po-etf-1001",
+      "orderCode": "FRUIT-2026-001",
+      "productName": "Mango Nectar",
+      "orderType": "Export",
+      "status": "Active",
+      "targetQuantity": 12000,
+      "completedQuantity": 7800,
+      "startDate": "2026-07-01T00:00:00Z",
+      "endDate": "2026-07-07T00:00:00Z",
+      "totalBudget": 42000,
+      "fundsUtilized": 26500
+    }
+  ],
+  "inventoryItems": [
+    {
+      "id": "inv-etf-1001",
+      "receiptNumber": "RC-ETF-1001",
+      "supplierName": "Eastern Tropical Growers",
+      "sku": "FRUIT-MNG-01",
+      "name": "Fresh Mangoes",
+      "batchNumber": "MNG-2407-A1",
+      "quantity": 8400,
+      "unit": "kg",
+      "binLocation": "COLD-03",
+      "expiryDate": "2026-07-10T00:00:00Z",
+      "status": "Available"
+    }
+  ],
+  "warehouseTasks": [
+    {
+      "id": "task-etf-1001",
+      "taskType": "Putaway",
+      "description": "Move mango intake to cold storage bay COLD-03",
+      "assignedTo": "Cold Store Team 1",
+      "status": "Pending",
+      "createdAt": "2026-07-04T08:00:00Z"
+    }
+  ],
+  "fleetVehicles": [
+    {
+      "id": "fleet-etf-1001",
+      "plateNumber": "ZM-ETF-201",
+      "driverName": "Moses Banda",
+      "currentRoute": "Chipata -> Lusaka",
+      "latitude": -15.3875,
+      "longitude": 28.3228,
+      "temperature": 3.1,
+      "humidity": 71,
+      "status": "In-Transit"
+    }
+  ],
+  "intakeRecords": [
+    {
+      "id": "intake-etf-1001",
+      "receiptNumber": "RC-ETF-2407-001",
+      "supplierName": "Eastern Tropical Growers",
+      "materialType": "Mangoes",
+      "deliveryDate": "2026-07-04T00:00:00Z",
+      "declaredWeight": 9000,
+      "actualWeight": 8920,
+      "status": "Accepted",
+      "qcGrading": "Grade A",
+      "moistureContent": 82.4,
+      "purityLevel": 98.2
+    }
+  ],
+  "sourcingContracts": [
+    {
+      "id": "sc-etf-1001",
+      "contractNumber": "CTR-ETF-001",
+      "vendorName": "Eastern Tropical Growers",
+      "materialCategory": "Fresh Produce",
+      "status": "Active",
+      "startDate": "2026-04-01T00:00:00Z",
+      "endDate": "2027-01-01T00:00:00Z",
+      "contractValue": 380000,
+      "amountFulfilled": 145000
+    }
+  ],
+  "financialSyncEvents": [
+    {
+      "id": "fin-etf-1001",
+      "eventType": "InventoryValuation",
+      "sourceModule": "Manufacturing",
+      "referenceId": "ETF-402",
+      "timestamp": "2026-07-04T08:00:00Z",
+      "amount": 18400,
+      "currency": "ZMW",
+      "status": "Synced",
+      "destinationLedger": "WIP Inventory"
+    }
+  ],
+  "costAllocations": [
+    {
+      "id": "cost-etf-1001",
+      "costCenter": "Fruit Line A",
+      "expenseType": "Cold Storage",
+      "allocatedAmount": 1800,
+      "allocationPeriod": "2026-07-01T00:00:00Z",
+      "syncStatus": "Pending"
+    }
+  ],
+  "platformSession": {
+    "userId": "planner-01",
+    "displayName": "Planning Supervisor",
+    "environment": "ManufacturingWebApp",
+    "mode": "Mock",
+    "roles": [ "Planner", "Supervisor" ],
+    "permissions": [ "Audit.View", "Orders.Manage", "Quality.Manage", "Traceability.View", "Performance.View" ],
+    "lastAuthenticatedUtc": "2026-07-04T07:48:00Z"
+  },
+  "platformAuditEvents": [
+    {
+      "eventId": "audit-etf-1001",
+      "userId": "planner-01",
+      "action": "Login",
+      "resource": "Platform",
+      "outcome": "Success",
+      "details": "Authenticated into mock environment",
+      "eventTimeUtc": "2026-07-04T07:48:00Z",
+      "severity": "Info"
+    }
+  ],
+  "platformPermissionRules": [
+    {
+      "permission": "Audit.View",
+      "description": "View audit trail and system events",
+      "granted": true
+    },
+    {
+      "permission": "Orders.Manage",
+      "description": "Create and update production orders",
+      "granted": true
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "templates": [
+    {
+      "templateKey": "textiles",
+      "displayName": "Textiles Manufacturing Lifecycle",
+      "description": "Textiles Manufacturing operations from intake through dispatch.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "fibre-intake",
+          "name": "Fibre Intake",
+          "description": "Textiles Manufacturing stage: Fibre Intake",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "spinning"
+          ]
+        },
+        {
+          "stageKey": "spinning",
+          "name": "Spinning",
+          "description": "Textiles Manufacturing stage: Spinning",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "weaving"
+          ]
+        },
+        {
+          "stageKey": "weaving",
+          "name": "Weaving",
+          "description": "Textiles Manufacturing stage: Weaving",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "finishing"
+          ]
+        },
+        {
+          "stageKey": "finishing",
+          "name": "Finishing",
+          "description": "Textiles Manufacturing stage: Finishing",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "dispatch"
+          ]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Textiles Manufacturing stage: Dispatch",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "textiles",
+      "templateKey": "textiles",
+      "displayName": "Textiles Manufacturing",
+      "notes": ""
+    }
+  ]
+}

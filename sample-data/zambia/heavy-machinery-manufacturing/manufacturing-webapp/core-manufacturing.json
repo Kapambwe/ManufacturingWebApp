@@ -1,0 +1,44 @@
+{
+  "workCenters": [
+    { "WorkCenterId": "WC-HM-CNC", "Name": "CNC Machining Cell", "ShiftCapacityHours": 20, "UtilizationPercent": 78, "MaxDailyLoadHours": 18, "SupportedSkills": [ "Machining", "Tooling", "Inspection" ] },
+    { "WorkCenterId": "WC-HM-FAB", "Name": "Fabrication Bay", "ShiftCapacityHours": 22, "UtilizationPercent": 82, "MaxDailyLoadHours": 20, "SupportedSkills": [ "Fabrication", "Welding", "Layout" ] },
+    { "WorkCenterId": "WC-HM-ASM", "Name": "Assembly and Test Bay", "ShiftCapacityHours": 24, "UtilizationPercent": 64, "MaxDailyLoadHours": 22, "SupportedSkills": [ "Assembly", "Hydraulics", "Testing" ] }
+  ],
+  "routings": [
+    {
+      "RoutingId": "R-HM-1001",
+      "ItemId": "HM-ASM-001",
+      "Version": "v1",
+      "Operations": [
+        { "OperationNo": 10, "WorkCenterId": "WC-HM-CNC", "SetupMinutes": 120, "RunMinutesPerUnit": 12.5, "QueueMinutes": 60, "RequiredSkill": "Machining", "RequiredOperators": 4 },
+        { "OperationNo": 20, "WorkCenterId": "WC-HM-FAB", "SetupMinutes": 90, "RunMinutesPerUnit": 10.4, "QueueMinutes": 45, "RequiredSkill": "Welding", "RequiredOperators": 5 },
+        { "OperationNo": 30, "WorkCenterId": "WC-HM-ASM", "SetupMinutes": 75, "RunMinutesPerUnit": 8.1, "QueueMinutes": 30, "RequiredSkill": "Testing", "RequiredOperators": 4 }
+      ]
+    }
+  ],
+  "mpsHistory": [
+    {
+      "ScheduleId": "mps-hm-1001",
+      "HorizonStart": "2026-07-04T00:00:00Z",
+      "HorizonEnd": "2026-07-18T00:00:00Z",
+      "Scenario": "Heavy Machinery",
+      "Status": "Generated",
+      "TotalPlannedQty": 18,
+      "Lines": [
+        { "ItemId": "HM-ASM-001", "BucketDate": "2026-07-05T00:00:00Z", "Quantity": 6, "WorkCenterId": "WC-HM-CNC" },
+        { "ItemId": "HM-ASM-002", "BucketDate": "2026-07-07T00:00:00Z", "Quantity": 4, "WorkCenterId": "WC-HM-FAB" }
+      ]
+    }
+  ],
+  "mrpHistory": [
+    {
+      "Run": { "RunId": "mrp-hm-1001", "RunTime": "2026-07-04T06:00:00Z", "Planner": "planner-hm-01", "Scenario": "Heavy Machinery", "Status": "Generated" },
+      "Requirements": [
+        { "ItemId": "RM-STEEL-PLATE", "GrossReq": 220, "NetReq": 140, "Available": 80, "ShortageQty": 140, "PeggedOrderId": "HM-ASM-001" },
+        { "ItemId": "RM-HYDRAULIC-KIT", "GrossReq": 18, "NetReq": 6, "Available": 12, "ShortageQty": 6, "PeggedOrderId": "HM-ASM-001" }
+      ],
+      "Peggings": [],
+      "TotalShortageQty": 146
+    }
+  ]
+}

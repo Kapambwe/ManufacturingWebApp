@@ -1,0 +1,89 @@
+{
+  "workCenters": [
+    {
+      "WorkCenterId": "WC-DST-01",
+      "Name": "Distillation Column 1",
+      "ShiftCapacityHours": 24,
+      "UtilizationPercent": 82,
+      "MaxDailyLoadHours": 22,
+      "SupportedSkills": ["Distillation", "Process Control"]
+    },
+    {
+      "WorkCenterId": "WC-PCK-02",
+      "Name": "Packaging Line 2",
+      "ShiftCapacityHours": 16,
+      "UtilizationPercent": 74,
+      "MaxDailyLoadHours": 14,
+      "SupportedSkills": ["Packaging", "Labeling"]
+    },
+    {
+      "WorkCenterId": "WC-VEH-ASM-01",
+      "Name": "Vehicle Assembly Cell 1",
+      "ShiftCapacityHours": 20,
+      "UtilizationPercent": 77,
+      "MaxDailyLoadHours": 18,
+      "SupportedSkills": ["Chassis Assembly", "Body Fitting", "Final Assembly"]
+    }
+  ],
+  "routings": [
+    {
+      "RoutingId": "R-ETH-V1",
+      "ItemId": "FG-ETH-95",
+      "Version": "v1",
+      "Operations": [
+        { "OperationNo": 10, "WorkCenterId": "WC-DST-01", "SetupMinutes": 60, "RunMinutesPerUnit": 0.12, "QueueMinutes": 20, "RequiredSkill": "Distillation", "RequiredOperators": 2 },
+        { "OperationNo": 20, "WorkCenterId": "WC-PCK-02", "SetupMinutes": 30, "RunMinutesPerUnit": 0.05, "QueueMinutes": 10, "RequiredSkill": "Packaging", "RequiredOperators": 1 }
+      ]
+    },
+    {
+      "RoutingId": "R-CAR-ASM-01",
+      "ItemId": "CAR-ASM-001",
+      "Version": "v1",
+      "Operations": [
+        { "OperationNo": 10, "WorkCenterId": "WC-VEH-ASM-01", "SetupMinutes": 90, "RunMinutesPerUnit": 4.5, "QueueMinutes": 45, "RequiredSkill": "Chassis Assembly", "RequiredOperators": 4 },
+        { "OperationNo": 20, "WorkCenterId": "WC-VEH-ASM-01", "SetupMinutes": 60, "RunMinutesPerUnit": 3.2, "QueueMinutes": 30, "RequiredSkill": "Body Fitting", "RequiredOperators": 3 }
+      ]
+    }
+  ],
+  "mpsHistory": [
+    {
+      "ScheduleId": "MPS-VEH-001",
+      "HorizonStart": "2026-07-04T00:00:00Z",
+      "HorizonEnd": "2026-07-18T00:00:00Z",
+      "Scenario": "Vehicle Assembly",
+      "Status": "Approved",
+      "ApprovedBy": "planner-01",
+      "ApprovedAtUtc": "2026-07-04T06:00:00Z",
+      "ApprovalComment": "Seed schedule",
+      "TotalPlannedQty": 305,
+      "Lines": [
+        { "ItemId": "CAR-ASM-001", "BucketDate": "2026-07-05T00:00:00Z", "Quantity": 220, "WorkCenterId": "WC-VEH-ASM-01" },
+        { "ItemId": "TRK-ASM-001", "BucketDate": "2026-07-06T00:00:00Z", "Quantity": 65, "WorkCenterId": "WC-VEH-ASM-01" },
+        { "ItemId": "SPARE-CAR-001", "BucketDate": "2026-07-07T00:00:00Z", "Quantity": 20, "WorkCenterId": "WC-PCK-02" }
+      ]
+    }
+  ],
+  "mrpHistory": [
+    {
+      "Run": {
+        "RunId": "MRP-VEH-001",
+        "RunTime": "2026-07-04T06:00:00Z",
+        "Planner": "planner-01",
+        "Scenario": "Vehicle Assembly",
+        "Status": "Approved",
+        "ApprovedBy": "planner-01",
+        "ApprovedAtUtc": "2026-07-04T06:15:00Z",
+        "ApprovalComment": "Seed run"
+      },
+      "Requirements": [
+        { "ItemId": "RM-BODY-SHEET", "GrossReq": 400, "NetReq": 280, "Available": 120, "ShortageQty": 280, "PeggedOrderId": "MO-CAR-2001" },
+        { "ItemId": "RM-AXLE-KIT", "GrossReq": 120, "NetReq": 75, "Available": 45, "ShortageQty": 75, "PeggedOrderId": "MO-TRK-2001" }
+      ],
+      "Peggings": [
+        { "ItemId": "RM-BODY-SHEET", "DemandRef": "MO-CAR-2001", "SupplyType": "On-hand", "SupplyRef": "STK-BODY-01", "Quantity": 120, "NeedByDate": "2026-07-06T00:00:00Z", "SupplyDate": "2026-07-04T00:00:00Z", "Status": "Allocated" },
+        { "ItemId": "RM-AXLE-KIT", "DemandRef": "MO-TRK-2001", "SupplyType": "On-hand", "SupplyRef": "STK-AXLE-02", "Quantity": 45, "NeedByDate": "2026-07-06T00:00:00Z", "SupplyDate": "2026-07-04T00:00:00Z", "Status": "Allocated" }
+      ],
+      "TotalShortageQty": 355
+    }
+  ]
+}

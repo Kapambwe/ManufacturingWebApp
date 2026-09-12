@@ -1,0 +1,81 @@
+{
+  "shipments": [
+    {
+      "id": "ship-wb-4001",
+      "waybillNumber": "WB-4001",
+      "cargoType": "Bulk Minerals",
+      "origin": "Solwezi",
+      "destination": "Durban",
+      "status": "In-Transit",
+      "estimatedArrival": "2026-07-06T10:00:00Z",
+      "weight": 120,
+      "assignedAsset": "FRT-101",
+      "checkpoints": [
+        { "checkpointId": "cp-4001-01", "shipmentId": "WB-4001", "checkpointName": "Loaded", "status": "Recorded", "recordedAtUtc": "2026-07-03T12:00:00Z", "notes": "" }
+      ]
+    },
+    {
+      "id": "ship-wb-4002",
+      "waybillNumber": "WB-4002",
+      "cargoType": "Agricultural Cargo",
+      "origin": "Lusaka",
+      "destination": "Kasumbalesa",
+      "status": "Delayed",
+      "estimatedArrival": "2026-07-05T16:00:00Z",
+      "weight": 80,
+      "assignedAsset": "FRT-505",
+      "checkpoints": [
+        { "checkpointId": "cp-4002-01", "shipmentId": "WB-4002", "checkpointName": "Departed", "status": "Recorded", "recordedAtUtc": "2026-07-03T18:00:00Z", "notes": "" }
+      ]
+    },
+    {
+      "id": "ship-wb-4003",
+      "waybillNumber": "WB-4003",
+      "cargoType": "Industrial Chemicals",
+      "origin": "Ndola",
+      "destination": "Kitwe",
+      "status": "Scheduled",
+      "estimatedArrival": "2026-07-05T09:30:00Z",
+      "weight": 45,
+      "assignedAsset": "FRT-202",
+      "checkpoints": []
+    }
+  ],
+  "assets": [
+    { "id": "asset-loco-101", "assetCode": "FRT-LOCO-101", "type": "Locomotive", "status": "Operational", "mileage": 125000, "lastMaintenance": "2026-05-01T00:00:00Z", "currentRoute": "" },
+    { "id": "asset-wgn-202", "assetCode": "FRT-WGN-202", "type": "Rail Asset", "status": "Maintenance", "mileage": 45000, "lastMaintenance": "2026-05-15T00:00:00Z", "currentRoute": "" },
+    { "id": "asset-trk-505", "assetCode": "FRT-TRK-505", "type": "Truck", "status": "Operational", "mileage": 12000, "lastMaintenance": "2026-06-01T00:00:00Z", "currentRoute": "" }
+  ],
+  "terminals": [
+    { "id": "term-durban", "terminalName": "Durban Freight Terminal", "location": "Durban", "status": "Active", "queueLength": 6, "notes": "High export throughput" },
+    { "id": "term-kasumbalesa", "terminalName": "Kasumbalesa Logistics Hub", "location": "Copperbelt", "status": "Active", "queueLength": 3, "notes": "Border clearance in progress" }
+  ],
+  "routes": [
+    { "id": "route-corridor-1", "routeName": "Copperbelt to Durban Corridor", "origin": "Solwezi", "destination": "Durban", "plannedDistanceKm": 1800, "status": "Planned", "notes": "Priority export corridor" }
+  ],
+  "contracts": [
+    { "id": "contract-1001", "contractNumber": "FRT-1001", "customerName": "Zambezi Metals", "cargoType": "Copper Cathodes", "baseRate": 1250, "slaPenaltyRate": 250, "status": "Active" }
+  ],
+  "capacityPlans": [
+    { "id": "cap-1001", "assetCode": "FRT-LOCO-101", "routeName": "Copperbelt to Durban Corridor", "plannedLoadTonnes": 120, "remainingCapacityTonnes": 18, "status": "Watch" }
+  ],
+  "maintenance": [
+    { "id": "maint-1001", "assetCode": "FRT-WGN-202", "maintenanceType": "Wheelset Inspection", "description": "Quarterly inspection", "technician": "maint-01", "status": "Planned", "scheduledAtUtc": "2026-07-05T00:00:00Z" }
+  ],
+  "customs": [
+    { "id": "cust-4002", "shipmentId": "WB-4002", "declarationNumber": "CUST-4002", "countryOfEntry": "Zambia", "customsStatus": "Filed", "notes": "Awaiting border release", "filedAtUtc": "2026-07-03T10:00:00Z" }
+  ],
+  "pods": [
+    { "podId": "pod-4001", "shipmentId": "WB-4001", "receiverName": "D. Mthembu", "receiverSignature": "DM", "deliveredAtUtc": "2026-07-03T14:00:00Z", "condition": "Good", "notes": "Delivered at Durban warehouse" }
+  ],
+  "exceptions": [
+    { "exceptionId": "ex-4002", "shipmentId": "WB-4002", "waybillNumber": "WB-4002", "exceptionType": "Delay", "severity": "High", "owner": "dispatch-01", "status": "Open", "rerouteTo": "Kasumbalesa Bypass", "evidence": "Border delay exceeding SLA by 12h", "notes": "Needs reroute approval", "raisedAtUtc": "2026-07-03T00:00:00Z" }
+  ],
+  "documents": [
+    { "documentId": "doc-4001", "shipmentId": "WB-4001", "documentType": "Bill of Lading", "title": "BOL WB-4001", "referenceNumber": "BOL-4001", "status": "Filed", "notes": "Signed on dispatch", "uploadedAtUtc": "2026-07-03T08:00:00Z" }
+  ],
+  "events": [
+    { "eventId": "evt-4001", "shipmentId": "WB-4001", "eventType": "Shipment Created", "category": "Dispatch", "summary": "Shipment WB-4001 created and dispatched", "referenceId": "WB-4001", "occurredAtUtc": "2026-07-02T08:00:00Z" },
+    { "eventId": "evt-4002", "shipmentId": "WB-4002", "eventType": "Checkpoint Recorded", "category": "Movement", "summary": "Border arrival checkpoint recorded", "referenceId": "WB-4002", "occurredAtUtc": "2026-07-03T10:00:00Z" }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "country": "Zambia",
+  "institutionType": "accelerator-management",
+  "institutionName": "sample-institution",
+  "lifecycleName": "Supplier to Finished Product Lifecycle",
+  "description": "Tracks products from supplier input through processing, quality checks, packaging, and finished product dispatch.",
+  "supplier": {
+    "supplierId": "SUP-001",
+    "supplierName": "Sample Supplier Ltd",
+    "supplierCode": "SPL-001",
+    "contactPerson": "John Doe",
+    "contactPhone": "+260000000000",
+    "contactEmail": "supplier@example.com",
+    "supplierType": "Primary",
+    "complianceStatus": "Approved",
+    "rating": 4.6,
+    "lastAuditDate": "2026-07-01T00:00:00Z",
+    "documents": [
+      { "documentType": "Tax Clearance", "documentNumber": "TC-2026-001", "expiryDate": "2027-06-30T00:00:00Z" },
+      { "documentType": "Business Registration", "documentNumber": "BR-2024-889", "expiryDate": null }
+    ]
+  },
+  "stages": [
+    { "stageKey": "supplier-intake", "stageName": "Supplier Intake", "order": 1, "description": "Suppliers submit materials and supporting documents.", "status": "Open", "allowedNextStages": [ "quality-check" ], "completionCriteria": [ "Supplier registered", "Documents received", "Input logged" ] },
+    { "stageKey": "quality-check", "stageName": "Quality Check", "order": 2, "description": "Incoming input is inspected and accepted or rejected.", "status": "In Progress", "allowedNextStages": [ "processing", "rejection" ], "completionCriteria": [ "Inspection complete", "Status recorded", "Decision made" ] },
+    { "stageKey": "processing", "stageName": "Processing", "order": 3, "description": "Accepted input is transformed into work-in-progress product.", "status": "Open", "allowedNextStages": [ "packaging" ], "completionCriteria": [ "Batch started", "Work order issued", "Production logged" ] },
+    { "stageKey": "packaging", "stageName": "Packaging", "order": 4, "description": "Products are packed, labeled, and prepared for storage.", "status": "Open", "allowedNextStages": [ "delivery-confirmation" ], "completionCriteria": [ "Packaging complete", "Label applied", "Batch ready" ] },
+    { "stageKey": "delivery-confirmation", "stageName": "Delivery Confirmation", "order": 5, "description": "Proof of delivery is captured and the lifecycle is closed.", "status": "Closed", "allowedNextStages": [], "completionCriteria": [ "Proof of delivery captured", "Recipient acknowledged", "Record archived" ] }
+  ]
+}

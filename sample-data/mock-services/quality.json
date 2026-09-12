@@ -1,0 +1,91 @@
+{
+  "tests": [
+    {
+      "id": "qtest-eth-402",
+      "batchNumber": "ETH-402",
+      "product": "Industrial Ethanol",
+      "testDate": "2026-06-28T08:00:00Z",
+      "status": "Failed",
+      "inspectorName": "Dr. S. Phiri",
+      "metrics": [
+        {
+          "name": "Purity (ABV)",
+          "value": 94.2,
+          "minThreshold": 95.0,
+          "maxThreshold": 99.9,
+          "unit": "%"
+        },
+        {
+          "name": "pH Level",
+          "value": 4.1,
+          "minThreshold": 4.0,
+          "maxThreshold": 5.0,
+          "unit": "pH"
+        }
+      ]
+    },
+    {
+      "id": "qtest-mng-201",
+      "batchNumber": "MNG-201",
+      "product": "Mango Puree",
+      "testDate": "2026-06-29T09:15:00Z",
+      "status": "Passed",
+      "inspectorName": "J. Banda",
+      "metrics": [
+        {
+          "name": "Brix",
+          "value": 14.5,
+          "minThreshold": 14.0,
+          "maxThreshold": 18.0,
+          "unit": "°Bx"
+        },
+        {
+          "name": "Acidity",
+          "value": 0.5,
+          "minThreshold": 0.3,
+          "maxThreshold": 0.8,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "qtest-pne-105",
+      "batchNumber": "PNE-105",
+      "product": "Pineapple Concentrate",
+      "testDate": "2026-06-30T10:30:00Z",
+      "status": "Pending",
+      "inspectorName": "A. Mwape",
+      "metrics": [
+        {
+          "name": "Brix",
+          "value": 60.1,
+          "minThreshold": 60.0,
+          "maxThreshold": 65.0,
+          "unit": "°Bx"
+        }
+      ]
+    }
+  ],
+  "plans": [
+    {
+      "id": "haccp-fruit-pasteurization",
+      "processName": "Pasteurization (Fruit)",
+      "criticalControlPoint": "CCP-1 (Heating)",
+      "hazardType": "Biological",
+      "criticalLimit": "Min 85C for 30 secs",
+      "monitoringProcedure": "Continuous temp sensor logging",
+      "correctiveAction": "Divert product back to holding tank if temp drops",
+      "verificationStatus": "Active"
+    },
+    {
+      "id": "haccp-ethanol-distillation",
+      "processName": "Distillation (Ethanol)",
+      "criticalControlPoint": "CCP-3 (Pressure)",
+      "hazardType": "Physical",
+      "criticalLimit": "Max 1.5 bar",
+      "monitoringProcedure": "Pressure gauge alarm",
+      "correctiveAction": "Auto-shutdown steam valve",
+      "verificationStatus": "Review Required"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "units": [
+    { "id": "hi-u-1001", "unitName": "Sasol Cracker Unit A", "industry": "Petrochemical", "unitType": "Cracking Unit", "manufacturer": "Sasol Engineering", "assetTag": "HI-U-1001", "area": "Cracker Complex", "processStage": "Primary Conversion", "operatingMode": "Continuous", "status": "Online", "pressure": 15.4, "temperature": 850, "throughput": 450, "lastInspection": "2026-06-04T00:00:00Z" },
+    { "id": "hi-u-1002", "unitName": "Sasol Distillation Tower B", "industry": "Refining", "unitType": "Distillation Tower", "manufacturer": "ProcessWorks", "assetTag": "HI-U-1002", "area": "Separation Hall", "processStage": "Fractionation", "operatingMode": "Continuous", "status": "Online", "pressure": 2.1, "temperature": 120, "throughput": 320, "lastInspection": "2026-06-10T00:00:00Z" },
+    { "id": "hi-u-1003", "unitName": "Sasol Storage Tank Farm 4", "industry": "Petrochemical", "unitType": "Tank Farm", "manufacturer": "TankSafe Systems", "assetTag": "HI-U-1003", "area": "Bulk Storage", "processStage": "Storage", "operatingMode": "Standby", "status": "Maintenance", "pressure": 0.5, "temperature": 25, "throughput": 0, "lastInspection": "2026-05-28T00:00:00Z" }
+  ],
+  "incidents": [
+    { "id": "inc-1001", "title": "Minor Spillage", "severity": "Low", "reportedDate": "2026-07-01T08:00:00Z", "status": "Closed", "description": "Minor oil leak detected at pump station 2. Cleaned up immediately.", "assignedTo": "", "resolution": "Cleaned and inspected" },
+    { "id": "inc-1002", "title": "Near Miss - Crane", "severity": "High", "reportedDate": "2026-07-02T10:00:00Z", "status": "Investigating", "description": "Overhead crane operated near restricted zone without spotter.", "assignedTo": "", "resolution": "" }
+  ],
+  "permits": [
+    { "id": "ptw-1001", "permitNumber": "PTW-1001", "permitType": "Permit to Work", "workScope": "Maintenance on distillation valves", "unitId": "HI-U-1002", "requestedBy": "ops-01", "approvedBy": "safety-01", "status": "Active", "requestedAtUtc": "2026-07-03T05:00:00Z", "approvedAtUtc": "2026-07-03T06:00:00Z", "notes": "Hot work verified" },
+    { "id": "ptw-1002", "permitNumber": "PTW-1002", "permitType": "Confined Space", "workScope": "Tank entry inspection", "unitId": "HI-U-1003", "requestedBy": "maint-02", "approvedBy": "", "status": "Requested", "requestedAtUtc": "2026-07-03T07:15:00Z", "notes": "Awaiting gas test" }
+  ],
+  "lockouts": [
+    { "id": "loto-1001", "lockoutNumber": "LOTO-1001", "unitId": "HI-U-1003", "isolationPoint": "Main breaker panel", "appliedBy": "elec-01", "status": "Verified", "appliedAtUtc": "2026-07-03T04:00:00Z", "verifiedAtUtc": "2026-07-03T05:00:00Z", "notes": "Zero energy confirmed" }
+  ],
+  "changes": [
+    { "id": "moc-1001", "changeNumber": "MOC-1001", "title": "Upgrade burner control logic", "unitId": "HI-U-1001", "changeType": "Control", "status": "UnderReview", "owner": "eng-01", "riskSummary": "Requires HAZOP review", "raisedAtUtc": "2026-07-01T00:00:00Z", "notes": "Awaiting safety sign-off" }
+  ],
+  "emissions": [
+    { "id": "em-1001", "unitId": "HI-U-1001", "emissionType": "CO2", "value": 450.2, "unitOfMeasure": "t", "source": "Stack A", "measuredAtUtc": "2026-07-03T07:00:00Z", "status": "Recorded" },
+    { "id": "em-1002", "unitId": "HI-U-1002", "emissionType": "SOx", "value": 12.8, "unitOfMeasure": "kg", "source": "Stack B", "measuredAtUtc": "2026-07-03T08:00:00Z", "status": "Recorded" }
+  ],
+  "shutdowns": [
+    { "id": "sd-1001", "shutdownNumber": "SD-1001", "unitId": "HI-U-1003", "title": "Tank farm shutdown", "status": "Planned", "plannedStartUtc": "2026-07-11T00:00:00Z", "plannedEndUtc": "2026-07-12T00:00:00Z", "notes": "Includes inspection and cleaning" }
+  ],
+  "trades": [
+    { "id": "trd-1001", "tradeNumber": "TRD-1001", "commodity": "Crude", "counterparty": "Global Energy SA", "quantity": 50000, "pricePerUnit": 82.45, "currency": "USD", "status": "Confirmed", "tradedAtUtc": "2026-07-03T02:00:00Z" }
+  ],
+  "hedges": [
+    { "id": "hedge-1001", "instrument": "ICE Brent Futures", "commodity": "Crude", "notional": 2500000, "direction": "Short", "status": "Active", "openedAtUtc": "2026-06-30T00:00:00Z" }
+  ],
+  "maintenance": [
+    { "id": "maint-1002", "unitId": "HI-U-1002", "workScope": "Inspect distillation column internals", "technician": "maint-03", "status": "InProgress", "scheduledAtUtc": "2026-07-03T10:00:00Z", "notes": "Shutdown window in progress" }
+  ]
+}

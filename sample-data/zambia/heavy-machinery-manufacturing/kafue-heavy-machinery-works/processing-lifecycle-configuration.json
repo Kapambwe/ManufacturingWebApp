@@ -1,0 +1,90 @@
+{
+  "templates": [
+    {
+      "description": "Heavy machinery manufacturing operations from intake through dispatch.",
+      "primaryUnitLabel": "Machines",
+      "templateKey": "heavy-machinery-manufacturing",
+      "stages": [
+        {
+          "stageKey": "intake",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "fabrication"
+          ],
+          "status": "Normal",
+          "name": "Intake",
+          "sortOrder": 1,
+          "description": "Heavy Machinery Manufacturing stage: Intake",
+          "unit": ""
+        },
+        {
+          "stageKey": "fabrication",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "welding"
+          ],
+          "status": "Normal",
+          "name": "Fabrication",
+          "sortOrder": 2,
+          "description": "Heavy Machinery Manufacturing stage: Fabrication",
+          "unit": ""
+        },
+        {
+          "stageKey": "welding",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "assembly"
+          ],
+          "status": "Normal",
+          "name": "Welding",
+          "sortOrder": 3,
+          "description": "Heavy Machinery Manufacturing stage: Welding",
+          "unit": ""
+        },
+        {
+          "stageKey": "assembly",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "testing"
+          ],
+          "status": "Normal",
+          "name": "Assembly",
+          "sortOrder": 4,
+          "description": "Heavy Machinery Manufacturing stage: Assembly",
+          "unit": ""
+        },
+        {
+          "stageKey": "testing",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "dispatch"
+          ],
+          "status": "Normal",
+          "name": "Testing",
+          "sortOrder": 5,
+          "description": "Heavy Machinery Manufacturing stage: Testing",
+          "unit": ""
+        },
+        {
+          "stageKey": "dispatch",
+          "value": "Ready",
+          "allowedNextStageKeys": [],
+          "status": "Normal",
+          "name": "Dispatch",
+          "sortOrder": 6,
+          "description": "Heavy Machinery Manufacturing stage: Dispatch",
+          "unit": ""
+        }
+      ],
+      "displayName": "Heavy Machinery Manufacturing Lifecycle"
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "heavy-machinery-manufacturing",
+      "notes": "",
+      "templateKey": "heavy-machinery-manufacturing",
+      "displayName": "Heavy Machinery Manufacturing Lifecycle"
+    }
+  ]
+}

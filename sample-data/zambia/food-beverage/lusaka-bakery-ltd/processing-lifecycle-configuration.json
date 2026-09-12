@@ -1,0 +1,242 @@
+{
+  "templates": [
+    {
+      "templateKey": "ethanol",
+      "displayName": "Ethanol Processing Lifecycle",
+      "description": "Feedstock intake, fermentation, distillation, and dispatch control.",
+      "primaryUnitLabel": "Batches",
+      "stages": [
+        {
+          "stageKey": "intake",
+          "name": "Intake",
+          "description": "Quality release and moisture correction",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Release required",
+          "unit": "",
+          "allowedNextStageKeys": ["fermentation"]
+        },
+        {
+          "stageKey": "fermentation",
+          "name": "Fermentation",
+          "description": "Tank control and contamination monitoring",
+          "sortOrder": 2,
+          "status": "Warning",
+          "value": "2 exceptions",
+          "unit": "",
+          "allowedNextStageKeys": ["distillation"]
+        },
+        {
+          "stageKey": "distillation",
+          "name": "Distillation",
+          "description": "ABV deviation and yield tracking",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "95.2",
+          "unit": "% ABV",
+          "allowedNextStageKeys": ["dispatch"]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Compliance packet and release readiness",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    },
+    {
+      "templateKey": "fruit",
+      "displayName": "Fruit Processing Lifecycle",
+      "description": "Intake, wash, peel, pulp, package, and recall-ready traceability.",
+      "primaryUnitLabel": "Lines",
+      "stages": [
+        {
+          "stageKey": "intake",
+          "name": "Intake",
+          "description": "Receipt acceptance and trace tags",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Released",
+          "unit": "",
+          "allowedNextStageKeys": ["processing"]
+        },
+        {
+          "stageKey": "processing",
+          "name": "Processing",
+          "description": "Wash, peel, pulp, and package",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "2 lines",
+          "unit": "",
+          "allowedNextStageKeys": ["quality"]
+        },
+        {
+          "stageKey": "quality",
+          "name": "Quality",
+          "description": "CCP breaches and corrective actions",
+          "sortOrder": 3,
+          "status": "Warning",
+          "value": "1 breach",
+          "unit": "",
+          "allowedNextStageKeys": ["recall"]
+        },
+        {
+          "stageKey": "recall",
+          "name": "Recall",
+          "description": "Recall drill readiness and evidence linkage",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    },
+    {
+      "templateKey": "feed",
+      "displayName": "Feed Processing Lifecycle",
+      "description": "Receiving, grinding, blending, conditioning, pelletizing, and dispatch.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "receiving",
+          "name": "Receiving",
+          "description": "Inbound lot intake and sampling",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Open",
+          "unit": "",
+          "allowedNextStageKeys": ["grinding"]
+        },
+        {
+          "stageKey": "grinding",
+          "name": "Grinding",
+          "description": "Particle reduction and moisture control",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "2 mills",
+          "unit": "",
+          "allowedNextStageKeys": ["blending"]
+        },
+        {
+          "stageKey": "blending",
+          "name": "Blending",
+          "description": "Recipe balance and micro-dose checks",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "In recipe",
+          "unit": "",
+          "allowedNextStageKeys": ["conditioning"]
+        },
+        {
+          "stageKey": "conditioning",
+          "name": "Conditioning",
+          "description": "Steam conditioning and hold time",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Stable",
+          "unit": "",
+          "allowedNextStageKeys": ["dispatch"]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Pallet release and shipping control",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    },
+    {
+      "templateKey": "cooking-oil",
+      "displayName": "Cooking Oil Processing Lifecycle",
+      "description": "Receiving, refining, deodorising, packaging, and pallet release.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "receiving",
+          "name": "Receiving",
+          "description": "Crude oil intake and sample release",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Open",
+          "unit": "",
+          "allowedNextStageKeys": ["refining"]
+        },
+        {
+          "stageKey": "refining",
+          "name": "Refining",
+          "description": "Degumming, neutralising, and washing",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "In progress",
+          "unit": "",
+          "allowedNextStageKeys": ["deodorising"]
+        },
+        {
+          "stageKey": "deodorising",
+          "name": "Deodorising",
+          "description": "Polishing and sensory control",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Stable",
+          "unit": "",
+          "allowedNextStageKeys": ["packaging"]
+        },
+        {
+          "stageKey": "packaging",
+          "name": "Packaging",
+          "description": "Fill, seal, and label management",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["dispatch"]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Shipment release and trace packet",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "ethanol",
+      "templateKey": "ethanol",
+      "displayName": "Ethanol Processing",
+      "notes": ""
+    },
+    {
+      "profileKey": "fruit",
+      "templateKey": "fruit",
+      "displayName": "Fruit Processing",
+      "notes": ""
+    },
+    {
+      "profileKey": "feed",
+      "templateKey": "feed",
+      "displayName": "Feed Processing",
+      "notes": ""
+    },
+    {
+      "profileKey": "cooking-oil",
+      "templateKey": "cooking-oil",
+      "displayName": "Cooking Oil Processing",
+      "notes": ""
+    }
+  ]
+}

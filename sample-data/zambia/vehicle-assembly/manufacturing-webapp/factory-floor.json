@@ -1,0 +1,120 @@
+{
+  "shifts": [
+    { "ShiftId": "SHIFT-VA-A", "ShiftName": "Day Shift", "Supervisor": "sup-va-01", "StartUtc": "2026-07-04T06:00:00Z", "EndUtc": "2026-07-04T14:00:00Z", "Status": "Active" },
+    { "ShiftId": "SHIFT-VA-B", "ShiftName": "Night Shift", "Supervisor": "sup-va-02", "StartUtc": "2026-07-04T22:00:00Z", "EndUtc": "2026-07-05T06:00:00Z", "Status": "Planned" }
+  ],
+  "assignments": [
+    { "AssignmentId": "ASSIGN-VA-1001", "OperatorId": "op-va-01", "OperatorName": "J. Phiri", "LineId": "LINE-VA-01", "Station": "Body Shop", "Role": "Lead Operator", "Status": "Assigned", "AssignedAtUtc": "2026-07-04T06:00:00Z", "Notes": "Inspect body-in-white fixtures." },
+    { "AssignmentId": "ASSIGN-VA-1002", "OperatorId": "op-va-02", "OperatorName": "M. Banda", "LineId": "LINE-VA-02", "Station": "Paint Shop", "Role": "Painter", "Status": "Assigned", "AssignedAtUtc": "2026-07-04T06:00:00Z", "Notes": "Confirm booth airflow and paint mix." }
+  ],
+  "downtimeRecords": [
+    { "DowntimeId": "DT-VA-1001", "AssetId": "VA-M-401", "AssetName": "Body Weld Cell A", "ReasonCategory": "Electrical", "ReasonDetails": "Robot controller fault on weld cell", "StartUtc": "2026-07-04T05:45:00Z", "Status": "Open", "LoggedBy": "maint-va-01" }
+  ],
+  "maintenanceRecords": [
+    { "MaintenanceId": "MT-VA-1001", "MachineId": "VA-M-401", "MachineName": "Body Weld Cell A", "MaintenanceType": "Inspection", "Priority": "High", "RequestedBy": "maint-va-01", "AssignedTo": "tech-va-04", "Status": "Scheduled", "ScheduledForUtc": "2026-07-04T08:00:00Z", "Notes": "Check robot controller fault logs" },
+    { "MaintenanceId": "MT-VA-1002", "MachineId": "VA-M-404", "MachineName": "Paint Booth A", "MaintenanceType": "Filter Change", "Priority": "High", "RequestedBy": "maint-va-02", "AssignedTo": "tech-va-05", "Status": "Scheduled", "ScheduledForUtc": "2026-07-04T10:00:00Z", "Notes": "Maintain booth cleanliness and airflow" }
+  ],
+  "handoverHistory": [
+    { "HandoverId": "HO-VA-1001", "FromShiftId": "SHIFT-VA-A", "ToShiftId": "SHIFT-VA-B", "Supervisor": "sup-va-01", "Notes": "Body shop stable, paint booth watch", "CompletedAtUtc": "2026-07-04T06:00:00Z", "Status": "Completed" }
+  ],
+  "roster": [
+    { "RosterId": "ROSTER-VA-1001", "OperatorId": "op-va-01", "OperatorName": "J. Phiri", "SkillGroup": "Welding", "CurrentLineId": "LINE-VA-01", "ShiftId": "SHIFT-VA-A", "PlannedHours": 8, "AssignedHours": 8, "CapacityPercent": 100, "Availability": "Available", "Status": "Active", "Notes": "Lead welder" },
+    { "RosterId": "ROSTER-VA-1002", "OperatorId": "op-va-02", "OperatorName": "M. Banda", "SkillGroup": "Painting", "CurrentLineId": "LINE-VA-02", "ShiftId": "SHIFT-VA-A", "PlannedHours": 8, "AssignedHours": 7, "CapacityPercent": 88, "Availability": "Available", "Status": "Active", "Notes": "Painter" }
+  ],
+  "capacities": [
+    { "LineId": "LINE-VA-01", "LineName": "Body Shop", "PlannedHeadcount": 12, "AssignedHeadcount": 11, "CapacityPercent": 92, "Bottleneck": "Fixture changeover", "Status": "Healthy", "Notes": "Normal body-in-white rate" },
+    { "LineId": "LINE-VA-02", "LineName": "Paint Shop", "PlannedHeadcount": 8, "AssignedHeadcount": 7, "CapacityPercent": 88, "Bottleneck": "Booth curing time", "Status": "Watch", "Notes": "Paint booth near limit" },
+    { "LineId": "LINE-VA-03", "LineName": "Final Assembly", "PlannedHeadcount": 15, "AssignedHeadcount": 13, "CapacityPercent": 87, "Bottleneck": "Trim install labor", "Status": "Watch", "Notes": "Need one extra trim crew" }
+  ],
+  "lines": [
+    { "LineId": "LINE-VA-01", "Name": "Body Shop", "Status": "Running", "CurrentOrder": "VA-CAR-001", "ThroughputPerHour": 18, "UtilizationPercent": 84, "OeePercent": 76, "Shift": "Day" },
+    { "LineId": "LINE-VA-02", "Name": "Paint Shop", "Status": "Running", "CurrentOrder": "VA-CAR-001", "ThroughputPerHour": 12, "UtilizationPercent": 79, "OeePercent": 72, "Shift": "Day" },
+    { "LineId": "LINE-VA-03", "Name": "Final Assembly", "Status": "Running", "CurrentOrder": "VA-CAR-001", "ThroughputPerHour": 16, "UtilizationPercent": 81, "OeePercent": 75, "Shift": "Night" }
+  ],
+  "machines": [
+    {
+      "MachineId": "VA-M-401",
+      "Name": "Body Weld Cell A",
+      "LineId": "LINE-VA-01",
+      "Industry": "Vehicle Assembly",
+      "AssetClass": "Robotic Welding",
+      "MachineType": "Weld Cell",
+      "MachineRole": "Body shell welding",
+      "Manufacturer": "AutoFrame Robotics",
+      "ModelNumber": "AFR-WC-900",
+      "SerialNumber": "AFR-900-4101",
+      "AssetTag": "VA-00401",
+      "Site": "Vehicle Assembly Plant",
+      "Area": "Body Shop",
+      "OperatingMode": "Automated",
+      "ControlSystem": "PLC + Robot Controller",
+      "PowerSource": "Electric",
+      "TelemetrySource": "IIoT Gateway",
+      "MaintenanceOwner": "maint-va-01",
+      "ComplianceProfile": "Weld integrity / dimensional control",
+      "OperatingContext": "Vehicle body welding for car assembly",
+      "Status": "Operational",
+      "TemperatureC": 49.3,
+      "RuntimeHours": 164.4,
+      "LastServiceDate": "2026-06-25T00:00:00Z",
+      "CommissionedOnUtc": "2025-03-04T00:00:00Z",
+      "AlertCount": 0,
+      "Metrics": [
+        { "Name": "Weld Accuracy", "Value": "98.7", "Unit": "%", "Status": "Strong" },
+        { "Name": "Cycle Time", "Value": "42", "Unit": "secs", "Status": "Normal" }
+      ],
+      "Specifications": [
+        { "Category": "Automation", "Name": "Robot Controller", "Value": "Fanuc" }
+      ],
+      "Capabilities": [ "Body shell welding", "Spot weld inspection", "Dimensional alignment" ]
+    },
+    {
+      "MachineId": "VA-M-404",
+      "Name": "Paint Booth A",
+      "LineId": "LINE-VA-02",
+      "Industry": "Vehicle Assembly",
+      "AssetClass": "Surface Finishing",
+      "MachineType": "Paint Booth",
+      "MachineRole": "Body painting",
+      "Manufacturer": "AutoFinish Systems",
+      "ModelNumber": "AFS-PB-220",
+      "SerialNumber": "AFS-220-0404",
+      "AssetTag": "VA-00404",
+      "Site": "Vehicle Assembly Plant",
+      "Area": "Paint Shop",
+      "OperatingMode": "Automated",
+      "ControlSystem": "PLC",
+      "PowerSource": "Electric",
+      "TelemetrySource": "Booth Sensors",
+      "MaintenanceOwner": "maint-va-02",
+      "ComplianceProfile": "Paint quality / emissions",
+      "OperatingContext": "Applies primer and base coat to vehicle bodies",
+      "Status": "Operational",
+      "TemperatureC": 32.5,
+      "RuntimeHours": 144.7,
+      "LastServiceDate": "2026-06-21T00:00:00Z",
+      "CommissionedOnUtc": "2025-04-10T00:00:00Z",
+      "AlertCount": 0,
+      "Metrics": [
+        { "Name": "Airflow", "Value": "1.8", "Unit": "m/s", "Status": "Normal" },
+        { "Name": "Booth Temp", "Value": "32.5", "Unit": "C", "Status": "Normal" }
+      ],
+      "Specifications": [
+        { "Category": "Process", "Name": "Filter Class", "Value": "HEPA" }
+      ],
+      "Capabilities": [ "Primer application", "Base coat", "Air quality control" ]
+    }
+  ],
+  "tasks": [
+    { "TaskId": "TASK-VA-1001", "TaskType": "Assembly Calibration", "AssignedTo": "maint-va-01", "Area": "Body Shop", "Priority": "High", "Status": "Pending", "DueAt": "2026-07-04T09:00:00Z", "Description": "Verify weld cell calibration before car body run." }
+  ],
+  "exceptions": [
+    { "ExceptionId": "EX-VA-1001", "ExceptionType": "Blocked", "ReferenceId": "TASK-VA-1001", "ReferenceName": "Assembly Calibration", "Owner": "maint-va-01", "TargetArea": "Body Shop", "Priority": "High", "Status": "Open", "EscalationLevel": "Supervisor", "DueAtUtc": "2026-07-04T08:30:00Z", "RecommendedAction": "Calibrate weld tooling before first run", "Notes": "Vehicle line startup" }
+  ],
+  "incidents": [
+    { "IncidentId": "INC-VA-1001", "AlarmId": "ALARM-VA-101", "Category": "Alarm", "Severity": "Critical", "SourceAssetId": "VA-M-401", "SourceName": "Body Weld Cell A", "Summary": "Robot controller fault on weld cell.", "Owner": "maint-va-01", "Status": "Open", "RaisedAtUtc": "2026-07-04T05:50:00Z", "Notes": "Need immediate inspection" }
+  ],
+  "alerts": [
+    { "AlertId": "ALERT-VA-1001", "Category": "Assembly", "Severity": "Warning", "Message": "Weld cell controller fault trending up.", "Status": "Open", "SourceAssetId": "VA-M-401", "RaisedAt": "2026-07-04T05:50:00Z" }
+  ]
+}

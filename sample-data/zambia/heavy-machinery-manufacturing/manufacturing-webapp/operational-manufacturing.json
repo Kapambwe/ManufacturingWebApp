@@ -1,0 +1,42 @@
+{
+  "productionOrders": [
+    {
+      "OrderNo": "MO-HM-1001",
+      "ItemId": "HM-ASM-001",
+      "PlannedQty": 6,
+      "ReleasedQty": 4,
+      "Status": "Released",
+      "Priority": "High",
+      "DueDate": "2026-07-20T00:00:00Z",
+      "LastAction": "Release",
+      "LastActionBy": "planner-hm-01",
+      "LastActionAtUtc": "2026-07-04T06:00:00Z",
+      "LinkedLotNo": "LOT-HM-001",
+      "Operations": [
+        { "OrderNo": "MO-HM-1001", "OperationNo": 10, "OperationName": "Machining", "WorkCenterId": "WC-HM-CNC", "Status": "In Progress", "PlannedQty": 6, "CompletedQty": 2, "ScrapQty": 0 },
+        { "OrderNo": "MO-HM-1001", "OperationNo": 20, "OperationName": "Fabrication", "WorkCenterId": "WC-HM-FAB", "Status": "Queued", "PlannedQty": 6, "CompletedQty": 0, "ScrapQty": 0 }
+      ]
+    }
+  ],
+  "shopFloorEvents": [],
+  "qualityHolds": [],
+  "nonConformances": [],
+  "qualityHistory": [],
+  "genealogyHistory": [],
+  "costingStates": [
+    {
+      "OrderNo": "MO-HM-1001",
+      "Variances": [
+        { "OrderNo": "MO-HM-1001", "VarianceType": "Material", "Amount": 1800, "Currency": "USD", "AnalysisNote": "Steel plate premium" },
+        { "OrderNo": "MO-HM-1001", "VarianceType": "Labor", "Amount": 900, "Currency": "USD", "AnalysisNote": "Specialist machining overtime" }
+      ],
+      "Handoffs": [
+        { "OrderNo": "MO-HM-1001", "EventType": "SettlementReady", "TargetSystem": "Accounting", "Status": "Pending", "Notes": "Awaiting variance review" }
+      ],
+      "SettlementStatus": "Pending",
+      "PostingId": "",
+      "PostAttempts": 0,
+      "RequiresRetry": true
+    }
+  ]
+}

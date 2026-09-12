@@ -1,0 +1,78 @@
+{
+  "templates": [
+    {
+      "templateKey": "poultry",
+      "displayName": "Poultry Processing Lifecycle",
+      "description": "Poultry Processing operations from intake through dispatch.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "hatchery",
+          "name": "Hatchery",
+          "description": "Poultry Processing stage: Hatchery",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "brooding"
+          ]
+        },
+        {
+          "stageKey": "brooding",
+          "name": "Brooding",
+          "description": "Poultry Processing stage: Brooding",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "grow-out"
+          ]
+        },
+        {
+          "stageKey": "grow-out",
+          "name": "Grow-Out",
+          "description": "Poultry Processing stage: Grow-Out",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "processing"
+          ]
+        },
+        {
+          "stageKey": "processing",
+          "name": "Processing",
+          "description": "Poultry Processing stage: Processing",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "dispatch"
+          ]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Poultry Processing stage: Dispatch",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "poultry",
+      "templateKey": "poultry",
+      "displayName": "Poultry Processing",
+      "notes": ""
+    }
+  ]
+}

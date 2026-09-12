@@ -1,0 +1,148 @@
+{
+  "autoPilotActions": [
+    {
+      "id": "ap-1001",
+      "category": "Procurement",
+      "title": "Low Stock: PET Bottles",
+      "description": "Stock for 500ml PET bottles has dropped below 15% of the 30-day requirement.",
+      "suggestedAction": "Draft PO for 50,000 units from Global Packaging Solutions.",
+      "status": "Pending",
+      "timestamp": "2026-07-04T08:00:00Z",
+      "impactAnalysis": "Prevents stock-out on packaging line.",
+      "confidenceScore": 98
+    }
+  ],
+  "autoPilotHistory": [
+    {
+      "id": "ap-0901",
+      "category": "Procurement",
+      "title": "Reorder: Citric Acid",
+      "description": "Inventory hit reorder point.",
+      "suggestedAction": "Draft PO for 500L.",
+      "status": "Executed",
+      "timestamp": "2026-07-02T08:00:00Z",
+      "impactAnalysis": "Averted stock-out.",
+      "confidenceScore": 95
+    }
+  ],
+  "productionOrders": [
+    {
+      "id": "po-1001",
+      "orderCode": "PRD-2024-001",
+      "productName": "Premium Cassava Flour",
+      "orderType": "Standard",
+      "status": "Active",
+      "targetQuantity": 5000,
+      "completedQuantity": 3200,
+      "startDate": "2026-06-29T00:00:00Z",
+      "endDate": "2026-07-06T00:00:00Z",
+      "totalBudget": 15000,
+      "fundsUtilized": 9500
+    }
+  ],
+  "inventoryItems": [
+    {
+      "id": "inv-1001",
+      "receiptNumber": "RC-1001",
+      "supplierName": "Zambeef Farmers Co-op",
+      "sku": "RM-CASS-01",
+      "name": "Cassava Root",
+      "batchNumber": "B-1001",
+      "quantity": 5000,
+      "unit": "kg",
+      "binLocation": "A1-01",
+      "expiryDate": "2026-08-04T00:00:00Z",
+      "status": "Available"
+    }
+  ],
+  "warehouseTasks": [
+    {
+      "id": "task-1001",
+      "taskType": "Putaway",
+      "description": "Move 5000kg Cassava to A1-01",
+      "assignedTo": "Forklift 1",
+      "status": "Pending",
+      "createdAt": "2026-07-04T08:00:00Z"
+    }
+  ],
+  "fleetVehicles": [
+    {
+      "id": "fleet-1001",
+      "plateNumber": "ZM-A-101",
+      "driverName": "John Phiri",
+      "currentRoute": "Lusaka -> Ndola",
+      "latitude": -15.3875,
+      "longitude": 28.3228,
+      "temperature": 2.4,
+      "humidity": 65,
+      "status": "In-Transit"
+    }
+  ],
+  "intakeRecords": [
+    {
+      "id": "intake-1001",
+      "receiptNumber": "RC-2405-001",
+      "supplierName": "Zambeef Farmers Co-op",
+      "materialType": "Cassava Root",
+      "deliveryDate": "2026-07-03T00:00:00Z",
+      "declaredWeight": 15000,
+      "actualWeight": 14950,
+      "status": "Accepted",
+      "qcGrading": "Grade A",
+      "moistureContent": 12.5,
+      "purityLevel": 98.0
+    }
+  ],
+  "sourcingContracts": [
+    {
+      "id": "sc-1001",
+      "contractNumber": "CTR-ZAM-001",
+      "vendorName": "Zambeef Farmers Co-op",
+      "materialCategory": "Raw Agriculture",
+      "status": "Active",
+      "startDate": "2026-04-01T00:00:00Z",
+      "endDate": "2027-01-01T00:00:00Z",
+      "contractValue": 250000,
+      "amountFulfilled": 120000
+    }
+  ],
+  "financialSyncEvents": [
+    {
+      "id": "fin-1001",
+      "eventType": "InventoryValuation",
+      "sourceModule": "Manufacturing",
+      "referenceId": "ETH-402",
+      "timestamp": "2026-07-03T08:00:00Z",
+      "amount": 12500,
+      "currency": "ZMW",
+      "status": "Synced",
+      "destinationLedger": "WIP Inventory"
+    }
+  ],
+  "costAllocations": [
+    {
+      "id": "cost-1001",
+      "costCenter": "Fruit Line A",
+      "expenseType": "Water",
+      "allocatedAmount": 1200,
+      "allocationPeriod": "2026-07-01T00:00:00Z",
+      "syncStatus": "Pending"
+    }
+  ],
+  "platformSession": {
+    "userId": "planner-01",
+    "displayName": "Planning Supervisor",
+    "environment": "ManufacturingWebApp",
+    "mode": "Mock",
+    "roles": [ "Planner", "Supervisor" ],
+    "permissions": [ "Audit.View", "Orders.Manage", "Quality.Manage", "Traceability.View", "Performance.View" ],
+    "lastAuthenticatedUtc": "2026-07-04T07:48:00Z"
+  },
+  "platformAuditEvents": [
+    { "eventId": "audit-1001", "userId": "planner-01", "action": "Login", "resource": "Platform", "outcome": "Success", "details": "Authenticated into mock environment", "eventTimeUtc": "2026-07-04T07:48:00Z", "severity": "Info" }
+  ],
+  "platformPermissionRules": [
+    { "permission": "Audit.View", "description": "View audit trail and system events", "granted": true },
+    { "permission": "Orders.Manage", "description": "Create and update production orders", "granted": true }
+  ]
+}

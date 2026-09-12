@@ -1,0 +1,70 @@
+{
+  "templates": [
+    {
+      "templateKey": "edible-oils",
+      "displayName": "Edible Oils Processing Lifecycle",
+      "description": "Edible Oils Processing operations from intake through dispatch.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "intake",
+          "name": "Intake",
+          "description": "Edible Oils Processing stage: Intake",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["refining"]
+        },
+        {
+          "stageKey": "refining",
+          "name": "Refining",
+          "description": "Edible Oils Processing stage: Refining",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["deodorising"]
+        },
+        {
+          "stageKey": "deodorising",
+          "name": "Deodorising",
+          "description": "Edible Oils Processing stage: Deodorising",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["packaging"]
+        },
+        {
+          "stageKey": "packaging",
+          "name": "Packaging",
+          "description": "Edible Oils Processing stage: Packaging",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["dispatch"]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Edible Oils Processing stage: Dispatch",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "edible-oils",
+      "templateKey": "edible-oils",
+      "displayName": "Edible Oils Processing",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "templates": [
+    {
+      "stages": [
+        {
+          "description": "Dairy Processing stage: Intake",
+          "unit": "",
+          "sortOrder": 1,
+          "allowedNextStageKeys": [
+            "processing"
+          ],
+          "name": "Intake",
+          "status": "Normal",
+          "value": "Ready",
+          "stageKey": "intake"
+        },
+        {
+          "description": "Dairy Processing stage: Processing",
+          "unit": "",
+          "sortOrder": 2,
+          "allowedNextStageKeys": [
+            "packaging"
+          ],
+          "name": "Processing",
+          "status": "Normal",
+          "value": "Ready",
+          "stageKey": "processing"
+        },
+        {
+          "description": "Dairy Processing stage: Packaging",
+          "unit": "",
+          "sortOrder": 3,
+          "allowedNextStageKeys": [
+            "dispatch"
+          ],
+          "name": "Packaging",
+          "status": "Normal",
+          "value": "Ready",
+          "stageKey": "packaging"
+        },
+        {
+          "description": "Dairy Processing stage: Dispatch",
+          "unit": "",
+          "sortOrder": 4,
+          "allowedNextStageKeys": [],
+          "name": "Dispatch",
+          "status": "Normal",
+          "value": "Ready",
+          "stageKey": "dispatch"
+        }
+      ],
+      "primaryUnitLabel": "Lots",
+      "displayName": "Dairy Processing Lifecycle",
+      "description": "Dairy processing operations from intake through dispatch.",
+      "templateKey": "dairy"
+    }
+  ],
+  "profileMappings": [
+    {
+      "notes": "",
+      "displayName": "Dairy Processing Lifecycle",
+      "profileKey": "dairy",
+      "templateKey": "dairy"
+    }
+  ]
+}

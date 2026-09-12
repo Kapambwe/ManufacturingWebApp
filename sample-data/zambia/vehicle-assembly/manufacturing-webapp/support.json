@@ -1,0 +1,200 @@
+{
+  "autoPilotActions": [
+    {
+      "id": "ap-va-1001",
+      "category": "Scheduling",
+      "title": "Body Shop Bottleneck",
+      "description": "Body shop queue is trending above the plan for the week.",
+      "suggestedAction": "Shift sub-assembly work to the second line.",
+      "status": "Pending",
+      "timestamp": "2026-07-04T08:00:00Z",
+      "impactAnalysis": "Protects assembly takt time.",
+      "confidenceScore": 96
+    }
+  ],
+  "autoPilotHistory": [],
+  "productionOrders": [
+    {
+      "id": "po-va-1001",
+      "orderCode": "VA-CAR-001",
+      "productName": "Passenger Vehicle Assembly",
+      "orderType": "Custom",
+      "status": "Planning",
+      "targetQuantity": 120,
+      "completedQuantity": 0,
+      "startDate": "2026-07-04T00:00:00Z",
+      "endDate": "2026-08-15T00:00:00Z",
+      "totalBudget": 480000,
+      "fundsUtilized": 42000
+    }
+  ],
+  "inventoryItems": [
+    {
+      "id": "inv-va-1001",
+      "receiptNumber": "RC-VA-001",
+      "supplierName": "Copperbelt Steel Fabricators",
+      "sku": "ASM-BODY-01",
+      "name": "Body Shell Kit",
+      "batchNumber": "VA-B-001",
+      "quantity": 42,
+      "unit": "sets",
+      "binLocation": "ASM-A1",
+      "expiryDate": "2027-07-04T00:00:00Z",
+      "status": "Available"
+    }
+  ],
+  "warehouseTasks": [
+    {
+      "id": "task-va-1001",
+      "taskType": "Putaway",
+      "description": "Move body shell kits to the assembly line buffer",
+      "assignedTo": "Forklift 2",
+      "status": "Pending",
+      "createdAt": "2026-07-04T08:00:00Z"
+    }
+  ],
+  "fleetVehicles": [
+    {
+      "id": "fleet-va-1001",
+      "plateNumber": "VA-LOG-101",
+      "driverName": "Henry Chileshe",
+      "currentRoute": "Ndola -> Lusaka",
+      "latitude": -15.3875,
+      "longitude": 28.3228,
+      "temperature": 18.0,
+      "humidity": 48,
+      "status": "Loading"
+    }
+  ],
+  "intakeRecords": [
+    {
+      "id": "intake-va-1001",
+      "receiptNumber": "RC-VA-001",
+      "supplierName": "Copperbelt Steel Fabricators",
+      "materialType": "Steel Components",
+      "deliveryDate": "2026-07-03T00:00:00Z",
+      "declaredWeight": 2000,
+      "actualWeight": 1988,
+      "status": "Accepted",
+      "qcGrading": "Grade A",
+      "moistureContent": 0.1,
+      "purityLevel": 99.7
+    }
+  ],
+  "sourcingContracts": [
+    {
+      "id": "sc-va-1001",
+      "contractNumber": "VA-CTR-001",
+      "vendorName": "Zambia Auto Components",
+      "materialCategory": "Body Panels",
+      "status": "Active",
+      "startDate": "2026-01-01T00:00:00Z",
+      "endDate": "2027-01-01T00:00:00Z",
+      "contractValue": 1250000,
+      "amountFulfilled": 580000
+    }
+  ],
+  "financialSyncEvents": [
+    {
+      "id": "fin-va-1001",
+      "eventType": "AssetCapitalization",
+      "sourceModule": "Manufacturing",
+      "referenceId": "VA-ASM-001",
+      "timestamp": "2026-07-03T08:00:00Z",
+      "amount": 180000,
+      "currency": "ZMW",
+      "status": "Pending",
+      "destinationLedger": "Plant & Equipment"
+    }
+  ],
+  "costAllocations": [
+    {
+      "id": "cost-va-1001",
+      "costCenter": "Vehicle Assembly",
+      "expenseType": "Direct Labor",
+      "allocatedAmount": 22000,
+      "allocationPeriod": "2026-07-01T00:00:00Z",
+      "syncStatus": "Synced"
+    }
+  ],
+  "platformSession": {
+    "userId": "planner-va-01",
+    "displayName": "Vehicle Assembly Planner",
+    "environment": "ManufacturingWebApp",
+    "mode": "Mock",
+    "roles": [ "Planner", "Supervisor" ],
+    "permissions": [ "Audit.View", "Orders.Manage", "Quality.Manage", "Traceability.View", "Performance.View" ],
+    "lastAuthenticatedUtc": "2026-07-04T07:48:00Z"
+  },
+  "platformAuditEvents": [
+    { "eventId": "audit-va-1001", "userId": "planner-va-01", "action": "Login", "resource": "Platform", "outcome": "Success", "details": "Authenticated into vehicle assembly context", "eventTimeUtc": "2026-07-04T07:48:00Z", "severity": "Info" }
+  ],
+  "platformPermissionRules": [
+    { "permission": "Audit.View", "description": "View audit trail and system events", "granted": true },
+    { "permission": "Orders.Manage", "description": "Create and update production orders", "granted": true }
+  ],
+  "subscribers": [],
+  "telecomBills": [
+    {
+      "id": "bill-va-1001",
+      "subscriberId": "260971200111",
+      "billCycle": "2026-07-01T00:00:00Z",
+      "usageCharges": 540,
+      "subscriptionFees": 260,
+      "paymentStatus": "Unpaid"
+    }
+  ],
+  "telecomRecharges": [
+    { "id": "recharge-va-1001", "subscriberId": "260971200111", "amount": 200, "channel": "Mobile Money", "rechargedAtUtc": "2026-07-04T05:30:00Z", "status": "Posted" }
+  ],
+  "telecomUsage": [
+    { "id": "usage-va-1001", "subscriberId": "260971200111", "voiceMinutes": 185, "dataMb": 4096, "ratedAmount": 54.25, "ratedAtUtc": "2026-07-04T06:00:00Z", "status": "Rated" }
+  ],
+  "telecomAssurance": [
+    { "id": "assure-va-1001", "category": "Coverage", "summary": "Assembly yard coverage requires optimisation", "owner": "network-ops", "status": "Investigating", "raisedAtUtc": "2026-07-04T06:10:00Z", "notes": "" }
+  ],
+  "telecomCdrs": [
+    { "id": "cdr-va-1001", "subscriberId": "260971200111", "callDirection": "Outbound", "durationSeconds": 245, "ratedAmount": 6.1, "cellId": "CELL-VA-07", "occurredAtUtc": "2026-07-04T06:05:00Z", "status": "Mediated" }
+  ],
+  "telecomRoaming": [],
+  "telecomCases": [
+    { "id": "case-va-1001", "caseNumber": "CASE-VA-1001", "subscriberId": "260971200111", "category": "Coverage", "summary": "Plant edge coverage investigation", "owner": "care-va-01", "status": "Open", "createdAtUtc": "2026-07-04T06:15:00Z" }
+  ],
+  "telecomSites": [
+    { "id": "site-va-1001", "siteCode": "VA-01", "siteName": "Vehicle Assembly Plant", "region": "Copperbelt", "technology": "4G", "status": "Active", "uptimePercent": 99.7, "owner": "radio-ops" }
+  ],
+  "telecomElements": [
+    { "id": "elem-va-1001", "elementCode": "CELL-VA-07", "elementType": "Base Station", "siteCode": "VA-01", "vendor": "Ericsson", "status": "In Service", "managedBy": "noc-va-01", "lastHeartbeatUtc": "2026-07-04T06:12:00Z" }
+  ],
+  "telecomWorkOrders": [
+    { "id": "wo-va-1001", "workOrderNumber": "WO-VA-1001", "workType": "Optimisation", "priority": "High", "siteCode": "VA-01", "summary": "Tighten coverage around weld shop", "assignedTo": "field-tech-va-01", "status": "Open", "createdAtUtc": "2026-07-04T06:20:00Z" }
+  ],
+  "utilityMeters": [
+    { "id": "um-va-1001", "meterNumber": "ZWES-VA-1001", "customerName": "Vehicle Assembly Works", "status": "Active", "meterType": "Electricity", "lastReading": 11240.8, "lastReadingDate": "2026-07-04T05:45:00Z", "currentUsage": 980.2, "tariffClass": "Industrial", "balance": 10900 }
+  ],
+  "utilityBills": [
+    { "id": "ub-va-1001", "meterId": "ZWES-VA-1001", "billDate": "2026-07-01T00:00:00Z", "consumption": 20800, "amount": 10900, "status": "Unpaid", "dueDate": "2026-07-14T00:00:00Z" }
+  ],
+  "utilityReadings": [
+    { "id": "ur-va-1001", "meterId": "ZWES-VA-1001", "readingValue": 11240.8, "capturedAtUtc": "2026-07-04T05:45:00Z", "capturedBy": "meter-tech-va-01", "status": "Posted" }
+  ],
+  "utilityTariffs": [
+    { "id": "ut-va-1001", "tariffClass": "Industrial", "meterType": "Electricity", "baseCharge": 280, "ratePerUnit": 0.73, "status": "Active" }
+  ],
+  "utilityOutages": [
+    { "id": "uo-va-1001", "outageNumber": "OUT-VA-1001", "area": "Paint Shop", "severity": "Medium", "status": "Monitoring", "owner": "dispatch-va-01", "reportedAtUtc": "2026-07-04T06:05:00Z", "notes": "Voltage fluctuation observed" }
+  ],
+  "utilityEvents": [
+    { "id": "ue-va-1001", "meterId": "ZWES-VA-1001", "eventType": "Read", "notes": "Scheduled read captured", "occurredAtUtc": "2026-07-04T05:45:00Z" }
+  ],
+  "utilityPrepayments": [
+    { "id": "up-va-1001", "accountNumber": "ACC-VA-1001", "amount": 5000, "postedAtUtc": "2026-07-04T05:55:00Z", "status": "Posted" }
+  ],
+  "utilityDispatches": [
+    { "id": "ud-va-1001", "dispatchNumber": "DIS-VA-1001", "area": "Paint Shop", "crew": "Utility Crew 5", "status": "Assigned", "createdAtUtc": "2026-07-04T06:00:00Z" }
+  ],
+  "utilityForecasts": [
+    { "id": "uf-va-1001", "area": "Copperbelt Assembly Corridor", "forecastDate": "2026-07-05T00:00:00Z", "forecastLoad": 214.6, "status": "Planned" }
+  ],
+  "ethanolBatches": []
+}

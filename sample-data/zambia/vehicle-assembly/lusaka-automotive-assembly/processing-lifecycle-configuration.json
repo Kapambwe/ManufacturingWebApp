@@ -1,0 +1,90 @@
+{
+  "templates": [
+    {
+      "description": "Vehicle assembly operations for cars, trucks, and heavy machinery from intake through dispatch.",
+      "primaryUnitLabel": "Units",
+      "templateKey": "vehicle-assembly",
+      "stages": [
+        {
+          "stageKey": "intake",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "chassis-assembly"
+          ],
+          "status": "Normal",
+          "name": "Intake",
+          "sortOrder": 1,
+          "description": "Vehicle Assembly stage: Intake",
+          "unit": ""
+        },
+        {
+          "stageKey": "chassis-assembly",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "body-fitting"
+          ],
+          "status": "Normal",
+          "name": "Chassis Assembly",
+          "sortOrder": 2,
+          "description": "Vehicle Assembly stage: Chassis Assembly",
+          "unit": ""
+        },
+        {
+          "stageKey": "body-fitting",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "powertrain-installation"
+          ],
+          "status": "Normal",
+          "name": "Body Fitting",
+          "sortOrder": 3,
+          "description": "Vehicle Assembly stage: Body Fitting",
+          "unit": ""
+        },
+        {
+          "stageKey": "powertrain-installation",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "testing"
+          ],
+          "status": "Normal",
+          "name": "Powertrain Installation",
+          "sortOrder": 4,
+          "description": "Vehicle Assembly stage: Powertrain Installation",
+          "unit": ""
+        },
+        {
+          "stageKey": "testing",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "dispatch"
+          ],
+          "status": "Normal",
+          "name": "Testing",
+          "sortOrder": 5,
+          "description": "Vehicle Assembly stage: Testing",
+          "unit": ""
+        },
+        {
+          "stageKey": "dispatch",
+          "value": "Ready",
+          "allowedNextStageKeys": [],
+          "status": "Normal",
+          "name": "Dispatch",
+          "sortOrder": 6,
+          "description": "Vehicle Assembly stage: Dispatch",
+          "unit": ""
+        }
+      ],
+      "displayName": "Vehicle Assembly Lifecycle"
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "vehicle-assembly",
+      "notes": "",
+      "templateKey": "vehicle-assembly",
+      "displayName": "Vehicle Assembly Lifecycle"
+    }
+  ]
+}

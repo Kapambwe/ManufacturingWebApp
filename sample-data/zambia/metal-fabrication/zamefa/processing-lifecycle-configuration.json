@@ -1,0 +1,66 @@
+{
+  "templates": [
+    {
+      "stages": [
+        {
+          "description": "Metal Fabrication stage: Intake",
+          "unit": "",
+          "sortOrder": 1,
+          "allowedNextStageKeys": [
+            "processing"
+          ],
+          "name": "Intake",
+          "status": "Normal",
+          "value": "Ready",
+          "stageKey": "intake"
+        },
+        {
+          "description": "Metal Fabrication stage: Processing",
+          "unit": "",
+          "sortOrder": 2,
+          "allowedNextStageKeys": [
+            "packaging"
+          ],
+          "name": "Processing",
+          "status": "Normal",
+          "value": "Ready",
+          "stageKey": "processing"
+        },
+        {
+          "description": "Metal Fabrication stage: Packaging",
+          "unit": "",
+          "sortOrder": 3,
+          "allowedNextStageKeys": [
+            "dispatch"
+          ],
+          "name": "Packaging",
+          "status": "Normal",
+          "value": "Ready",
+          "stageKey": "packaging"
+        },
+        {
+          "description": "Metal Fabrication stage: Dispatch",
+          "unit": "",
+          "sortOrder": 4,
+          "allowedNextStageKeys": [],
+          "name": "Dispatch",
+          "status": "Normal",
+          "value": "Ready",
+          "stageKey": "dispatch"
+        }
+      ],
+      "primaryUnitLabel": "Lots",
+      "displayName": "Metal Fabrication Lifecycle",
+      "description": "Metal fabrication operations from raw material intake through dispatch.",
+      "templateKey": "metal-fabrication"
+    }
+  ],
+  "profileMappings": [
+    {
+      "notes": "",
+      "displayName": "Metal Fabrication Lifecycle",
+      "profileKey": "metal-fabrication",
+      "templateKey": "metal-fabrication"
+    }
+  ]
+}

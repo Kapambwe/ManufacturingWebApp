@@ -1,0 +1,99 @@
+{
+  "zambia": {
+    "agro-processing": [
+      "eastern-tropical-fruit-company",
+      "kalene-hills-fruit-company",
+      "mununshi-fruit-company",
+      "national-milling-corporation",
+      "zambeef-products-plc",
+      "zambezi-cashew-company",
+      "zambia-sugar-plc",
+      "zampalm"
+    ],
+    "food-beverage": [
+      "lusaka-bakery-ltd",
+      "mongu-fish-trading",
+      "tradekings-group-limited",
+      "zambeef-products-plc",
+      "zambian-breweries-plc"
+    ],
+    "chemicals": [
+      "nitrogen-chemicals-zambia"
+    ],
+    "cement": [
+      "chilanga-cement-plc"
+    ],
+    "utilities": [
+      "zesco"
+    ],
+    "poultry": [
+      "chisamba-poultry-farms",
+      "zambeef-products-plc"
+    ],
+    "metal-fabrication": [
+      "kabwe-engineering-works",
+      "zamefa"
+    ],
+    "pharmaceuticals": [
+      "zambia-pharma-manufacturing",
+      "akums-zambia"
+    ],
+    "textiles": [
+      "lusaka-textiles-ltd",
+      "lokomade-brand"
+    ],
+    "packaging": [
+      "lusaka-packaging-solutions",
+      "nampak-zambia"
+    ],
+    "solar-assembly": [
+      "lusaka-solar-assembly",
+      "cec-renewables"
+    ],
+    "dairy": [
+      "central-dairy-products",
+      "parmalat-zambia"
+    ],
+    "building-materials": [
+      "kafue-building-materials",
+      "lafarge-zambia-plc"
+    ],
+    "edible-oils": [
+      "kapiri-vegetable-oils-ltd",
+      "trade-kings-group-limited"
+    ],
+    "fertilizers": [
+      "lusaka-fertilizer-blenders",
+      "yara-zambia"
+    ],
+    "animal-feed": [
+      "zambeef-animal-feed-mills"
+    ],
+    "electronics-assembly": [
+      "lusaka-electronics-assembly"
+    ],
+    "agricultural-machinery": [
+      "kafue-agricultural-machinery"
+    ],
+    "vehicle-assembly": [
+      "lusaka-automotive-assembly"
+    ],
+    "vehicle-spare-parts": [
+      "zambia-auto-spare-parts"
+    ],
+    "heavy-machinery-manufacturing": [
+      "kafue-heavy-machinery-works"
+    ]
+  },
+  "south-africa": {
+    "steel": [
+      "arcelormittal-sa"
+    ],
+    "petrochemicals": [
+      "sasol-limited"
+    ],
+    "paper": [
+      "sappi-southern-africa"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "templates": [
+    {
+      "description": "Spare parts manufacturing for cars, trucks, and heavy machinery from intake through dispatch.",
+      "primaryUnitLabel": "Parts",
+      "templateKey": "vehicle-spare-parts",
+      "stages": [
+        {
+          "stageKey": "intake",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "machining"
+          ],
+          "status": "Normal",
+          "name": "Intake",
+          "sortOrder": 1,
+          "description": "Vehicle Spare Parts stage: Intake",
+          "unit": ""
+        },
+        {
+          "stageKey": "machining",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "treatment"
+          ],
+          "status": "Normal",
+          "name": "Machining",
+          "sortOrder": 2,
+          "description": "Vehicle Spare Parts stage: Machining",
+          "unit": ""
+        },
+        {
+          "stageKey": "treatment",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "assembly"
+          ],
+          "status": "Normal",
+          "name": "Treatment",
+          "sortOrder": 3,
+          "description": "Vehicle Spare Parts stage: Treatment",
+          "unit": ""
+        },
+        {
+          "stageKey": "assembly",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "inspection"
+          ],
+          "status": "Normal",
+          "name": "Assembly",
+          "sortOrder": 4,
+          "description": "Vehicle Spare Parts stage: Assembly",
+          "unit": ""
+        },
+        {
+          "stageKey": "inspection",
+          "value": "Ready",
+          "allowedNextStageKeys": [
+            "dispatch"
+          ],
+          "status": "Normal",
+          "name": "Inspection",
+          "sortOrder": 5,
+          "description": "Vehicle Spare Parts stage: Inspection",
+          "unit": ""
+        },
+        {
+          "stageKey": "dispatch",
+          "value": "Ready",
+          "allowedNextStageKeys": [],
+          "status": "Normal",
+          "name": "Dispatch",
+          "sortOrder": 6,
+          "description": "Vehicle Spare Parts stage: Dispatch",
+          "unit": ""
+        }
+      ],
+      "displayName": "Vehicle Spare Parts Lifecycle"
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "vehicle-spare-parts",
+      "notes": "",
+      "templateKey": "vehicle-spare-parts",
+      "displayName": "Vehicle Spare Parts Lifecycle"
+    }
+  ]
+}

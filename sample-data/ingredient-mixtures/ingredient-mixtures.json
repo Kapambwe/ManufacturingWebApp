@@ -1,0 +1,232 @@
+{
+  "institutionTypes": [
+    {
+      "country": "zambia",
+      "institutionType": "dairy-processing",
+      "institutionName": "zambia-dairy-cooperative",
+      "productFamily": "Dairy Products",
+      "templates": [
+        {
+          "templateKey": "cheese",
+          "displayName": "Cheese Blend",
+          "description": "Cheese formulation template.",
+          "ingredients": [
+            { "name": "Raw Milk", "quantity": 1000, "unit": "L" },
+            { "name": "Starter Culture", "quantity": 2, "unit": "kg" },
+            { "name": "Rennet", "quantity": 0.5, "unit": "kg" },
+            { "name": "Salt", "quantity": 15, "unit": "kg" }
+          ],
+          "notes": "Suitable for hard cheese variants."
+        },
+        {
+          "templateKey": "powdered-milk",
+          "displayName": "Powdered Milk Blend",
+          "description": "Powder milk formulation template.",
+          "ingredients": [
+            { "name": "Milk Concentrate", "quantity": 1000, "unit": "L" },
+            { "name": "Vitamin Premix", "quantity": 0.2, "unit": "kg", "isOptional": false },
+            { "name": "Anti-Caking Agent", "quantity": 0.1, "unit": "kg", "isOptional": true }
+          ],
+          "notes": "For fortified powder milk products."
+        }
+      ]
+    },
+    {
+      "country": "zambia",
+      "institutionType": "bakery-and-biscuits",
+      "institutionName": "zambia-biscuit-manufacturing",
+      "productFamily": "Bakery Products",
+      "templates": [
+        {
+          "templateKey": "biscuits",
+          "displayName": "Biscuit Dough Mix",
+          "description": "Biscuit dough formulation.",
+          "ingredients": [
+            { "name": "Flour", "quantity": 500, "unit": "kg" },
+            { "name": "Sugar", "quantity": 120, "unit": "kg" },
+            { "name": "Fat", "quantity": 80, "unit": "kg" },
+            { "name": "Milk Powder", "quantity": 15, "unit": "kg" },
+            { "name": "Baking Powder", "quantity": 4, "unit": "kg" }
+          ],
+          "notes": "Suitable for sweet biscuit production."
+        }
+      ]
+    },
+    {
+      "country": "south-africa",
+      "institutionType": "animal-feed-processing",
+      "institutionName": "south-africa-feed-millers",
+      "productFamily": "Animal Feed",
+      "templates": [
+        {
+          "templateKey": "poultry-starter",
+          "displayName": "Poultry Starter Feed",
+          "description": "Starter feed formulation.",
+          "ingredients": [
+            { "name": "Maize Meal", "quantity": 450, "unit": "kg" },
+            { "name": "Soybean Meal", "quantity": 300, "unit": "kg" },
+            { "name": "Vitamin Premix", "quantity": 5, "unit": "kg" },
+            { "name": "Mineral Premix", "quantity": 3, "unit": "kg" }
+          ],
+          "notes": "High protein starter feed."
+        }
+      ]
+    },
+    {
+      "country": "zambia",
+      "institutionType": "petrochemical-processing",
+      "institutionName": "zambia-petrochemical-works",
+      "productFamily": "Petrochemical Products",
+      "templates": [
+        {
+          "templateKey": "lubricant-blend",
+          "displayName": "Lubricant Blend",
+          "description": "Lubricant base and additive mix.",
+          "ingredients": [
+            { "name": "Base Oil", "quantity": 900, "unit": "L" },
+            { "name": "Viscosity Modifier", "quantity": 20, "unit": "L" },
+            { "name": "Anti-Wear Additive", "quantity": 10, "unit": "L" }
+          ],
+          "notes": "Industrial lubrication product."
+        }
+      ]
+    },
+    {
+      "country": "south-africa",
+      "institutionType": "steel-processing",
+      "institutionName": "south-africa-steel-works",
+      "productFamily": "Steel Products",
+      "templates": [
+        {
+          "templateKey": "steel-charge",
+          "displayName": "Steelmaking Charge Mix",
+          "description": "Charge mix for steel melt.",
+          "ingredients": [
+            { "name": "Iron Source", "quantity": 700, "unit": "kg" },
+            { "name": "Scrap Metal", "quantity": 250, "unit": "kg" },
+            { "name": "Limestone", "quantity": 30, "unit": "kg" }
+          ],
+          "notes": "Typical furnace charge profile."
+        }
+      ]
+    },
+    {
+      "country": "zambia",
+      "institutionType": "pharmaceutical-processing",
+      "institutionName": "zambia-pharma-labs",
+      "productFamily": "Pharmaceuticals",
+      "templates": [
+        {
+          "templateKey": "tablet-blend",
+          "displayName": "Tablet Blend",
+          "description": "Tablet batch formulation.",
+          "ingredients": [
+            { "name": "Active Ingredient", "quantity": 25, "unit": "kg" },
+            { "name": "Filler", "quantity": 150, "unit": "kg" },
+            { "name": "Binder", "quantity": 12, "unit": "kg" },
+            { "name": "Lubricant", "quantity": 2, "unit": "kg" }
+          ],
+          "notes": "For oral solid dosage production."
+        }
+      ]
+    },
+    {
+      "country": "south-africa",
+      "institutionType": "footwear-processing",
+      "institutionName": "south-africa-shoe-works",
+      "productFamily": "Footwear",
+      "templates": [
+        {
+          "templateKey": "shoe-assembly",
+          "displayName": "Shoe Assembly Kit",
+          "description": "Footwear assembly material kit.",
+          "ingredients": [
+            { "name": "Upper Material", "quantity": 1, "unit": "set" },
+            { "name": "Rubber Sole", "quantity": 1, "unit": "set" },
+            { "name": "Thread", "quantity": 1, "unit": "set" },
+            { "name": "Adhesive", "quantity": 0.2, "unit": "kg" }
+          ],
+          "notes": "Generic shoe production kit."
+        }
+      ]
+    },
+    {
+      "country": "zambia",
+      "institutionType": "textile-processing",
+      "institutionName": "zambia-textiles-company",
+      "productFamily": "Textiles",
+      "templates": [
+        {
+          "templateKey": "fabric-blend",
+          "displayName": "Fabric Blend",
+          "description": "Textile fiber blend.",
+          "ingredients": [
+            { "name": "Cotton", "quantity": 60, "unit": "%" },
+            { "name": "Polyester", "quantity": 40, "unit": "%" },
+            { "name": "Dye", "quantity": 3, "unit": "kg" },
+            { "name": "Finishing Agent", "quantity": 1, "unit": "kg" }
+          ],
+          "notes": "Suitable for cloth and garments."
+        }
+      ]
+    },
+    {
+      "country": "zambia",
+      "institutionType": "core-manufacturing",
+      "institutionName": "zambia-core-manufacturing",
+      "productFamily": "General Manufacturing",
+      "templates": [
+        {
+          "templateKey": "assembly-kit",
+          "displayName": "Assembly Kit",
+          "description": "General assembly product family.",
+          "ingredients": [
+            { "name": "Frame Component", "quantity": 1, "unit": "set" },
+            { "name": "Fastener Set", "quantity": 1, "unit": "set" },
+            { "name": "Control Module", "quantity": 1, "unit": "set" }
+          ],
+          "notes": "Core manufacturing catch-all profile."
+        }
+      ]
+    },
+    {
+      "country": "south-africa",
+      "institutionType": "heavy-industry",
+      "institutionName": "south-africa-heavy-works",
+      "productFamily": "Heavy Industry",
+      "templates": [
+        {
+          "templateKey": "steelmaking-charge",
+          "displayName": "Steelmaking Charge",
+          "description": "Heavy industry feedstock blend.",
+          "ingredients": [
+            { "name": "Iron Ore", "quantity": 800, "unit": "kg" },
+            { "name": "Scrap Steel", "quantity": 150, "unit": "kg" },
+            { "name": "Coke", "quantity": 40, "unit": "kg" },
+            { "name": "Limestone", "quantity": 25, "unit": "kg" }
+          ],
+          "notes": "Generic charge mix for heavy industrial operations."
+        }
+      ]
+    },
+    {
+      "country": "zambia",
+      "institutionType": "logistics",
+      "institutionName": "zambia-logistics-network",
+      "productFamily": "Freight Catalogs",
+      "templates": [
+        {
+          "templateKey": "freight-profile",
+          "displayName": "Freight Profile",
+          "description": "Shipment profile catalog.",
+          "ingredients": [
+            { "name": "Mode", "quantity": null, "unit": "" },
+            { "name": "Origin", "quantity": null, "unit": "" },
+            { "name": "Destination", "quantity": null, "unit": "" }
+          ],
+          "notes": "Catalog-style definition rather than a material mixture."
+        }
+      ]
+    }
+  ]
+}

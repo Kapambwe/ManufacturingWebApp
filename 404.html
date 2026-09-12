@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ManufacturingWebApp</title>
+    <base href="/ManufacturingWebApp/" />
+    <script>
+        (function () {
+            var theme = window.localStorage.getItem("mw.theme") || "light";
+            document.documentElement.setAttribute("data-theme", theme);
+            var culture = window.localStorage.getItem("mw.culture") || "en-US";
+            document.documentElement.setAttribute("lang", culture);
+        })();
+    </script>
+    <link href="_framework/dotnet.hna88kjx25.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-7S/S6uRtgYhz4yGNw8pCSAPvwK0QroLe1d3HGbQLUfo=" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="ManufacturingWebApp.styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="_content/Radzen.Blazor/css/standard-base.css">
+    <link rel="manifest" href="manifest.json">
+    <script type="importmap">{
+  "imports": {
+    "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.w3qd1tpl0e.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.hna88kjx25.js",
+    "./_framework/dotnet.native.js": "./_framework/dotnet.native.pzqb9tus17.js",
+    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.zbexyp8zrs.js"
+  },
+  "scopes": {},
+  "integrity": {
+    "./_framework/blazor.webassembly.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
+    "./_framework/blazor.webassembly.w3qd1tpl0e.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
+    "./_framework/dotnet.hna88kjx25.js": "sha256-7S/S6uRtgYhz4yGNw8pCSAPvwK0QroLe1d3HGbQLUfo=",
+    "./_framework/dotnet.js": "sha256-7S/S6uRtgYhz4yGNw8pCSAPvwK0QroLe1d3HGbQLUfo=",
+    "./_framework/dotnet.native.js": "sha256-m4XMCDgrQ5rOxGwmdmz2P4/old/VMscOlD88aHQNiis=",
+    "./_framework/dotnet.native.pzqb9tus17.js": "sha256-m4XMCDgrQ5rOxGwmdmz2P4/old/VMscOlD88aHQNiis=",
+    "./_framework/dotnet.runtime.js": "sha256-MZMguyke9CroSQl+L/SHIGFkPTD+LtYGXkXjAvwWx40=",
+    "./_framework/dotnet.runtime.zbexyp8zrs.js": "sha256-MZMguyke9CroSQl+L/SHIGFkPTD+LtYGXkXjAvwWx40="
+  }
+}</script>
+</head>
+
+<body>
+    <div id="app">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+    <script src="_framework/blazor.webassembly.w3qd1tpl0e.js"></script>
+    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+    <script src="js/processingLifecycleStorage.js"></script>
+    <script src="js/platformShell.js"></script>
+</body>
+
+</html>
+

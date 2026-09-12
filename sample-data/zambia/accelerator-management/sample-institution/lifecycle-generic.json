@@ -1,0 +1,16 @@
+{
+  "country": "Zambia",
+  "institutionType": "accelerator-management",
+  "institutionName": "sample-institution",
+  "lifecycleName": "Generic Product Lifecycle",
+  "description": "Tracks product flow from supplier input to finished output across any institution type.",
+  "stages": [
+    { "stageKey": "intake", "stageName": "Intake", "order": 1, "description": "Receive supplier inputs and register them into the system.", "status": "Open", "allowedNextStages": [ "review" ], "completionCriteria": [ "Supplier input received", "Basic details captured", "Record created" ] },
+    { "stageKey": "review", "stageName": "Review", "order": 2, "description": "Check documents, quality, and business rules before proceeding.", "status": "In Progress", "allowedNextStages": [ "process", "reject" ], "completionCriteria": [ "Documents reviewed", "Quality checked", "Approval decision recorded" ] },
+    { "stageKey": "factory", "stageName": "Factory Stage", "order": 3, "description": "Factory operations and line-side handling are active.", "status": "Open", "allowedNextStages": [ "process" ], "completionCriteria": [ "Factory work started", "Line assigned", "Task recorded" ] },
+    { "stageKey": "process", "stageName": "Processing Stage", "order": 4, "description": "Transform approved inputs into work-in-progress output.", "status": "Open", "allowedNextStages": [ "main" ], "completionCriteria": [ "Work order issued", "Processing started", "Output recorded" ] },
+    { "stageKey": "main", "stageName": "Main Stage", "order": 5, "description": "Core lifecycle execution and consolidation happens here.", "status": "Open", "allowedNextStages": [ "package" ], "completionCriteria": [ "Main work completed", "Records reconciled", "Flow approved" ] },
+    { "stageKey": "package", "stageName": "Package", "order": 6, "description": "Prepare approved output for storage, sale, or dispatch.", "status": "Open", "allowedNextStages": [ "confirm" ], "completionCriteria": [ "Packaging completed", "Labels applied", "Batch marked ready" ] },
+    { "stageKey": "confirm", "stageName": "Confirm Delivery", "order": 7, "description": "Close the lifecycle after receipt or proof of delivery is captured.", "status": "Closed", "allowedNextStages": [], "completionCriteria": [ "Proof of delivery captured", "Receipt acknowledged", "Lifecycle closed" ] }
+  ]
+}

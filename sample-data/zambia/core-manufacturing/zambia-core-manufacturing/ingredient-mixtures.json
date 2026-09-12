@@ -1,0 +1,15 @@
+{
+  "templates": [
+    {
+      "templateKey": "assembly-kit",
+      "displayName": "Assembly Kit",
+      "description": "General assembly product family.",
+      "ingredients": [
+        { "name": "Frame Component", "quantity": 1, "unit": "set" },
+        { "name": "Fastener Set", "quantity": 1, "unit": "set" },
+        { "name": "Control Module", "quantity": 1, "unit": "set" }
+      ],
+      "notes": "Core manufacturing catch-all profile."
+    }
+  ]
+}

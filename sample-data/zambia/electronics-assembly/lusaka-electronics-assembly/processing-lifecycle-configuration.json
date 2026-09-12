@@ -1,0 +1,90 @@
+{
+  "profileMappings": [
+    {
+      "templateKey": "electronics-assembly",
+      "profileKey": "electronics-assembly",
+      "displayName": "Electronics Assembly Lifecycle",
+      "notes": ""
+    }
+  ],
+  "templates": [
+    {
+      "templateKey": "electronics-assembly",
+      "description": "Electronics assembly operations from component intake through dispatch.",
+      "stages": [
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "pcb-assembly"
+          ],
+          "description": "Electronics Assembly stage: Intake",
+          "stageKey": "intake",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 1,
+          "name": "Intake"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "final-assembly"
+          ],
+          "description": "Electronics Assembly stage: PCB Assembly",
+          "stageKey": "pcb-assembly",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 2,
+          "name": "PCB Assembly"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "testing"
+          ],
+          "description": "Electronics Assembly stage: Final Assembly",
+          "stageKey": "final-assembly",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 3,
+          "name": "Final Assembly"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "packaging"
+          ],
+          "description": "Electronics Assembly stage: Testing",
+          "stageKey": "testing",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 4,
+          "name": "Testing"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "dispatch"
+          ],
+          "description": "Electronics Assembly stage: Packaging",
+          "stageKey": "packaging",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 5,
+          "name": "Packaging"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [],
+          "description": "Electronics Assembly stage: Dispatch",
+          "stageKey": "dispatch",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 6,
+          "name": "Dispatch"
+        }
+      ],
+      "displayName": "Electronics Assembly Lifecycle",
+      "primaryUnitLabel": "Units"
+    }
+  ]
+}

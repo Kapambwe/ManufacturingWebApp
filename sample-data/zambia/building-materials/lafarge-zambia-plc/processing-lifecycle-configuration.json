@@ -1,0 +1,70 @@
+{
+  "templates": [
+    {
+      "templateKey": "building-materials",
+      "displayName": "Building Materials Manufacturing Lifecycle",
+      "description": "Building Materials Manufacturing operations from intake through dispatch.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "raw-materials",
+          "name": "Raw Materials",
+          "description": "Building Materials Manufacturing stage: Raw Materials",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["crushing"]
+        },
+        {
+          "stageKey": "crushing",
+          "name": "Crushing",
+          "description": "Building Materials Manufacturing stage: Crushing",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["mixing"]
+        },
+        {
+          "stageKey": "mixing",
+          "name": "Mixing",
+          "description": "Building Materials Manufacturing stage: Mixing",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["curing"]
+        },
+        {
+          "stageKey": "curing",
+          "name": "Curing",
+          "description": "Building Materials Manufacturing stage: Curing",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": ["dispatch"]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Building Materials Manufacturing stage: Dispatch",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "building-materials",
+      "templateKey": "building-materials",
+      "displayName": "Building Materials Manufacturing",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "templates": [
+    {
+      "templateKey": "pharmaceuticals",
+      "displayName": "Pharmaceutical Manufacturing Lifecycle",
+      "description": "Pharmaceutical Manufacturing operations from intake through dispatch.",
+      "primaryUnitLabel": "Lots",
+      "stages": [
+        {
+          "stageKey": "raw-materials",
+          "name": "Raw Materials",
+          "description": "Pharmaceutical Manufacturing stage: Raw Materials",
+          "sortOrder": 1,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "compounding"
+          ]
+        },
+        {
+          "stageKey": "compounding",
+          "name": "Compounding",
+          "description": "Pharmaceutical Manufacturing stage: Compounding",
+          "sortOrder": 2,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "tableting"
+          ]
+        },
+        {
+          "stageKey": "tableting",
+          "name": "Tableting",
+          "description": "Pharmaceutical Manufacturing stage: Tableting",
+          "sortOrder": 3,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "quality-release"
+          ]
+        },
+        {
+          "stageKey": "quality-release",
+          "name": "Quality Release",
+          "description": "Pharmaceutical Manufacturing stage: Quality Release",
+          "sortOrder": 4,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": [
+            "dispatch"
+          ]
+        },
+        {
+          "stageKey": "dispatch",
+          "name": "Dispatch",
+          "description": "Pharmaceutical Manufacturing stage: Dispatch",
+          "sortOrder": 5,
+          "status": "Normal",
+          "value": "Ready",
+          "unit": "",
+          "allowedNextStageKeys": []
+        }
+      ]
+    }
+  ],
+  "profileMappings": [
+    {
+      "profileKey": "pharmaceuticals",
+      "templateKey": "pharmaceuticals",
+      "displayName": "Pharmaceutical Manufacturing",
+      "notes": ""
+    }
+  ]
+}

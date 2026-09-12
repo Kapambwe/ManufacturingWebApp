@@ -1,0 +1,160 @@
+{
+  "shifts": [
+    { "ShiftId": "SHIFT-HM-A", "ShiftName": "Day Shift", "Supervisor": "sup-hm-01", "StartUtc": "2026-07-04T06:00:00Z", "EndUtc": "2026-07-04T14:00:00Z", "Status": "Active" },
+    { "ShiftId": "SHIFT-HM-B", "ShiftName": "Night Shift", "Supervisor": "sup-hm-02", "StartUtc": "2026-07-04T22:00:00Z", "EndUtc": "2026-07-05T06:00:00Z", "Status": "Planned" }
+  ],
+  "assignments": [
+    { "AssignmentId": "ASSIGN-HM-1001", "OperatorId": "op-hm-01", "OperatorName": "J. Phiri", "LineId": "LINE-HM-01", "Station": "CNC", "Role": "Lead Machinist", "Status": "Assigned", "AssignedAtUtc": "2026-07-04T06:00:00Z", "Notes": "Prepare CNC tooling and verify offsets." },
+    { "AssignmentId": "ASSIGN-HM-1002", "OperatorId": "op-hm-02", "OperatorName": "M. Chisulo", "LineId": "LINE-HM-02", "Station": "Fabrication", "Role": "Welder", "Status": "Assigned", "AssignedAtUtc": "2026-07-04T06:00:00Z", "Notes": "Check jigs and weld consumables." }
+  ],
+  "downtimeRecords": [
+    { "DowntimeId": "DT-HM-1001", "AssetId": "HM-M-101", "AssetName": "CNC Lathe A", "ReasonCategory": "Mechanical", "ReasonDetails": "Spindle vibration above threshold", "StartUtc": "2026-07-04T05:45:00Z", "Status": "Open", "LoggedBy": "maint-hm-01" }
+  ],
+  "maintenanceRecords": [
+    { "MaintenanceId": "MT-HM-1001", "MachineId": "HM-M-101", "MachineName": "CNC Lathe A", "MaintenanceType": "Inspection", "Priority": "High", "RequestedBy": "maint-hm-01", "AssignedTo": "tech-hm-02", "Status": "Scheduled", "ScheduledForUtc": "2026-07-04T08:00:00Z", "Notes": "Follow-up on spindle vibration alert" },
+    { "MaintenanceId": "MT-HM-1002", "MachineId": "HM-M-104", "MachineName": "Hydraulic Press 400T", "MaintenanceType": "Hydraulic Check", "Priority": "High", "RequestedBy": "maint-hm-03", "AssignedTo": "tech-hm-04", "Status": "Scheduled", "ScheduledForUtc": "2026-07-04T10:00:00Z", "Notes": "Seal and pressure verification" }
+  ],
+  "handoverHistory": [
+    { "HandoverId": "HO-HM-1001", "FromShiftId": "SHIFT-HM-A", "ToShiftId": "SHIFT-HM-B", "Supervisor": "sup-hm-01", "Notes": "CNC and press lines stable", "CompletedAtUtc": "2026-07-04T06:00:00Z", "Status": "Completed" }
+  ],
+  "roster": [
+    { "RosterId": "ROSTER-HM-1001", "OperatorId": "op-hm-01", "OperatorName": "J. Phiri", "SkillGroup": "Machining", "CurrentLineId": "LINE-HM-01", "ShiftId": "SHIFT-HM-A", "PlannedHours": 8, "AssignedHours": 8, "CapacityPercent": 100, "Availability": "Available", "Status": "Active", "Notes": "Lead machinist" },
+    { "RosterId": "ROSTER-HM-1002", "OperatorId": "op-hm-02", "OperatorName": "M. Chisulo", "SkillGroup": "Fabrication", "CurrentLineId": "LINE-HM-02", "ShiftId": "SHIFT-HM-A", "PlannedHours": 8, "AssignedHours": 7, "CapacityPercent": 88, "Availability": "Available", "Status": "Active", "Notes": "Certified welder" }
+  ],
+  "capacities": [
+    { "LineId": "LINE-HM-01", "LineName": "Machining Bay", "PlannedHeadcount": 6, "AssignedHeadcount": 5, "CapacityPercent": 83, "Bottleneck": "Tool changeover", "Status": "Watch", "Notes": "CNC queue building" },
+    { "LineId": "LINE-HM-02", "LineName": "Fabrication Bay", "PlannedHeadcount": 8, "AssignedHeadcount": 7, "CapacityPercent": 88, "Bottleneck": "Welding gas supply", "Status": "Healthy", "Notes": "Normal output" },
+    { "LineId": "LINE-HM-03", "LineName": "Assembly and Test Bay", "PlannedHeadcount": 5, "AssignedHeadcount": 4, "CapacityPercent": 80, "Bottleneck": "Crane availability", "Status": "Watch", "Notes": "Need overhead lift scheduling" }
+  ],
+  "lines": [
+    { "LineId": "LINE-HM-01", "Name": "Machining Bay", "Status": "Running", "CurrentOrder": "HM-ASM-001", "ThroughputPerHour": 4, "UtilizationPercent": 72, "OeePercent": 68, "Shift": "Day" },
+    { "LineId": "LINE-HM-02", "Name": "Fabrication Bay", "Status": "Running", "CurrentOrder": "HM-ASM-002", "ThroughputPerHour": 3, "UtilizationPercent": 76, "OeePercent": 71, "Shift": "Day" },
+    { "LineId": "LINE-HM-03", "Name": "Assembly and Test Bay", "Status": "Watch", "CurrentOrder": "HM-ASM-003", "ThroughputPerHour": 2, "UtilizationPercent": 61, "OeePercent": 58, "Shift": "Night" }
+  ],
+  "machines": [
+    {
+      "MachineId": "HM-M-101",
+      "Name": "CNC Lathe A",
+      "LineId": "LINE-HM-01",
+      "Industry": "Heavy Machinery Manufacturing",
+      "AssetClass": "Machining",
+      "MachineType": "CNC Lathe",
+      "MachineRole": "Precision turning",
+      "Manufacturer": "Kabwe Engineering Works",
+      "ModelNumber": "KEW-CNC-500",
+      "SerialNumber": "KEW-500-001",
+      "AssetTag": "HM-00101",
+      "Site": "Kafue Heavy Machinery Works",
+      "Area": "Machining Bay",
+      "OperatingMode": "Automated",
+      "ControlSystem": "CNC Controller",
+      "PowerSource": "Electric",
+      "TelemetrySource": "IIoT Gateway",
+      "MaintenanceOwner": "maint-hm-01",
+      "ComplianceProfile": "Dimensional control / machine guarding",
+      "OperatingContext": "Produces shafts and gearbox housings",
+      "Status": "Operational",
+      "TemperatureC": 54.1,
+      "RuntimeHours": 96.4,
+      "LastServiceDate": "2026-06-20T00:00:00Z",
+      "CommissionedOnUtc": "2024-09-12T00:00:00Z",
+      "AlertCount": 1,
+      "Metrics": [
+        { "Name": "Spindle Load", "Value": "68", "Unit": "%", "Status": "Normal" },
+        { "Name": "Vibration", "Value": "3.1", "Unit": "mm/s", "Status": "Watch" },
+        { "Name": "Temperature", "Value": "54.1", "Unit": "C", "Status": "Normal" }
+      ],
+      "Specifications": [
+        { "Category": "Power", "Name": "Voltage", "Value": "415V" },
+        { "Category": "Automation", "Name": "Controller", "Value": "Siemens CNC" }
+      ],
+      "Capabilities": [ "Precision turning", "Gear blank machining", "Thread cutting" ]
+    },
+    {
+      "MachineId": "HM-M-104",
+      "Name": "Hydraulic Press 400T",
+      "LineId": "LINE-HM-02",
+      "Industry": "Heavy Machinery Manufacturing",
+      "AssetClass": "Forming",
+      "MachineType": "Hydraulic Press",
+      "MachineRole": "Plate forming",
+      "Manufacturer": "ZamHydraulics",
+      "ModelNumber": "ZH-PRESS-400",
+      "SerialNumber": "ZH-400-014",
+      "AssetTag": "HM-00104",
+      "Site": "Kafue Heavy Machinery Works",
+      "Area": "Fabrication Bay",
+      "OperatingMode": "Semi-Automated",
+      "ControlSystem": "PLC",
+      "PowerSource": "Electric",
+      "TelemetrySource": "Pressure Sensors",
+      "MaintenanceOwner": "maint-hm-03",
+      "ComplianceProfile": "Press safety / guarding",
+      "OperatingContext": "Forms chassis plates and brackets",
+      "Status": "Operational",
+      "TemperatureC": 48.7,
+      "RuntimeHours": 140.2,
+      "LastServiceDate": "2026-06-18T00:00:00Z",
+      "CommissionedOnUtc": "2024-08-01T00:00:00Z",
+      "AlertCount": 0,
+      "Metrics": [
+        { "Name": "Hydraulic Pressure", "Value": "388", "Unit": "bar", "Status": "Normal" },
+        { "Name": "Cycle Time", "Value": "42", "Unit": "sec", "Status": "Normal" }
+      ],
+      "Specifications": [
+        { "Category": "Force", "Name": "Rated Capacity", "Value": "400T" },
+        { "Category": "Control", "Name": "Safety Relay", "Value": "Dual Channel" }
+      ],
+      "Capabilities": [ "Plate forming", "Bracket stamping", "Heavy pressing" ]
+    },
+    {
+      "MachineId": "HM-M-108",
+      "Name": "Gantry Crane 20T",
+      "LineId": "LINE-HM-03",
+      "Industry": "Heavy Machinery Manufacturing",
+      "AssetClass": "Material Handling",
+      "MachineType": "Gantry Crane",
+      "MachineRole": "Lift and transfer",
+      "Manufacturer": "BridgeLift Africa",
+      "ModelNumber": "BLA-GC-20",
+      "SerialNumber": "BLA-20-009",
+      "AssetTag": "HM-00108",
+      "Site": "Kafue Heavy Machinery Works",
+      "Area": "Assembly and Test Bay",
+      "OperatingMode": "Manual",
+      "ControlSystem": "Pendant Control",
+      "PowerSource": "Electric",
+      "TelemetrySource": "Load Cell Feed",
+      "MaintenanceOwner": "maint-hm-04",
+      "ComplianceProfile": "Lifting equipment",
+      "OperatingContext": "Transfers engine blocks and assemblies",
+      "Status": "Operational",
+      "TemperatureC": 35.4,
+      "RuntimeHours": 72.8,
+      "LastServiceDate": "2026-06-25T00:00:00Z",
+      "CommissionedOnUtc": "2025-02-15T00:00:00Z",
+      "AlertCount": 0,
+      "Metrics": [
+        { "Name": "Load", "Value": "11.4", "Unit": "t", "Status": "Normal" },
+        { "Name": "Hook Height", "Value": "9.8", "Unit": "m", "Status": "Normal" }
+      ],
+      "Specifications": [
+        { "Category": "Lift", "Name": "Rated Capacity", "Value": "20T" },
+        { "Category": "Safety", "Name": "Overload Cutoff", "Value": "Enabled" }
+      ],
+      "Capabilities": [ "Heavy lift", "Part transfer", "Assembly support" ]
+    }
+  ],
+  "tasks": [
+    { "TaskId": "TASK-HM-1001", "TaskType": "Inspection", "AssignedTo": "maint-hm-01", "Area": "Machining Bay", "Priority": "High", "Status": "Pending", "DueAt": "2026-07-04T09:00:00Z", "Description": "Inspect CNC spindle vibration trend." }
+  ],
+  "exceptions": [
+    { "ExceptionId": "EX-HM-1001", "ExceptionType": "Blocked", "ReferenceId": "TASK-HM-1001", "ReferenceName": "Inspection", "Owner": "maint-hm-01", "TargetArea": "Machining Bay", "Priority": "High", "Status": "Open", "EscalationLevel": "Supervisor", "DueAtUtc": "2026-07-04T09:30:00Z", "RecommendedAction": "Stop affected CNC and inspect spindle bearings", "Notes": "Heavy machinery priority" }
+  ],
+  "incidents": [
+    { "IncidentId": "INC-HM-1001", "AlarmId": "ALARM-HM-101", "Category": "Alarm", "Severity": "Critical", "SourceAssetId": "HM-M-101", "SourceName": "CNC Lathe A", "Summary": "CNC vibration exceeded threshold.", "Owner": "maint-hm-01", "Status": "Open", "RaisedAtUtc": "2026-07-04T05:50:00Z", "Notes": "Need immediate inspection" }
+  ],
+  "alerts": [
+    { "AlertId": "ALERT-HM-1001", "Category": "Machining", "Severity": "Warning", "Message": "Spindle vibration trending high on CNC Lathe A.", "Status": "Open", "SourceAssetId": "HM-M-101", "RaisedAt": "2026-07-04T05:50:00Z" }
+  ]
+}

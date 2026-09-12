@@ -1,0 +1,50 @@
+{
+  "productionOrders": [
+    {
+      "OrderNo": "MO-FB-1001",
+      "ItemId": "FB-JUICE-001",
+      "PlannedQty": 9000,
+      "ReleasedQty": 9000,
+      "Status": "Released",
+      "Priority": "High",
+      "DueDate": "2026-07-10T00:00:00Z",
+      "LastAction": "Release",
+      "LastActionBy": "planner-fb-01",
+      "LastActionAtUtc": "2026-07-04T06:00:00Z",
+      "LinkedLotNo": "LOT-FB-001",
+      "Operations": [
+        { "OrderNo": "MO-FB-1001", "OperationNo": 10, "OperationName": "Wash and Sort", "WorkCenterId": "WC-FB-WASH", "Status": "In Progress", "PlannedQty": 5000, "CompletedQty": 4200, "ScrapQty": 20 },
+        { "OrderNo": "MO-FB-1001", "OperationNo": 20, "OperationName": "Pasteurize and Fill", "WorkCenterId": "WC-FB-PULP", "Status": "Ready", "PlannedQty": 4000, "CompletedQty": 0, "ScrapQty": 0 }
+      ]
+    }
+  ],
+  "shopFloorEvents": [],
+  "qualityHolds": [
+    { "HoldId": "HOLD-FB-1001", "EntityType": "Order", "EntityId": "MO-FB-1001", "ReasonCode": "Brix-Out-Of-Spec", "RaisedBy": "qa-fb-01", "RaisedAt": "2026-07-04T06:10:00Z", "Status": "Open" }
+  ],
+  "nonConformances": [
+    { "NcrId": "NCR-FB-1001", "OrderNo": "MO-FB-1001", "OperationNo": 20, "Severity": "High", "Disposition": "Rework", "RootCause": "Underfill", "CapaId": "CAPA-FB-1001", "Status": "Open", "RecordedBy": "qa-fb-01", "RecordedAtUtc": "2026-07-04T06:15:00Z", "Notes": "Bottle fill variation exceeded limit" }
+  ],
+  "qualityHistory": [
+    { "ActionType": "Hold", "EntityType": "Order", "EntityId": "MO-FB-1001", "Result": "Open", "PerformedBy": "qa-fb-01", "Comment": "Brix out of spec", "TimestampUtc": "2026-07-04T06:10:00Z" }
+  ],
+  "genealogyHistory": [
+    { "LotNo": "LOT-FB-001", "Direction": "Backward", "NodeCount": 3, "RequestedBy": "operator", "RequestedAtUtc": "2026-07-04T06:20:00Z" }
+  ],
+  "costingStates": [
+    {
+      "OrderNo": "MO-FB-1001",
+      "Variances": [
+        { "OrderNo": "MO-FB-1001", "VarianceType": "Material", "Amount": 420.55, "Currency": "USD", "AnalysisNote": "Mango pulp premium" },
+        { "OrderNo": "MO-FB-1001", "VarianceType": "Labor", "Amount": -120.15, "Currency": "USD", "AnalysisNote": "Shift efficiency gain" }
+      ],
+      "Handoffs": [
+        { "OrderNo": "MO-FB-1001", "EventType": "SettlementReady", "TargetSystem": "Accounting", "Status": "Pending", "Notes": "Awaiting variance review" }
+      ],
+      "SettlementStatus": "Pending",
+      "PostingId": "",
+      "PostAttempts": 0,
+      "RequiresRetry": false
+    }
+  ]
+}

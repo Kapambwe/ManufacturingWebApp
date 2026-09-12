@@ -1,0 +1,90 @@
+{
+  "profileMappings": [
+    {
+      "templateKey": "animal-feed",
+      "profileKey": "animal-feed",
+      "displayName": "Animal Feed Processing Lifecycle",
+      "notes": ""
+    }
+  ],
+  "templates": [
+    {
+      "templateKey": "animal-feed",
+      "description": "Animal feed processing operations from intake through dispatch.",
+      "stages": [
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "milling"
+          ],
+          "description": "Animal Feed Processing stage: Intake",
+          "stageKey": "intake",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 1,
+          "name": "Intake"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "mixing"
+          ],
+          "description": "Animal Feed Processing stage: Milling",
+          "stageKey": "milling",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 2,
+          "name": "Milling"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "pelleting"
+          ],
+          "description": "Animal Feed Processing stage: Mixing",
+          "stageKey": "mixing",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 3,
+          "name": "Mixing"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "bagging"
+          ],
+          "description": "Animal Feed Processing stage: Pelleting",
+          "stageKey": "pelleting",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 4,
+          "name": "Pelleting"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [
+            "dispatch"
+          ],
+          "description": "Animal Feed Processing stage: Bagging",
+          "stageKey": "bagging",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 5,
+          "name": "Bagging"
+        },
+        {
+          "unit": "",
+          "allowedNextStageKeys": [],
+          "description": "Animal Feed Processing stage: Dispatch",
+          "stageKey": "dispatch",
+          "value": "Ready",
+          "status": "Normal",
+          "sortOrder": 6,
+          "name": "Dispatch"
+        }
+      ],
+      "displayName": "Animal Feed Processing Lifecycle",
+      "primaryUnitLabel": "Bags"
+    }
+  ]
+}
